@@ -1,0 +1,23 @@
+uuid: 99b0dba0-afc9-44fe-a6d6-f6d80145336b
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+    - views
+    - viewsreference
+_core:
+  default_config_hash: 4X7mRoEE2nlZnWkQgwsLKvYfzGkoW7fL1-9mDdyUaso
+id: paragraph.field_wcms_pgph__view
+field_name: field_wcms_pgph__view
+entity_type: paragraph
+type: viewsreference
+settings:
+  target_type: view
+module: viewsreference
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

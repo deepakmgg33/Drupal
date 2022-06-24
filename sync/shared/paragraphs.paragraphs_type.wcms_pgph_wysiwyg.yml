@@ -1,0 +1,12 @@
+uuid: b71bad03-71a2-486e-b688-e15b292cf8fc
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: _Pcgm6byQEwOy4Cch2BWdWKqYRjwlGBOXWZG86S-o44
+id: wcms_pgph_wysiwyg
+label: WYSIWYG
+icon_uuid: null
+icon_default: null
+description: null
+behavior_plugins: {  }

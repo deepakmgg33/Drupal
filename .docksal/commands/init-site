@@ -1,0 +1,82 @@
+#!/usr/bin/env bash
+
+#: exec_target = cli
+
+## Initialize/reinstall site
+##
+## Usage: fin init-site
+
+# Abort if anything fails
+set -e
+
+#-------------------------- Settings -------------------------------------------
+
+# PROJECT_ROOT and DOCROOT are set as env variables in cli
+SITE_DIRECTORY="default"
+DOCROOT_PATH="${PROJECT_ROOT}/${DOCROOT}"
+SITEDIR_PATH="${DOCROOT_PATH}/sites/${SITE_DIRECTORY}"
+
+#-------------------------- END: Settings --------------------------------------
+
+#-------------------------- Helper functions -----------------------------------
+
+# Copy a settings file.
+# Skips if the destination file already exists.
+# @param $1 source file
+# @param $2 destination file
+copy_settings_file()
+{
+	local source="$1"
+	local dest="$2"
+
+	if [[ ! -f $dest ]]; then
+		echo "Copying ${dest}..."
+		cp $source $dest
+	else
+		echo "${dest} already in place."
+	fi
+}
+
+#-------------------------- END: Helper functions -----------------------------
+
+#-------------------------- Functions -----------------------------------------
+# Copy assets files: default settings and mirrored site-install script.
+init_settings () {
+	cd $PROJECT_ROOT
+	copy_settings_file ".docksal/assets/settings-example.local.php" "envs/local/settings.local.php"
+}
+
+# Install site
+site_install ()
+{
+   echo "${green_bg}Get dependencies...${NC}"
+   composer install
+
+   echo "${green_bg}Apply drush workaround for docksal...${NC}"
+   cd /usr/local/bin
+   sudo mv drush drush8
+   sudo ln -s /var/www/vendor/drush/drush/drush drush
+   drush --version
+   cd $PROJECT_ROOT
+
+   echo "Prepare default local settings"
+   init_settings
+
+   echo "${green_bg}Run installation script...${NC}"
+   # Disable email sending.
+   PHP_OPTIONS="-d sendmail_path=`which true`"
+   echo "Run site installation"
+   sh "scripts/site-install.sh"
+   cd $PROJECT_ROOT
+   # Copy post install settings.
+   copy_settings_file ".docksal/assets/settings.postinstall.php" "envs/local/settings.postinstall.php"
+}
+
+#-------------------------- END: Functions ------------------------------------
+
+#-------------------------- Execution -----------------------------------------
+
+# Project initialization steps
+echo "Site repo: ${SITE_REPO}"
+time site_install
+#-------------------------- END: Execution ------------------------------------

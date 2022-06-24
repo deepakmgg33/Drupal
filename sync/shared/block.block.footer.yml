@@ -1,0 +1,25 @@
+uuid: 5ef40ee9-e6c8-4c77-a15a-6a23f27eb27b
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.footer
+  module:
+    - system
+  theme:
+    - ucb
+id: footer
+theme: ucb
+region: footer
+weight: -10
+provider: null
+plugin: 'system_menu_block:footer'
+settings:
+  id: 'system_menu_block:footer'
+  label: Footer
+  provider: system
+  label_display: '0'
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }

@@ -1,0 +1,52 @@
+uuid: 1efff70a-3df2-45c4-ac6b-9b1d8523075e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.medical_information.field_medical_info_title
+    - field.field.paragraph.medical_information.field_medico_info_desc
+    - field.field.paragraph.medical_information.field_medico_info_link
+    - paragraphs.paragraphs_type.medical_information
+  module:
+    - field_layout
+    - layout_discovery
+    - text
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings:
+      label: ''
+id: paragraph.medical_information.default
+targetEntityType: paragraph
+bundle: medical_information
+mode: default
+content:
+  field_medical_info_title:
+    weight: 0
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_medico_info_desc:
+    weight: 1
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+      show_summary: false
+    third_party_settings: {  }
+    type: text_textarea_with_summary
+    region: content
+  field_medico_info_link:
+    weight: 2
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true

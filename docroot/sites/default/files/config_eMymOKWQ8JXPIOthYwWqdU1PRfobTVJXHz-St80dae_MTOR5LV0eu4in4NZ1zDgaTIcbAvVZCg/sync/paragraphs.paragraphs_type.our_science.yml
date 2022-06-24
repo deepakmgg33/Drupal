@@ -1,0 +1,10 @@
+uuid: 5213ec9f-9085-48a0-b7ee-963e452fbb40
+langcode: en
+status: true
+dependencies: {  }
+id: our_science
+label: 'Our science'
+icon_uuid: null
+icon_default: null
+description: 'Used for our science page'
+behavior_plugins: {  }

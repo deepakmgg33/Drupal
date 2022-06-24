@@ -1,0 +1,12 @@
+uuid: 17d5fbb3-b2e8-4902-b3ef-a797271c91c6
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: bqS-hi6GXT0OOWzhiyDrpuqDcvcqWkg-iPpA7HGBgjw
+id: wcms_pgph_slider
+label: Slider
+icon_uuid: null
+icon_default: null
+description: null
+behavior_plugins: {  }

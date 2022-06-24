@@ -1,0 +1,19 @@
+Index: core/lib/Drupal/Core/StackMiddleware/NegotiationMiddleware.php
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- a/core/lib/Drupal/Core/StackMiddleware/NegotiationMiddleware.php	(date 1523473707000)
++++ b/core/lib/Drupal/Core/StackMiddleware/NegotiationMiddleware.php	(date 1523654026000)
+@@ -90,6 +90,11 @@
+       return $request->query->get('_format');
+     }
+ 
++    // If content-type is json, use a JSON format.
++    if ($request->headers->get('content-type') == 'application/json') {
++      return 'json';
++    }
++
+     // No format was specified in the request.
+     return NULL;
+   }

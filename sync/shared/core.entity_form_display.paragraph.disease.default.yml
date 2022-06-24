@@ -1,0 +1,79 @@
+uuid: bcddac66-edb2-417c-a5d7-0776e4dc29a9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.disease.field_disease_body
+    - field.field.paragraph.disease.field_disease_image
+    - field.field.paragraph.disease.field_disease_link
+    - field.field.paragraph.disease.field_disease_name
+    - field.field.paragraph.disease.field_disease_video
+    - field.field.paragraph.disease.field_disease_video_link
+    - image.style.thumbnail
+    - paragraphs.paragraphs_type.disease
+  module:
+    - field_layout
+    - image
+    - layout_discovery
+    - link
+    - text
+    - video_embed_field
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings:
+      label: ''
+id: paragraph.disease.default
+targetEntityType: paragraph
+bundle: disease
+mode: default
+content:
+  field_disease_body:
+    weight: 2
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_disease_image:
+    weight: 1
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_disease_link:
+    weight: 3
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_disease_name:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_disease_video:
+    weight: 4
+    settings: {  }
+    third_party_settings: {  }
+    type: video_embed_field_textfield
+    region: content
+  field_disease_video_link:
+    weight: 5
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+hidden:
+  created: true
+  status: true

@@ -1,0 +1,12 @@
+uuid: 7ecfaa70-632a-45cc-87e5-eed25c0a678a
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: W0awOesVPRY9cGF-MBAz9-TusJBdjeH4CpyAKryelNk
+id: wcms_pgph_form
+label: Form
+icon_uuid: null
+icon_default: null
+description: null
+behavior_plugins: {  }

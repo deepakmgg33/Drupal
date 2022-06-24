@@ -1,0 +1,32 @@
+uuid: c778fc3e-add2-435c-8cf0-b57210def6fa
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.hcp_resource.field_hcp_desc
+    - field.field.paragraph.hcp_resource.field_hcp_title
+    - paragraphs.paragraphs_type.hcp_resource
+  module:
+    - text
+id: paragraph.hcp_resource.default
+targetEntityType: paragraph
+bundle: hcp_resource
+mode: default
+content:
+  field_hcp_desc:
+    weight: 1
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_hcp_title:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden:
+  search_api_excerpt: true

@@ -1,0 +1,10 @@
+uuid: 909c328a-3765-4f97-ad36-1598f753a03b
+langcode: en
+status: true
+dependencies: {  }
+id: medical_information
+label: 'Medical Information'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

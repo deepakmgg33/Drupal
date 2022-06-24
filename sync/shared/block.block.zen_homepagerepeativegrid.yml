@@ -1,0 +1,25 @@
+uuid: f539557f-0930-41e0-9627-43e2ee9c516f
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:repeative_grid:5dfca54e-6899-432a-8895-294feec05d36'
+  module:
+    - block_content
+  theme:
+    - zen
+id: zen_homepagerepeativegrid
+theme: zen
+region: content
+weight: 0
+provider: null
+plugin: 'block_content:5dfca54e-6899-432a-8895-294feec05d36'
+settings:
+  id: 'block_content:5dfca54e-6899-432a-8895-294feec05d36'
+  label: 'Home page repeative grid'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

@@ -1,0 +1,31 @@
+uuid: 45012d62-bc17-4610-bcd5-303f2e896de0
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:immunology_block:20c23cb8-73d5-4d59-b3c5-78534b202868'
+  module:
+    - block_content
+    - system
+  theme:
+    - ucb
+id: immunology
+theme: ucb
+region: content
+weight: 0
+provider: null
+plugin: 'block_content:20c23cb8-73d5-4d59-b3c5-78534b202868'
+settings:
+  id: 'block_content:20c23cb8-73d5-4d59-b3c5-78534b202868'
+  label: Immunology
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: /immunology-pipeline
+    negate: false
+    context_mapping: {  }

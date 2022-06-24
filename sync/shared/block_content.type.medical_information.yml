@@ -1,0 +1,8 @@
+uuid: 648a5906-c5c3-49d9-a213-1977745e1bc0
+langcode: en
+status: true
+dependencies: {  }
+id: medical_information
+label: 'Medical Information'
+revision: 0
+description: ''

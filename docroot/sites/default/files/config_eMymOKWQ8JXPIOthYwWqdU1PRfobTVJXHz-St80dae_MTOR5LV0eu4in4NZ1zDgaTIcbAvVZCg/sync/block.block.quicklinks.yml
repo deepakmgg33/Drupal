@@ -1,0 +1,25 @@
+uuid: 53303386-0508-4c52-a992-481a352f21eb
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.quick-links
+  module:
+    - system
+  theme:
+    - ucb
+id: quicklinks
+theme: ucb
+region: headertop
+weight: -10
+provider: null
+plugin: 'system_menu_block:quick-links'
+settings:
+  id: 'system_menu_block:quick-links'
+  label: 'Quick Links'
+  provider: system
+  label_display: '0'
+  level: 1
+  depth: 0
+  expand_all_items: true
+visibility: {  }

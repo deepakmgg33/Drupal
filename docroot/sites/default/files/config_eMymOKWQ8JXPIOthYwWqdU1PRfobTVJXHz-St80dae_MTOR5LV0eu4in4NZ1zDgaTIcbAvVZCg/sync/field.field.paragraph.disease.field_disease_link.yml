@@ -1,0 +1,23 @@
+uuid: 0149d68a-22e3-4cfa-a5a7-3aa255adbd9d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_disease_link
+    - paragraphs.paragraphs_type.disease
+  module:
+    - link
+id: paragraph.disease.field_disease_link
+field_name: field_disease_link
+entity_type: paragraph
+bundle: disease
+label: 'Disease link'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 1
+field_type: link

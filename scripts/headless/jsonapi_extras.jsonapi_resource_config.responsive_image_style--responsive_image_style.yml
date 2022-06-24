@@ -1,0 +1,35 @@
+uuid: a5a53fad-e301-4724-ba8c-61eb7ba060f3
+langcode: en
+status: true
+dependencies:
+  module:
+    - responsive_image
+id: responsive_image_style--responsive_image_style
+disabled: true
+path: responsive_image_style/responsive_image_style
+resourceType: responsive_image_style--responsive_image_style
+resourceFields:
+  id:
+    fieldName: id
+    publicName: id
+    enhancer:
+      id: ''
+    disabled: false
+  type:
+    fieldName: type
+    publicName: type
+    enhancer:
+      id: ''
+    disabled: false
+  uuid:
+    fieldName: uuid
+    publicName: uuid
+    enhancer:
+      id: ''
+    disabled: false
+  _core:
+    fieldName: _core
+    publicName: _core
+    enhancer:
+      id: ''
+    disabled: false

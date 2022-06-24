@@ -1,0 +1,21 @@
+uuid: 15865be3-6614-43b7-bed6-c8548f53a9f1
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+    - view_mode_selector
+_core:
+  default_config_hash: 3Uz28z-nZJv3pK4vaZJEywyOxTR697D9GLB9hFqL5LU
+id: paragraph.field_wcms_pgph__view_mode
+field_name: field_wcms_pgph__view_mode
+entity_type: paragraph
+type: view_mode_selector
+settings: {  }
+module: view_mode_selector
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

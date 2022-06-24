@@ -1,0 +1,11 @@
+uuid: 735f6f81-2695-47c8-9734-f0005f7af75f
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.rheumatology
+id: block_content.rheumatology
+target_entity_type_id: block_content
+target_bundle: rheumatology
+default_langcode: site_default
+language_alterable: false

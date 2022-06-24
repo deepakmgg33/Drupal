@@ -1,0 +1,84 @@
+uuid: d2566581-fbe7-450b-933c-8311a3c904b5
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.immunology_block
+    - field.field.block_content.immunology_block.body
+    - field.field.block_content.immunology_block.field_image
+    - field.field.block_content.immunology_block.field_image_para_1
+    - field.field.block_content.immunology_block.field_image_para_2
+    - field.field.block_content.immunology_block.field_image_para_link
+    - field.field.block_content.immunology_block.field_immune_icon
+    - field.field.block_content.immunology_block.field_title_immunology
+  module:
+    - image
+    - link
+    - text
+id: block_content.immunology_block.default
+targetEntityType: block_content
+bundle: immunology_block
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_image:
+    weight: 3
+    label: hidden
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_image_para_1:
+    weight: 4
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_image_para_2:
+    weight: 5
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_image_para_link:
+    weight: 6
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_immune_icon:
+    weight: 1
+    label: hidden
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_title_immunology:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden:
+  langcode: true
+  search_api_excerpt: true

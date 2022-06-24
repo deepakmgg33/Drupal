@@ -1,0 +1,21 @@
+uuid: 608b63be-bbcd-42e3-bd93-7c2da3377adf
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_disease_body
+    - paragraphs.paragraphs_type.disease
+  module:
+    - text
+id: paragraph.disease.field_disease_body
+field_name: field_disease_body
+entity_type: paragraph
+bundle: disease
+label: 'Disease body'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

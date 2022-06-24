@@ -1,0 +1,12 @@
+uuid: 6355c668-d9d4-46e7-aca7-867a5c66ebb0
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: 2whDZAQDX49_cR0jA-GYqisSKmS3ihohSjvjIf5MpvM
+id: wcms_asymmetric_translation
+label: 'Asymmetric Translation'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

@@ -1,0 +1,30 @@
+uuid: 8988e051-a020-49d8-bdcf-f997200e0f79
+langcode: en
+status: true
+dependencies:
+  config:
+    - colossal_menu.link_type.wcms_linktype_sociallink
+    - field.storage.colossal_menu_link.field_wcms_linktype__sl__icon
+    - media.type.image
+_core:
+  default_config_hash: 0DbrEtIdr0ZxaMkhcea5VLmK4XxxV_0qiPeUsbX6WCw
+id: colossal_menu_link.wcms_linktype_sociallink.field_wcms_linktype__sl__icon
+field_name: field_wcms_linktype__sl__icon
+entity_type: colossal_menu_link
+bundle: wcms_linktype_sociallink
+label: Icon
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

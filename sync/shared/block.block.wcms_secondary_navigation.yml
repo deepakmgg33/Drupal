@@ -1,0 +1,27 @@
+uuid: 7a03c8f4-3e81-4261-a5aa-2619d0d76442
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.main
+  module:
+    - system
+  theme:
+    - wcms
+_core:
+  default_config_hash: 6IA5FtPbzjJqR71x2B5Oa6hUqLWW7DfKTIHnr26Za4E
+id: wcms_secondary_navigation
+theme: wcms
+region: sidebar_first
+weight: 0
+provider: null
+plugin: 'system_menu_block:main'
+settings:
+  id: 'system_menu_block:main'
+  label: 'Secondary navigation'
+  provider: system
+  label_display: '0'
+  level: 2
+  depth: 0
+  expand_all_items: false
+visibility: {  }

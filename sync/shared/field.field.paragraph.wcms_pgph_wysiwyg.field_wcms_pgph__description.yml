@@ -1,0 +1,23 @@
+uuid: c38a973f-550a-4f2d-a398-bfa8cd76d60b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_wcms_pgph__description
+    - paragraphs.paragraphs_type.wcms_pgph_wysiwyg
+  module:
+    - text
+_core:
+  default_config_hash: _Bzn8NAl5H5PuvfZATmhU1D0GNJVqRmfxjBuLPRjbJc
+id: paragraph.wcms_pgph_wysiwyg.field_wcms_pgph__description
+field_name: field_wcms_pgph__description
+entity_type: paragraph
+bundle: wcms_pgph_wysiwyg
+label: Description
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

@@ -1,0 +1,31 @@
+uuid: e5205eae-3922-416d-adfa-f7dad0ea1558
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:medical_information:6cd48adf-e543-4d40-b73f-4a3c1c5f4c5b'
+  module:
+    - block_content
+    - system
+  theme:
+    - ucb
+id: medicalinfo
+theme: ucb
+region: content
+weight: 0
+provider: null
+plugin: 'block_content:6cd48adf-e543-4d40-b73f-4a3c1c5f4c5b'
+settings:
+  id: 'block_content:6cd48adf-e543-4d40-b73f-4a3c1c5f4c5b'
+  label: 'Medical Info'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: /medical-information
+    negate: false
+    context_mapping: {  }

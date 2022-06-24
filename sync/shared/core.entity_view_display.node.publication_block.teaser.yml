@@ -1,0 +1,40 @@
+uuid: 4ac11b2f-72a9-4369-824a-d0e6650c4017
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.publication_block.body
+    - field.field.node.publication_block.field_link
+    - field.field.node.publication_block.field_phase
+    - field.field.node.publication_block.field_product
+    - field.field.node.publication_block.field_topic
+    - node.type.publication_block
+  module:
+    - text
+    - user
+id: node.publication_block.teaser
+targetEntityType: node
+bundle: publication_block
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_link: true
+  field_phase: true
+  field_product: true
+  field_topic: true
+  langcode: true
+  search_api_excerpt: true

@@ -1,0 +1,44 @@
+uuid: 32fc6b49-a7dd-4984-941d-4ee18b9fa7e7
+langcode: en
+status: true
+dependencies:
+  config:
+    - page_manager.page.home_page
+  content:
+    - 'block_content:repeative_grid:5dfca54e-6899-432a-8895-294feec05d36'
+  module:
+    - block_content
+    - panels
+id: home_page-panels_variant-0
+label: 'Home page'
+variant: panels_variant
+variant_settings:
+  blocks:
+    d98aa683-5b91-460f-92cd-8bbfb398275d:
+      id: 'block_content:5dfca54e-6899-432a-8895-294feec05d36'
+      label: 'Home page repeative grid'
+      provider: block_content
+      label_display: '0'
+      status: true
+      info: ''
+      view_mode: full
+      region: content
+      weight: 0
+      uuid: d98aa683-5b91-460f-92cd-8bbfb398275d
+      context_mapping: {  }
+  id: panels_variant
+  uuid: 35930458-b84b-4850-b301-a81808dbb500
+  label: null
+  weight: 0
+  layout: layout_onecol
+  layout_settings:
+    label: 'Home page'
+  page_title: ''
+  storage_type: page_manager
+  storage_id: home_page-panels_variant-0
+  builder: standard
+page: home_page
+weight: 0
+selection_criteria: {  }
+selection_logic: and
+static_context: {  }

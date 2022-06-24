@@ -1,0 +1,19 @@
+uuid: 934ab801-cf8f-4c9d-8d28-435d1c9cbc09
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_content
+    - link
+id: block_content.field_image_para_link
+field_name: field_image_para_link
+entity_type: block_content
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

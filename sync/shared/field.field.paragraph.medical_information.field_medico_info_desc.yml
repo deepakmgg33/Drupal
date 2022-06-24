@@ -1,0 +1,23 @@
+uuid: 32406777-5946-4c8d-abb5-c436d62d2270
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_medico_info_desc
+    - paragraphs.paragraphs_type.medical_information
+  module:
+    - text
+id: paragraph.medical_information.field_medico_info_desc
+field_name: field_medico_info_desc
+entity_type: paragraph
+bundle: medical_information
+label: 'Medico info desc'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: false
+  required_summary: false
+field_type: text_with_summary

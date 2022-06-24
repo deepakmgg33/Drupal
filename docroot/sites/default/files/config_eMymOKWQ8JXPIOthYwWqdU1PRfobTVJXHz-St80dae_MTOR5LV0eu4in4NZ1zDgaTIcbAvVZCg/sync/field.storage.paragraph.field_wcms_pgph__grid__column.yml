@@ -1,0 +1,35 @@
+uuid: 767677d9-8025-4b94-a826-4bd909d7eaf7
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+_core:
+  default_config_hash: LJhnNfNuhbTBvAR2WdR5YNuLJ0tNR0wmymOYjp_cYAg
+id: paragraph.field_wcms_pgph__grid__column
+field_name: field_wcms_pgph__grid__column
+entity_type: paragraph
+type: list_integer
+settings:
+  allowed_values:
+    -
+      value: 1
+      label: '1'
+    -
+      value: 2
+      label: '2'
+    -
+      value: 3
+      label: '3'
+    -
+      value: 4
+      label: '4'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

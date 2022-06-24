@@ -1,0 +1,22 @@
+uuid: e0d06912-86dd-42ac-910f-3ead265eb16b
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+    - system
+_core:
+  default_config_hash: LQfjUEHfFIDaX-i3A8sVw8Bgzu_JA4tfYSTmbS-WTZQ
+id: paragraph.field_wcms_pgph__menu
+field_name: field_wcms_pgph__menu
+entity_type: paragraph
+type: entity_reference
+settings:
+  target_type: menu
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

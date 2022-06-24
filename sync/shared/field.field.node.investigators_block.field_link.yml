@@ -1,0 +1,23 @@
+uuid: eaf6e35c-71f7-4195-b25b-42f1b8997c89
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_link
+    - node.type.investigators_block
+  module:
+    - link
+id: node.investigators_block.field_link
+field_name: field_link
+entity_type: node
+bundle: investigators_block
+label: link
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 1
+field_type: link

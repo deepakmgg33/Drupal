@@ -1,0 +1,21 @@
+uuid: da0ceb13-06d9-48f5-9bc1-fceab1df97ad
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_content_type
+    - node.type.congress_materials
+  module:
+    - text
+id: node.congress_materials.field_content_type
+field_name: field_content_type
+entity_type: node
+bundle: congress_materials
+label: content-type
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text

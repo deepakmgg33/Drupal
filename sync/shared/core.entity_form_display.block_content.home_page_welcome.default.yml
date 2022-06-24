@@ -1,0 +1,56 @@
+uuid: 2f057e9e-004b-486d-9dc6-0e71a9cfdd29
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.home_page_welcome
+    - field.field.block_content.home_page_welcome.body
+    - field.field.block_content.home_page_welcome.field_title
+  module:
+    - field_layout
+    - layout_discovery
+    - text
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings:
+      label: ''
+id: block_content.home_page_welcome.default
+targetEntityType: block_content
+bundle: home_page_welcome
+mode: default
+content:
+  body:
+    type: text_textarea_with_summary
+    weight: 26
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+      show_summary: false
+    third_party_settings: {  }
+    region: content
+  field_title:
+    weight: 27
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textfield
+    region: content
+  info:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 2
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+hidden: {  }

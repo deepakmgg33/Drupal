@@ -1,0 +1,11 @@
+uuid: ea4c9b10-b565-42b9-bf42-cf1f0997fd05
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.opportunities
+id: taxonomy_term.opportunities
+target_entity_type_id: taxonomy_term
+target_bundle: opportunities
+default_langcode: site_default
+language_alterable: false

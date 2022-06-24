@@ -1,0 +1,19 @@
+uuid: 238cc108-08e0-4c0d-a43a-ed5e73f9788d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_headline
+    - paragraphs.paragraphs_type.repeative_grid
+id: paragraph.repeative_grid.field_headline
+field_name: field_headline
+entity_type: paragraph
+bundle: repeative_grid
+label: Headline
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

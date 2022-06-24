@@ -1,0 +1,21 @@
+uuid: 526e7f6b-5f92-4a90-ac93-91c641609aa4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_title
+    - node.type.main_block
+  module:
+    - text
+id: node.main_block.field_title
+field_name: field_title
+entity_type: node
+bundle: main_block
+label: title
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text

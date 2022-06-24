@@ -1,0 +1,29 @@
+uuid: 83f3f499-7fe7-4a4e-a52f-18d96b9589e1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_phase
+    - node.type.publication_block
+    - taxonomy.vocabulary.phases
+id: node.publication_block.field_phase
+field_name: field_phase
+entity_type: node
+bundle: publication_block
+label: Phase
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      phases: phases
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

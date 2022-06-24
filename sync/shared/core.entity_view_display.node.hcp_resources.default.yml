@@ -1,0 +1,55 @@
+uuid: 0fcc8a22-5679-4e89-93bd-a884c81efb65
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.hcp_resources.body
+    - field.field.node.hcp_resources.field_hcp_list
+    - field.field.node.hcp_resources.field_resource_type
+    - field.field.node.hcp_resources.field_therapeutic_area
+    - node.type.hcp_resources
+  module:
+    - entity_reference_revisions
+    - text
+    - user
+id: node.hcp_resources.default
+targetEntityType: node
+bundle: hcp_resources
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_hcp_list:
+    type: entity_reference_revisions_entity_view
+    weight: 3
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_resource_type:
+    weight: 2
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_therapeutic_area:
+    weight: 1
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+hidden:
+  langcode: true
+  links: true
+  search_api_excerpt: true

@@ -1,0 +1,23 @@
+uuid: 75b4e240-0dd2-48f8-851c-2ab97b2c297c
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.immunology_block
+    - field.storage.block_content.body
+  module:
+    - text
+id: block_content.immunology_block.body
+field_name: body
+entity_type: block_content
+bundle: immunology_block
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: false
+  required_summary: false
+field_type: text_with_summary

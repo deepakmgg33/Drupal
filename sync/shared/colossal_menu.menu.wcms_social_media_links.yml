@@ -1,0 +1,8 @@
+uuid: 169cbc51-c7fd-41fd-a342-7b05ca86195f
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: GuIQ7ikUIM4T4dmmSKSSE3ApQnWqDprui9jtjUShtM4
+id: wcms_social_media_links
+label: 'Social Media Links'

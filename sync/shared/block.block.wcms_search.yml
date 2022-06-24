@@ -1,0 +1,23 @@
+uuid: 92b9a17a-ca8c-4fd4-b6e0-533e21d7746a
+langcode: en
+status: true
+dependencies:
+  module:
+    - search
+  theme:
+    - wcms
+_core:
+  default_config_hash: yGsCnHWWzbnshElvk5CNkQ7BZ9jlNTrzrEyAHocha9w
+id: wcms_search
+theme: wcms
+region: sidebar_first
+weight: -1
+provider: null
+plugin: search_form_block
+settings:
+  id: search_form_block
+  label: Search
+  provider: search
+  label_display: visible
+  page_id: ''
+visibility: {  }

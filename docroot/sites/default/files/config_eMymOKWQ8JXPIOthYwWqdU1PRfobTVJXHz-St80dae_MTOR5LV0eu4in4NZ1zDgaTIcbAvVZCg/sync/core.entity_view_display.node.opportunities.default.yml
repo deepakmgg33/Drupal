@@ -1,0 +1,210 @@
+uuid: 4c9243a5-168b-420c-82b5-819001084cd5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.opportunities.body
+    - field.field.node.opportunities.field_clinical_link
+    - field.field.node.opportunities.field_clinical_title
+    - field.field.node.opportunities.field_contents
+    - field.field.node.opportunities.field_investigator_d1
+    - field.field.node.opportunities.field_investigator_d2
+    - field.field.node.opportunities.field_investigator_link
+    - field.field.node.opportunities.field_investigator_link_d1
+    - field.field.node.opportunities.field_investigator_link_d2
+    - field.field.node.opportunities.field_investigator_link_d3
+    - field.field.node.opportunities.field_investigator_title
+    - field.field.node.opportunities.field_investogator_link_title
+    - field.field.node.opportunities.field_ucb_d1
+    - field.field.node.opportunities.field_ucb_d2
+    - field.field.node.opportunities.field_ucb_title
+    - node.type.opportunities
+  module:
+    - field_group
+    - text
+    - user
+third_party_settings:
+  field_group:
+    group_contents:
+      children:
+        - group_clinical_trial_data_sharin
+        - group_investigator_initiated_stu
+        - group_ucb_clinical_trial_investi
+      parent_name: ''
+      weight: 0
+      format_type: tabs
+      region: content
+      format_settings:
+        show_empty_fields: false
+        id: ''
+        classes: ''
+        direction: vertical
+        width_breakpoint: 640
+      label: Contents
+    group_clinical_trial_data_sharin:
+      children:
+        - field_clinical_title
+        - body
+        - field_clinical_link
+      parent_name: group_contents
+      weight: 14
+      format_type: tab
+      region: content
+      format_settings:
+        show_empty_fields: false
+        id: ''
+        classes: ''
+        description: ''
+        formatter: closed
+      label: 'Clinical Trial Data Sharing'
+    group_investigator_initiated_stu:
+      children:
+        - field_investigator_title
+        - field_investigator_d1
+        - field_investigator_d2
+        - field_investogator_link_title
+        - field_investigator_link_d1
+        - field_investigator_link
+        - field_investigator_link_d2
+        - field_investigator_link_d3
+      parent_name: group_contents
+      weight: 15
+      format_type: tab
+      region: content
+      format_settings:
+        show_empty_fields: false
+        id: ''
+        classes: ''
+        description: ''
+        formatter: closed
+      label: 'Investigator-Initiated Studies'
+    group_ucb_clinical_trial_investi:
+      children:
+        - field_ucb_title
+        - field_ucb_d1
+        - field_ucb_d2
+      parent_name: group_contents
+      weight: 16
+      format_type: tab
+      region: content
+      format_settings:
+        show_empty_fields: false
+        id: ''
+        classes: ''
+        description: ''
+        formatter: closed
+      label: 'UCB Clinical Trial Investigator'
+id: node.opportunities.default
+targetEntityType: node
+bundle: opportunities
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 3
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_clinical_link:
+    weight: 4
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_clinical_title:
+    weight: 2
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_investigator_d1:
+    weight: 6
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_investigator_d2:
+    weight: 8
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_investigator_link:
+    weight: 11
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_investigator_link_d1:
+    weight: 10
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_investigator_link_d2:
+    weight: 12
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_investigator_link_d3:
+    weight: 13
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_investigator_title:
+    weight: 5
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_investogator_link_title:
+    weight: 9
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_ucb_d1:
+    weight: 9
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_ucb_d2:
+    weight: 10
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_ucb_title:
+    weight: 8
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden:
+  field_contents: true
+  langcode: true
+  links: true
+  search_api_excerpt: true

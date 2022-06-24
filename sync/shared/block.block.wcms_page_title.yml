@@ -1,0 +1,20 @@
+uuid: 3175f1b6-dec6-4ef1-8029-d38f359254d2
+langcode: en
+status: true
+dependencies:
+  theme:
+    - wcms
+_core:
+  default_config_hash: 3JAAklEzBHWZ5MDLydAAxhalMy2eXrktXwC9jCPA30M
+id: wcms_page_title
+theme: wcms
+region: title
+weight: -50
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  provider: core
+  label_display: '0'
+visibility: {  }

@@ -1,0 +1,91 @@
+uuid: 6c94d5e1-9d2a-41bd-91c4-6ea9cbe98b41
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.dermatology
+    - field.storage.block_content.field_disease_dermatology
+    - paragraphs.paragraphs_type.disease
+  module:
+    - entity_reference_revisions
+id: block_content.dermatology.field_disease_dermatology
+field_name: field_disease_dermatology
+entity_type: block_content
+bundle: dermatology
+label: 'Disease dermatology'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      disease: disease
+    target_bundles_drag_drop:
+      disease:
+        enabled: true
+        weight: 22
+      from_library:
+        weight: 23
+        enabled: false
+      headline:
+        weight: 24
+        enabled: false
+      headline_icon_with_text:
+        weight: 25
+        enabled: false
+      headline_with_icon:
+        weight: 26
+        enabled: false
+      our_science:
+        weight: 27
+        enabled: false
+      repeative_grid:
+        weight: 28
+        enabled: false
+      wcms_asymmetric_translation:
+        weight: 29
+        enabled: false
+      wcms_pgph_backtotop:
+        weight: 30
+        enabled: false
+      wcms_pgph_document:
+        weight: 31
+        enabled: false
+      wcms_pgph_form:
+        weight: 32
+        enabled: false
+      wcms_pgph_grid:
+        weight: 33
+        enabled: false
+      wcms_pgph_logo:
+        weight: 34
+        enabled: false
+      wcms_pgph_menu:
+        weight: 35
+        enabled: false
+      wcms_pgph_printversion:
+        weight: 36
+        enabled: false
+      wcms_pgph_slider:
+        weight: 37
+        enabled: false
+      wcms_pgph_slideritem:
+        weight: 38
+        enabled: false
+      wcms_pgph_socialmedia:
+        weight: 39
+        enabled: false
+      wcms_pgph_teaser:
+        weight: 40
+        enabled: false
+      wcms_pgph_view:
+        weight: 41
+        enabled: false
+      wcms_pgph_wysiwyg:
+        weight: 42
+        enabled: false
+field_type: entity_reference_revisions

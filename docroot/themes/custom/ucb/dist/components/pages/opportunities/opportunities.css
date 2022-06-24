@@ -1,0 +1,36 @@
+.opportunities-page.main {
+  background: none;
+}
+
+.opportunities-page article {
+  padding-left: 70px;
+}
+
+.opportunities-page .vertical-tabs__menu {
+  border: 0;
+}
+
+.opportunities-page .vertical-tabs__menu li {
+  background-color: transparent;
+}
+
+.opportunities-page .vertical-tabs__menu li:hover {
+  border-bottom: 3px solid #71c5e8;
+}
+
+.opportunities-page .vertical-tabs__menu li.is-selected .vertical-tabs__menu-item-title {
+  color: #888;
+  text-decoration: none;
+}
+
+.opportunities-page .vertical-tabs__menu li a {
+  color: #888;
+}
+
+.opportunities-page .vertical-tabs__menu li a:hover,
+.opportunities-page .vertical-tabs__menu li a strong:hover {
+  border: 0;
+  outline: none;
+  text-decoration: none;
+}
+/*# sourceMappingURL=../../../maps/pages/opportunities/opportunities.css.map */

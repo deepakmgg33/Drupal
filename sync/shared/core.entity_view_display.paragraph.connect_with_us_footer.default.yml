@@ -1,0 +1,32 @@
+uuid: 997b4d59-1a1b-4860-bdee-a7880addcf7f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.connect_with_us_footer.field_connect_desc
+    - field.field.paragraph.connect_with_us_footer.field_connect_title
+    - paragraphs.paragraphs_type.connect_with_us_footer
+  module:
+    - text
+id: paragraph.connect_with_us_footer.default
+targetEntityType: paragraph
+bundle: connect_with_us_footer
+mode: default
+content:
+  field_connect_desc:
+    weight: 1
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_connect_title:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden:
+  search_api_excerpt: true

@@ -1,0 +1,22 @@
+uuid: 004a962d-dabe-4eff-b0f1-1f0307450c89
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - rls
+_core:
+  default_config_hash: o6qzL0gmFH0iN0vHxKJ6H1qfxla7JepLqvXofF7bw0A
+id: rls_messages
+theme: rls
+region: dialogs
+weight: 0
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Status messages'
+  provider: system
+  label_display: '0'
+visibility: {  }

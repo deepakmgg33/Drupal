@@ -1,0 +1,29 @@
+uuid: 8924b79a-4b2e-4c93-b5b0-a1c488753055
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_contents
+    - node.type.opportunities
+    - taxonomy.vocabulary.opportunities
+id: node.opportunities.field_contents
+field_name: field_contents
+entity_type: node
+bundle: opportunities
+label: Contents
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      opportunities: opportunities
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

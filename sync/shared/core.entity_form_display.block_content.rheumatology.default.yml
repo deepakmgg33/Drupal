@@ -1,0 +1,69 @@
+uuid: 0cda72dc-6370-4248-9a91-9c8e6b82e74a
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.rheumatology
+    - field.field.block_content.rheumatology.field_disease_rheumatology
+    - field.field.block_content.rheumatology.field_rh_image
+    - field.field.block_content.rheumatology.field_rheumatology_title
+    - image.style.thumbnail
+  module:
+    - field_layout
+    - image
+    - layout_discovery
+    - paragraphs
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings:
+      label: ''
+id: block_content.rheumatology.default
+targetEntityType: block_content
+bundle: rheumatology
+mode: default
+content:
+  field_disease_rheumatology:
+    type: entity_reference_paragraphs
+    weight: 28
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    region: content
+  field_rh_image:
+    weight: 27
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_rheumatology_title:
+    weight: 26
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  info:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 2
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+hidden: {  }

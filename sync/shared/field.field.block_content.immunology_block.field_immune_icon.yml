@@ -1,0 +1,38 @@
+uuid: b44386cb-3a80-46a2-a554-77d030c50b09
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.immunology_block
+    - field.storage.block_content.field_immune_icon
+  module:
+    - image
+id: block_content.immunology_block.field_immune_icon
+field_name: field_immune_icon
+entity_type: block_content
+bundle: immunology_block
+label: 'Immune icon'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'png gif jpg jpeg'
+  max_filesize: ''
+  max_resolution: ''
+  min_resolution: ''
+  alt_field: true
+  alt_field_required: true
+  title_field: false
+  title_field_required: false
+  default_image:
+    uuid: ''
+    alt: ''
+    title: ''
+    width: null
+    height: null
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: image

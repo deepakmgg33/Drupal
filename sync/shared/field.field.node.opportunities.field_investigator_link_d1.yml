@@ -1,0 +1,21 @@
+uuid: 821e2919-eb13-4add-af8e-cb0f96bb92d5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_investigator_link_d1
+    - node.type.opportunities
+  module:
+    - text
+id: node.opportunities.field_investigator_link_d1
+field_name: field_investigator_link_d1
+entity_type: node
+bundle: opportunities
+label: 'Investigator link d1'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

@@ -1,0 +1,31 @@
+uuid: 173ba54a-93cd-4f88-8e2e-62d804e77704
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:repeative_grid:5dfca54e-6899-432a-8895-294feec05d36'
+  module:
+    - block_content
+    - system
+  theme:
+    - ucb
+id: homepagerepeativegrid
+theme: ucb
+region: content
+weight: -7
+provider: null
+plugin: 'block_content:5dfca54e-6899-432a-8895-294feec05d36'
+settings:
+  id: 'block_content:5dfca54e-6899-432a-8895-294feec05d36'
+  label: 'Home page repeative grid'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }

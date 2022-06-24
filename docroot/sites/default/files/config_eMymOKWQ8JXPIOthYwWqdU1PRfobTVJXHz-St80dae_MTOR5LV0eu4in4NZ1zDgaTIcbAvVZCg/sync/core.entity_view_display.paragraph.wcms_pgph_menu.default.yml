@@ -1,0 +1,68 @@
+uuid: 3048d5ee-6fa8-472b-b518-7d83d083a9f8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.wcms_pgph_menu.field_wcms_pgph__menu
+    - field.field.paragraph.wcms_pgph_menu.field_wcms_pgph__view_mode
+    - paragraphs.paragraphs_type.wcms_pgph_menu
+  module:
+    - field_layout
+    - layout_builder
+    - layout_discovery
+    - menu_reference_render
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings:
+      label: ''
+  layout_builder:
+    enabled: true
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+        components:
+          f2cf2b43-cd20-446c-b0c2-a89bfe3f3b64:
+            uuid: f2cf2b43-cd20-446c-b0c2-a89bfe3f3b64
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:paragraph:wcms_pgph_menu:field_wcms_pgph__menu'
+              formatter:
+                label: hidden
+                settings:
+                  expand_all_items: false
+                third_party_settings: {  }
+                type: menu_reference_render
+            additional: {  }
+            weight: 0
+        third_party_settings: {  }
+_core:
+  default_config_hash: 8hTNeyvB9kqKtKt2_reQDfeZ9jzn3O7qUZBRtyGVHbY
+id: paragraph.wcms_pgph_menu.default
+targetEntityType: paragraph
+bundle: wcms_pgph_menu
+mode: default
+content:
+  field_pgph__menu:
+    weight: 0
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: menu_reference_render
+    region: content
+  field_wcms_pgph__menu:
+    weight: 0
+    label: hidden
+    settings:
+      expand_all_items: false
+    third_party_settings: {  }
+    type: menu_reference_render
+    region: content
+hidden:
+  field_wcms_pgph__view_mode: true
+  search_api_excerpt: true

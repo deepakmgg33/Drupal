@@ -1,0 +1,18 @@
+uuid: 495f3d59-dad3-4887-81c6-80904e3ddcd6
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.main_block
+id: node.main_block.title
+field_name: title
+entity_type: node
+bundle: main_block
+label: title
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

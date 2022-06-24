@@ -1,0 +1,30 @@
+uuid: 6644b8e0-94e5-4569-92ed-769f31f8aef9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.ou.body
+    - field.field.node.ou.field_our_science
+    - node.type.ou
+  module:
+    - entity_reference_revisions
+    - user
+id: node.ou.default
+targetEntityType: node
+bundle: ou
+mode: default
+content:
+  field_our_science:
+    type: entity_reference_revisions_entity_view
+    weight: 0
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+hidden:
+  body: true
+  langcode: true
+  links: true
+  search_api_excerpt: true

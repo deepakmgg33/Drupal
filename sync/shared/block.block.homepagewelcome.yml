@@ -1,0 +1,31 @@
+uuid: 4135af97-7119-42c9-9703-ac070a84900b
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:home_page_welcome:9a952493-d825-4f3e-90e5-7062f8a06411'
+  module:
+    - block_content
+    - system
+  theme:
+    - ucb
+id: homepagewelcome
+theme: ucb
+region: content
+weight: 0
+provider: null
+plugin: 'block_content:9a952493-d825-4f3e-90e5-7062f8a06411'
+settings:
+  id: 'block_content:9a952493-d825-4f3e-90e5-7062f8a06411'
+  label: home-page-welcome
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }

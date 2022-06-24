@@ -1,0 +1,12 @@
+uuid: e1e117fc-c838-465a-b69d-90d84ab2c383
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: slvoUqTJbLB-Fpb5unGsSJ8AzWrGgo6Oe6fS1hdESfs
+id: wcms_pgph_view
+label: View
+icon_uuid: null
+icon_default: null
+description: null
+behavior_plugins: {  }

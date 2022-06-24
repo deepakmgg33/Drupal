@@ -1,0 +1,21 @@
+uuid: cb01cbe5-7f8e-4e86-b677-e6da8ec42735
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_event_name
+    - node.type.congress_materials
+  module:
+    - text
+id: node.congress_materials.field_event_name
+field_name: field_event_name
+entity_type: node
+bundle: congress_materials
+label: event-name
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text

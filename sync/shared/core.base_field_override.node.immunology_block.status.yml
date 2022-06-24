@@ -1,0 +1,22 @@
+uuid: 432e7a47-a654-4bef-a57c-ce75b8fe9c29
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.immunology_block
+id: node.immunology_block.status
+field_name: status
+entity_type: node
+bundle: immunology_block
+label: Published
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

@@ -1,0 +1,145 @@
+uuid: 9a1e5d3f-7cf4-4fde-bca8-be733278c5bd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.wcms_pgph_slideritem.field_wcms_pgph__description
+    - field.field.paragraph.wcms_pgph_slideritem.field_wcms_pgph__link
+    - field.field.paragraph.wcms_pgph_slideritem.field_wcms_pgph__media
+    - field.field.paragraph.wcms_pgph_slideritem.field_wcms_pgph__slider__title
+    - field.field.paragraph.wcms_pgph_slideritem.field_wcms_pgph__view_mode
+    - paragraphs.paragraphs_type.wcms_pgph_slideritem
+  module:
+    - field_layout
+    - layout_builder
+    - layout_discovery
+    - link
+    - text
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings:
+      label: ''
+  layout_builder:
+    enabled: true
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+        components:
+          1400c3f6-1edd-4787-ae50-9f6fe7fe0e07:
+            uuid: 1400c3f6-1edd-4787-ae50-9f6fe7fe0e07
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:paragraph:wcms_pgph_slideritem:field_wcms_pgph__slider__title'
+              formatter:
+                label: hidden
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+                type: string
+            additional: {  }
+            weight: 0
+          1eb67065-33bf-428c-a813-5896c2281a58:
+            uuid: 1eb67065-33bf-428c-a813-5896c2281a58
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:paragraph:wcms_pgph_slideritem:field_wcms_pgph__media'
+              formatter:
+                label: hidden
+                settings:
+                  link: true
+                  view_mode: default
+                third_party_settings: {  }
+                type: entity_reference_entity_view
+            additional: {  }
+            weight: 1
+          042ed296-d64b-4338-af09-1a878ca7d554:
+            uuid: 042ed296-d64b-4338-af09-1a878ca7d554
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:paragraph:wcms_pgph_slideritem:field_wcms_pgph__description'
+              formatter:
+                label: hidden
+                settings: {  }
+                third_party_settings: {  }
+                type: text_default
+            additional: {  }
+            weight: 2
+          3074fe59-aece-43da-81d5-5ce19eeb947c:
+            uuid: 3074fe59-aece-43da-81d5-5ce19eeb947c
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:paragraph:wcms_pgph_slideritem:field_wcms_pgph__link'
+              formatter:
+                label: hidden
+                settings:
+                  trim_length: 80
+                  url_only: false
+                  url_plain: false
+                  rel: ''
+                  target: ''
+                third_party_settings: {  }
+                type: link
+            additional: {  }
+            weight: 3
+        third_party_settings: {  }
+_core:
+  default_config_hash: x_3rpioIh7S1NutJfv6BMBY3lu0b_xVe3kiSr8O-RtU
+id: paragraph.wcms_pgph_slideritem.default
+targetEntityType: paragraph
+bundle: wcms_pgph_slideritem
+mode: default
+content:
+  field_wcms_pgph__description:
+    weight: 2
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_wcms_pgph__link:
+    weight: 3
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_wcms_pgph__media:
+    weight: 1
+    label: hidden
+    settings:
+      link: true
+      view_mode: default
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+    region: content
+  field_wcms_pgph__slider__title:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden:
+  field_wcms_pgph__view_mode: true
+  search_api_excerpt: true

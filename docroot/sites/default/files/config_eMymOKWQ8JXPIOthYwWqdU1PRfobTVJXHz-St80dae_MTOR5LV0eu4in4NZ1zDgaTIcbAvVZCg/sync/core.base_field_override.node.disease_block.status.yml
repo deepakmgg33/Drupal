@@ -1,0 +1,22 @@
+uuid: 1a0bc4bb-ab0a-4afc-bbba-ca16a21cc934
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.disease_block
+id: node.disease_block.status
+field_name: status
+entity_type: node
+bundle: disease_block
+label: Published
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

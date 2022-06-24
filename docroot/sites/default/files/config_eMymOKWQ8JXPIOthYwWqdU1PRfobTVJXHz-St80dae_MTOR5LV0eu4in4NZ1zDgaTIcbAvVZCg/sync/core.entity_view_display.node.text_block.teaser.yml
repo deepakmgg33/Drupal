@@ -1,0 +1,28 @@
+uuid: e521fd14-1208-441e-bb91-4d462064ae92
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.text_block.field_icon
+    - field.field.node.text_block.field_image_link
+    - field.field.node.text_block.field_title
+    - node.type.text_block
+  module:
+    - user
+id: node.text_block.teaser
+targetEntityType: node
+bundle: text_block
+mode: teaser
+content:
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_icon: true
+  field_image_link: true
+  field_title: true
+  langcode: true
+  search_api_excerpt: true

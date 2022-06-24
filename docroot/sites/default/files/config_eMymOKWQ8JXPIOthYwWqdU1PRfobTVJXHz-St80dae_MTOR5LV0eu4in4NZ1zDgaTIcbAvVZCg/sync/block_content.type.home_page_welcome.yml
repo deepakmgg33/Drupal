@@ -1,0 +1,8 @@
+uuid: d9a092d9-12fc-4227-8be0-ecae9194e1e0
+langcode: en
+status: true
+dependencies: {  }
+id: home_page_welcome
+label: Welcome
+revision: 0
+description: ''

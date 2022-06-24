@@ -1,0 +1,21 @@
+uuid: 1fcc5af3-f9b5-47f6-acbc-453ce6aafd44
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_title
+    - node.type.investigators_block
+  module:
+    - text
+id: node.investigators_block.field_title
+field_name: field_title
+entity_type: node
+bundle: investigators_block
+label: title
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text

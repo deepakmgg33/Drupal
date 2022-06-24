@@ -1,0 +1,90 @@
+uuid: 45ee960e-0778-4f2b-8155-a3f796b91a37
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.wcms_pgph_slideritem.field_wcms_pgph__description
+    - field.field.paragraph.wcms_pgph_slideritem.field_wcms_pgph__link
+    - field.field.paragraph.wcms_pgph_slideritem.field_wcms_pgph__media
+    - field.field.paragraph.wcms_pgph_slideritem.field_wcms_pgph__slider__title
+    - field.field.paragraph.wcms_pgph_slideritem.field_wcms_pgph__view_mode
+    - paragraphs.paragraphs_type.wcms_pgph_slideritem
+  module:
+    - field_group
+    - field_layout
+    - layout_discovery
+    - link
+    - media_library
+    - text
+    - view_mode_selector
+third_party_settings:
+  field_group:
+    group_slider_item:
+      children:
+        - field_wcms_pgph__slider__title
+        - field_wcms_pgph__media
+        - field_wcms_pgph__description
+        - field_wcms_pgph__link
+        - field_wcms_pgph__view_mode
+      parent_name: ''
+      weight: 0
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+      label: 'Slider Item'
+      region: content
+  field_layout:
+    id: layout_onecol
+    settings:
+      label: ''
+_core:
+  default_config_hash: fkZMtDMj3KVf7v5deOzBytTh86y8-omhqejKODh3DuQ
+id: paragraph.wcms_pgph_slideritem.default
+targetEntityType: paragraph
+bundle: wcms_pgph_slideritem
+mode: default
+content:
+  field_wcms_pgph__description:
+    weight: 3
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_wcms_pgph__link:
+    weight: 4
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_wcms_pgph__media:
+    type: media_library_widget
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_wcms_pgph__slider__title:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_wcms_pgph__view_mode:
+    weight: 5
+    settings: {  }
+    third_party_settings: {  }
+    type: view_mode_selector_select
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

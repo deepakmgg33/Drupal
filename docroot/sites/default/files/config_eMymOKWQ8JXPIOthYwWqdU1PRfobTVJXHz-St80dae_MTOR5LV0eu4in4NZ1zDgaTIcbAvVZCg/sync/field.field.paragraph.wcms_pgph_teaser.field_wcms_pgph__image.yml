@@ -1,0 +1,30 @@
+uuid: 7839aea8-df73-4938-9c1c-48bd4257e22b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_wcms_pgph__image
+    - media.type.image
+    - paragraphs.paragraphs_type.wcms_pgph_teaser
+_core:
+  default_config_hash: MHxkb0ORX64aCZYZDBZcWVtybjB53SCanu_gkbuoNY4
+id: paragraph.wcms_pgph_teaser.field_wcms_pgph__image
+field_name: field_wcms_pgph__image
+entity_type: paragraph
+bundle: wcms_pgph_teaser
+label: Image
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

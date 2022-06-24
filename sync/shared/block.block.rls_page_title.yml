@@ -1,0 +1,20 @@
+uuid: 4d1f72c7-db1e-4309-8da2-e5afbcc6d0a8
+langcode: en
+status: true
+dependencies:
+  theme:
+    - rls
+_core:
+  default_config_hash: 3JAAklEzBHWZ5MDLydAAxhalMy2eXrktXwC9jCPA30M
+id: rls_page_title
+theme: rls
+region: dialogs
+weight: -50
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  provider: core
+  label_display: '0'
+visibility: {  }

@@ -1,0 +1,19 @@
+uuid: 55e26991-5fa5-4e1d-a08f-5b44c306249e
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.medical_information
+    - field.storage.block_content.field_medico_block_title
+id: block_content.medical_information.field_medico_block_title
+field_name: field_medico_block_title
+entity_type: block_content
+bundle: medical_information
+label: 'medico block title'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

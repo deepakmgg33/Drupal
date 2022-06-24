@@ -1,0 +1,47 @@
+uuid: 25cc61f3-0728-4a34-8db4-3e3bb8771df1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.headline_with_icon.field_headline_with_icon
+    - field.field.paragraph.headline_with_icon.field_science_icon
+    - image.style.thumbnail
+    - paragraphs.paragraphs_type.headline_with_icon
+  module:
+    - field_layout
+    - image
+    - layout_discovery
+    - paragraphs
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings:
+      label: ''
+id: paragraph.headline_with_icon.default
+targetEntityType: paragraph
+bundle: headline_with_icon
+mode: default
+content:
+  field_headline_with_icon:
+    type: entity_reference_paragraphs
+    weight: 0
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    region: content
+  field_science_icon:
+    weight: 1
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+hidden:
+  created: true
+  status: true

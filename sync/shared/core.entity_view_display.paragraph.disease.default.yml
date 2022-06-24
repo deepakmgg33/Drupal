@@ -1,0 +1,83 @@
+uuid: fd011dd8-92a5-4cec-ad48-001fac28d1cb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.disease.field_disease_body
+    - field.field.paragraph.disease.field_disease_image
+    - field.field.paragraph.disease.field_disease_link
+    - field.field.paragraph.disease.field_disease_name
+    - field.field.paragraph.disease.field_disease_video
+    - field.field.paragraph.disease.field_disease_video_link
+    - paragraphs.paragraphs_type.disease
+  module:
+    - image
+    - link
+    - text
+    - video_embed_field
+id: paragraph.disease.default
+targetEntityType: paragraph
+bundle: disease
+mode: default
+content:
+  field_disease_body:
+    weight: 2
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_disease_image:
+    weight: 1
+    label: hidden
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_disease_link:
+    weight: 3
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_disease_name:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_disease_video:
+    weight: 4
+    label: hidden
+    settings:
+      responsive: true
+      width: 854
+      height: 480
+      autoplay: true
+    third_party_settings: {  }
+    type: video_embed_field_video
+    region: content
+  field_disease_video_link:
+    weight: 5
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+hidden:
+  search_api_excerpt: true

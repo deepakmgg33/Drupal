@@ -1,0 +1,62 @@
+uuid: 4df28466-0116-42fc-94cf-6970c6bb9e30
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.medical_information
+    - field.field.block_content.medical_information.field_medico_block_desc
+    - field.field.block_content.medical_information.field_medico_block_title
+    - field.field.block_content.medical_information.field_medico_title
+  module:
+    - field_layout
+    - layout_discovery
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings:
+      label: ''
+id: block_content.medical_information.default
+targetEntityType: block_content
+bundle: medical_information
+mode: default
+content:
+  field_medico_block_desc:
+    weight: 28
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_medico_block_title:
+    weight: 27
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_medico_title:
+    weight: 26
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  info:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 2
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+hidden: {  }

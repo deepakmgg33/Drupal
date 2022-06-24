@@ -1,0 +1,59 @@
+uuid: d460e059-4ed4-4c79-94c8-e66458559b17
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.wcms_pgph_form.field_wcms_pgph__form
+    - field.field.paragraph.wcms_pgph_form.field_wcms_pgph__view_mode
+    - paragraphs.paragraphs_type.wcms_pgph_form
+  module:
+    - field_group
+    - field_layout
+    - layout_discovery
+    - view_mode_selector
+    - webform
+third_party_settings:
+  field_group:
+    group_form:
+      children:
+        - field_wcms_pgph__form
+        - field_wcms_pgph__view_mode
+      parent_name: ''
+      weight: 0
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+      label: Form
+      region: content
+  field_layout:
+    id: layout_onecol
+    settings:
+      label: ''
+_core:
+  default_config_hash: uD2vtuAWkTLljhtiDvR0n89A_EX4-x8AZIWR-M-74DQ
+id: paragraph.wcms_pgph_form.default
+targetEntityType: paragraph
+bundle: wcms_pgph_form
+mode: default
+content:
+  field_wcms_pgph__form:
+    weight: 1
+    settings:
+      default_data: true
+    third_party_settings: {  }
+    type: webform_entity_reference_select
+    region: content
+  field_wcms_pgph__view_mode:
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    type: view_mode_selector_select
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

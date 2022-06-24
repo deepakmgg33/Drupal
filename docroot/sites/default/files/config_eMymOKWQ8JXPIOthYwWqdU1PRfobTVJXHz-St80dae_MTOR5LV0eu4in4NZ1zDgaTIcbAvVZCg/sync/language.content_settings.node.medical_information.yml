@@ -1,0 +1,11 @@
+uuid: 8d0009f8-b078-4311-8215-fb24629a455b
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.medical_information
+id: node.medical_information
+target_entity_type_id: node
+target_bundle: medical_information
+default_langcode: site_default
+language_alterable: false

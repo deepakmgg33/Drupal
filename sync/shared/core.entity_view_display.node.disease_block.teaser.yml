@@ -1,0 +1,40 @@
+uuid: 01206eaf-8978-41b9-9d02-6147c5e859ca
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.disease_block.body
+    - field.field.node.disease_block.field_link
+    - field.field.node.disease_block.field_summary
+    - field.field.node.disease_block.field_thumbnail_image
+    - field.field.node.disease_block.field_title
+    - node.type.disease_block
+  module:
+    - text
+    - user
+id: node.disease_block.teaser
+targetEntityType: node
+bundle: disease_block
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_link: true
+  field_summary: true
+  field_thumbnail_image: true
+  field_title: true
+  langcode: true
+  search_api_excerpt: true

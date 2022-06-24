@@ -1,0 +1,11 @@
+uuid: cd909cd8-6874-4714-90cc-9c5b33dc1c0f
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.opportunities
+id: block_content.opportunities
+target_entity_type_id: block_content
+target_bundle: opportunities
+default_langcode: site_default
+language_alterable: false

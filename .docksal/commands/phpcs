@@ -1,0 +1,249 @@
+#!/bin/bash
+
+## Local script to run Docksal powered phpcs.
+##
+## USAGE
+##  - fin phpcs count - run phpcs and output only total number of errors and warnings.
+##  - fin phpcs report - generate phpcs report in txt or tar.gz.
+##  - fin phpcs - run multi-step phpcs in verbose mode with ability to go through phpcbf.
+
+#-------------------------- Settings --------------------------------
+
+CODE_DIR="profiles/pfgcslt_profile"
+PHPCS_FOLDERS=(
+  "$CODE_DIR/modules/custom"
+  "$CODE_DIR/themes/custom"
+)
+PHPCS_DRUPAL_PRACTICE_EXTENSIONS="php,module/php,inc/php,install/php,test/php,profile/php,theme/php,js,css"
+PHPCS_EXTENSIONS="${PHPCS_DRUPAL_PRACTICE_EXTENSIONS},info,txt,md"
+IGNORE_PATHS="pharmacists/.npm/*,pharmacists/libraries/*,pharmacists/js/vendor/*"
+
+#-------------------------- END: Settings --------------------------------
+
+
+#-------------------------- Helper functions --------------------------------
+
+# Console colors
+red='\033[0;31m'
+red_bg='\033[41m'
+green='\033[0;32m'
+green_bg='\033[0;30m\033[42m'
+yellow='\033[1;33m'
+NC='\033[0m'
+
+echo-red () { [ "$SILENT_MODE" != 1 ] && echo -e "${red}$1${NC}" || return 0; }
+echo-green () { [ "$SILENT_MODE" != 1 ] && echo -e "${green}$1${NC}" || return 0; }
+echo-green-bg () { [ "$SILENT_MODE" != 1 ] && echo -e "${green_bg}$1${NC}" || return 0; }
+echo-yellow () { [ "$SILENT_MODE" != 1 ] && echo -e "${yellow}$1${NC}" || return 0; }
+
+# Yes/no confirmation dialog with an optional message.
+# @param $1 confirmation message
+# @param $2 default answer (y/n). If set, confirmation time will be  limited
+#   to 20 seconds).
+#
+# @return bool to be used in 'if' to skip some pieces of code from execution.
+_confirm_next_step()
+{
+  local question="${1:-Continue with this step?}"
+  [[ "$2" != "" ]] && question="$question (default: ${2})"
+  if [ "$SILENT_MODE" = "1" ]; then
+    case $2 in
+      [Yy] | [Yy][Ee][Ss])
+        return 0
+      ;;
+      *)
+        return 1
+    esac
+  else
+    while true; do
+      if [[ "$2" = "" ]]; then
+        read -rp "$question [y/n]: " answer
+      else
+        read -t 10 -rp "$question [y/n]: " answer
+        if [[ "$answer" = "" ]]; then
+          answer=$2
+          echo "$answer"
+        fi
+      fi
+      case $answer in
+        [Yy] | [Yy][Ee][Ss])
+          break
+        ;;
+        [Nn] | [Nn][Oo])
+          return 1
+        ;;
+        *)
+          echo 'Please answer yes or no.'
+      esac
+    done
+  fi
+  return 0
+}
+
+charset_fix()
+{
+  FILE="$CODE_DIR/themes/custom/pharmacists/css/style.css"
+  if [[ "$1" != "restore" ]]; then
+    sed -i.orig -e "/@charset/d" "$FILE"
+  elif [[ -f "${FILE}.orig" ]]; then
+    rm "$FILE"
+    mv "${FILE}.orig" "$FILE"
+  fi
+}
+
+#-------------------------- END: Helper functions --------------------------------
+
+
+#-------------------------- Functions --------------------------------
+
+# Run phpcbf to fix some violations automatically.
+phpcbf()
+{
+  if _confirm_next_step "Would you like to fix some issues automatically by phpcbf?" "n"; then
+    for FOLDER in ${PHPCS_FOLDERS[@]}; do
+      if [ -d $FOLDER ]; then
+        echo-yellow "Check files inside ${FOLDER}..."
+        fin exec "phpcbf --ignore=${IGNORE_PATHS} --standard=Drupal --extensions=${PHPCS_EXTENSIONS} $FOLDER; sleep 5"
+        fin exec "phpcbf --ignore=${IGNORE_PATHS} --standard=DrupalPractice --extensions=${PHPCS_DRUPAL_PRACTICE_EXTENSIONS} $FOLDER; sleep 5"
+      fi
+    done
+  else
+    [ "$SILENT_MODE" != 1 ] && echo "Automated fixing skipped."
+  fi
+}
+
+# Verify specified folders with PHPCS.
+check_phpcs()
+{
+  #charset_fix
+  if [[ ! -d "${DOCROOT}" ]]; then
+    mkdir -p "${DOCROOT}"
+  fi
+  local PHPCS_REPORT_FILE="${DOCROOT}/${PHPCS_REPORT_FILE_NAME}"
+
+  # Delete existing report.
+  rm -f $PHPCS_REPORT_FILE
+
+  for FOLDER in ${PHPCS_FOLDERS[@]}; do
+    if [ -d $FOLDER ]; then
+      fin exec "phpcs ${@} --ignore=${IGNORE_PATHS} --standard=Drupal --extensions=${PHPCS_EXTENSIONS} $FOLDER >> $PHPCS_REPORT_FILE"
+      fin exec "phpcs ${@} --ignore=${IGNORE_PATHS} --standard=DrupalPractice --extensions=${PHPCS_DRUPAL_PRACTICE_EXTENSIONS} $FOLDER >> $PHPCS_REPORT_FILE"
+    fi
+  done
+  #charset_fix 'restore'
+  echo-yellow "Completed."
+}
+
+# Echo count errors or warnings.
+count()
+{
+  local PHPCS_REPORT_FILE="${DOCROOT}/${PHPCS_REPORT_FILE_NAME}"
+
+  # Delete existing report.
+  if [ ! -f $PHPCS_REPORT_FILE ]; then
+    check_phpcs "-qw"
+    compress
+  fi
+  echo $(grep -c "$1" "$PHPCS_REPORT_FILE")
+}
+
+# Verify specified folders with PHPCS.
+phpcs()
+{
+  local PHPCS_REPORT_FILE="${DOCROOT}/${PHPCS_REPORT_FILE_NAME}"
+
+  # Delete existing report.
+  rm -f $PHPCS_REPORT_FILE
+
+  for FOLDER in ${PHPCS_FOLDERS[@]}; do
+    if [ -d $FOLDER ]; then
+      fin exec "phpcs ${@} --ignore=${IGNORE_PATHS} --standard=Drupal --extensions=${PHPCS_EXTENSIONS} $FOLDER"
+      fin exec "phpcs ${@} --ignore=${IGNORE_PATHS} --standard=DrupalPractice --extensions=${PHPCS_DRUPAL_PRACTICE_EXTENSIONS} $FOLDER"
+    fi
+  done
+  echo-yellow "Completed."
+}
+
+# Compress report.
+# @param $1 (optional) File name or directory name to compress.
+compress()
+{
+  if _confirm_next_step "Would you like to compress txt report in .tar.gz archive?" "y"; then
+    local FILE=$([[ "$1" = "" ]] && echo "${PHPCS_REPORT_FILE_NAME}" || echo "$1")
+    ERRORS=$(fin exec "tar -czf '${DOCROOT}/${FILE}.tar.gz' -C '${DOCROOT}' '${FILE}'")
+    if [ "$ERRORS" = "" ]; then
+      rm -f "$PHPCS_REPORT_FILE_NAME"
+      PHPCS_REPORT_FILE_NAME="${PHPCS_REPORT_FILE_NAME}.tar.gz"
+      echo-yellow "Compressing completed."
+    else
+      echo-red "Something went wrong during compressing: $ERRORS"
+    fi
+  else
+    [ "$SILENT_MODE" != 1 ] && echo "Compressing skipped."
+  fi
+}
+
+#-------------------------- Execution --------------------------------
+
+# Set repo root as working directory.
+PROJECT_ROOT=$(git rev-parse --show-toplevel)
+if [[ -z "$PROJECT_ROOT" ]]; then
+	echo-red "Git repository was not found"
+	exit 1;
+fi
+if ! fin ps | grep -Eoq "cli.*Up"; then
+  fin up
+  CLI_IS_UP='false'
+else
+  CLI_IS_UP='true'
+fi
+
+cd "$PROJECT_ROOT"
+
+case "$1" in
+  count)
+    shift
+    SILENT_MODE=1
+    case "$1" in
+      warnings)
+        count '| WARNING |'
+      ;;
+      *)
+        count '| ERROR '
+      ;;
+    esac
+  ;;
+  report)
+    SILENT_MODE=1
+    echo -e "${green_bg} Step 1 ${NC}${green} Generating phpcs report...${NC}"
+    check_phpcs "-qw"
+    PHPCS_ERRORS=$(count '| ERROR ')
+    PHPCS_WARNINGS=$(count '| WARNING |')
+    echo -e "${green_bg} Step 2 ${NC}${green} Compressing the report...${NC}"
+    compress
+    # Finaly output a link to txt/tar.gz-file.
+    echo
+    echo -e "${green_bg} DONE! ${NC} "
+    echo
+    echo -e "${yellow}ERRORS:${NC}   ${red}${PHPCS_ERRORS}${NC}"
+    echo -e "${yellow}WARNINGS:${NC} ${red}${PHPCS_WARNINGS}${NC}"
+    echo
+    echo -e "Download the PHPCS report ${yellow}http://${SITE_DOMAIN}/${PHPCS_REPORT_FILE_NAME}${NC}."
+  ;;
+  *)
+    SILENT_MODE=0
+    echo -e "${green_bg} Step 1 ${NC}${green} Automated fixing (phpcbf)...${NC}"
+    phpcbf
+    echo -e "${green_bg} Step 2 ${NC}${green} Running phpcs...${NC}"
+    phpcs "-pwv"
+
+    # Finaly output a link to txt/tar.gz-file.
+    echo
+    echo -e "${green_bg} DONE! ${NC} "
+  ;;
+esac
+
+if [[ "$CLI_IS_UP" = "false" ]]; then
+  fin stop
+fi
+ 

@@ -1,0 +1,11 @@
+uuid: d4404b3c-38c5-47bf-a89c-c520b76aae26
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.hcp_resources
+id: node.hcp_resources
+target_entity_type_id: node
+target_bundle: hcp_resources
+default_langcode: site_default
+language_alterable: false

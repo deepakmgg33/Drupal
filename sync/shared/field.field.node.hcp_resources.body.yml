@@ -1,0 +1,23 @@
+uuid: a92f757f-cb73-469d-9b9e-46b28bf68b3e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.hcp_resources
+  module:
+    - text
+id: node.hcp_resources.body
+field_name: body
+entity_type: node
+bundle: hcp_resources
+label: Title
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

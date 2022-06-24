@@ -1,0 +1,10 @@
+uuid: 0d64e258-797e-4dc4-bb79-5667a215ce8f
+langcode: en
+status: true
+dependencies: {  }
+id: headline_with_icon
+label: 'Headline with icon'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

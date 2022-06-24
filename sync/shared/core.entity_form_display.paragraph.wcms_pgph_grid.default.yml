@@ -1,0 +1,72 @@
+uuid: 9150732d-291a-4313-9ba9-26a4adecf154
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.wcms_pgph_grid.field_wcms_pgph__component
+    - field.field.paragraph.wcms_pgph_grid.field_wcms_pgph__grid__column
+    - field.field.paragraph.wcms_pgph_grid.field_wcms_pgph__view_mode
+    - paragraphs.paragraphs_type.wcms_pgph_grid
+  module:
+    - field_group
+    - field_layout
+    - layout_discovery
+    - view_mode_selector
+    - wcms_paragraphs
+third_party_settings:
+  field_group:
+    group_grid:
+      children:
+        - field_wcms_pgph__grid__column
+        - field_wcms_pgph__component
+        - field_wcms_pgph__view_mode
+      parent_name: ''
+      weight: 0
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+      label: Grid
+      region: content
+  field_layout:
+    id: layout_onecol
+    settings:
+      label: ''
+_core:
+  default_config_hash: AT4ZuvE6LysADz7kCV9w2B0DDuMqmaWoSM_NWqz6rfY
+id: paragraph.wcms_pgph_grid.default
+targetEntityType: paragraph
+bundle: wcms_pgph_grid
+mode: default
+content:
+  field_wcms_pgph__component:
+    type: entity_reference_paragraphs_extended
+    weight: 2
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: closed
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: _none
+    third_party_settings: {  }
+    region: content
+  field_wcms_pgph__grid__column:
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_wcms_pgph__view_mode:
+    weight: 3
+    settings: {  }
+    third_party_settings: {  }
+    type: view_mode_selector_select
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

@@ -1,0 +1,8 @@
+uuid: d74fe848-61da-417b-838d-d4b26483f109
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: bQNdWKdP04k8ULsS1Trz1GGGBfygML8pQ-HfmRFhMsk
+id: wcms_linktype_sociallink
+label: 'Social Link'

@@ -1,0 +1,8 @@
+uuid: 6485f857-959b-4b9a-93a5-578f81fb364b
+langcode: en
+status: true
+dependencies: {  }
+id: advisory
+label: Advisory
+revision: 0
+description: ''

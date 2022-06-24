@@ -1,0 +1,22 @@
+uuid: ca78c4b0-0b34-42db-86be-e1598d4873cd
+langcode: en
+status: true
+dependencies:
+  module:
+    - colossal_menu
+    - paragraphs
+_core:
+  default_config_hash: 7wVRVJwblG27USfZRGIHgvi_3wSwSr4jyaKOcOROOmU
+id: paragraph.field_wcms_pgph__colossal_menu
+field_name: field_wcms_pgph__colossal_menu
+entity_type: paragraph
+type: entity_reference
+settings:
+  target_type: colossal_menu
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,60 @@
+uuid: 8b601e35-52da-4fb3-b48c-004d1430e7e0
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.repeative_grid
+    - field.field.block_content.repeative_grid.field_repeative_grid
+  module:
+    - entity_reference_revisions
+    - field_layout
+    - layout_builder
+    - layout_discovery
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings:
+      label: ''
+  layout_builder:
+    enabled: true
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+        components:
+          5814bd0b-b6ed-4dca-9ffd-680e01d4a000:
+            uuid: 5814bd0b-b6ed-4dca-9ffd-680e01d4a000
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:block_content:repeative_grid:field_repeative_grid'
+              formatter:
+                type: entity_reference_revisions_entity_view
+                label: above
+                settings:
+                  view_mode: default
+                  link: ''
+                third_party_settings: {  }
+            additional: {  }
+            weight: 0
+        third_party_settings: {  }
+id: block_content.repeative_grid.default
+targetEntityType: block_content
+bundle: repeative_grid
+mode: default
+content:
+  field_repeative_grid:
+    type: entity_reference_revisions_entity_view
+    weight: 1
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+hidden:
+  langcode: true
+  search_api_excerpt: true

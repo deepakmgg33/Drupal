@@ -1,0 +1,14 @@
+uuid: 2ff59ca9-e889-4772-b217-46884271f106
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: Xl721tHCMLdLhLQyITXwKpCJhKafrrwoTyyz5AUM7qw
+id: wcms_default_crop_mobile
+label: 'Default crop (mobile)'
+description: ''
+aspect_ratio: ''
+soft_limit_width: null
+soft_limit_height: null
+hard_limit_width: null
+hard_limit_height: null

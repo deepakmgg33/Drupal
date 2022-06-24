@@ -1,0 +1,57 @@
+uuid: 6bb5003d-74fc-4d9a-a7fd-7cbfd675d69b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.wcms_pgph_socialmedia.field_wcms_pgph__colossal_menu
+    - field.field.paragraph.wcms_pgph_socialmedia.field_wcms_pgph__view_mode
+    - paragraphs.paragraphs_type.wcms_pgph_socialmedia
+  module:
+    - field_group
+    - field_layout
+    - layout_discovery
+    - view_mode_selector
+third_party_settings:
+  field_group:
+    group_social_media:
+      children:
+        - field_wcms_pgph__colossal_menu
+        - field_wcms_pgph__view_mode
+      parent_name: ''
+      weight: 0
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+      label: 'Social Media'
+      region: content
+  field_layout:
+    id: layout_onecol
+    settings:
+      label: ''
+_core:
+  default_config_hash: J71XFRYeFnl1W9p4sQAUXu7Q8t43lziN0q1eJ2Xt3PM
+id: paragraph.wcms_pgph_socialmedia.default
+targetEntityType: paragraph
+bundle: wcms_pgph_socialmedia
+mode: default
+content:
+  field_wcms_pgph__colossal_menu:
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_wcms_pgph__view_mode:
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    type: view_mode_selector_select
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

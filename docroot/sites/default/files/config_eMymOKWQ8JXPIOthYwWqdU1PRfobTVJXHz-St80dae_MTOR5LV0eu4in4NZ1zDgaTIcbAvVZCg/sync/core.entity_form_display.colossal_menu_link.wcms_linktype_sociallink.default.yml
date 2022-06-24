@@ -1,0 +1,45 @@
+uuid: 68bbd94f-18b5-4fbb-bc0b-ce740bceec93
+langcode: en
+status: true
+dependencies:
+  config:
+    - colossal_menu.link_type.wcms_linktype_sociallink
+    - field.field.colossal_menu_link.wcms_linktype_sociallink.field_wcms_linktype__sl__icon
+  module:
+    - field_layout
+    - layout_discovery
+    - link
+    - media_library
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings:
+      label: ''
+_core:
+  default_config_hash: nj6kVh4C-5ZcZpiFhi4F6sP2-_a1ts_R8AHuT6-Ocxg
+id: colossal_menu_link.wcms_linktype_sociallink.default
+targetEntityType: colossal_menu_link
+bundle: wcms_linktype_sociallink
+mode: default
+content:
+  field_wcms_linktype__sl__icon:
+    type: media_library_widget
+    weight: 3
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  langcode:
+    type: language_select
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  link:
+    type: link_default
+    weight: 0
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+hidden: {  }

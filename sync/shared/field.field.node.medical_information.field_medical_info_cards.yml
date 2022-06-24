@@ -1,0 +1,94 @@
+uuid: 20c079ed-a67e-4eb5-9292-4b65e4143e9f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_medical_info_cards
+    - node.type.medical_information
+    - paragraphs.paragraphs_type.medical_information
+  module:
+    - entity_reference_revisions
+id: node.medical_information.field_medical_info_cards
+field_name: field_medical_info_cards
+entity_type: node
+bundle: medical_information
+label: 'Medical info cards'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      medical_information: medical_information
+    target_bundles_drag_drop:
+      disease:
+        weight: 23
+        enabled: false
+      from_library:
+        weight: 24
+        enabled: false
+      headline:
+        weight: 25
+        enabled: false
+      headline_icon_with_text:
+        weight: 26
+        enabled: false
+      headline_with_icon:
+        weight: 27
+        enabled: false
+      medical_information:
+        enabled: true
+        weight: 28
+      our_science:
+        weight: 29
+        enabled: false
+      repeative_grid:
+        weight: 30
+        enabled: false
+      wcms_asymmetric_translation:
+        weight: 31
+        enabled: false
+      wcms_pgph_backtotop:
+        weight: 32
+        enabled: false
+      wcms_pgph_document:
+        weight: 33
+        enabled: false
+      wcms_pgph_form:
+        weight: 34
+        enabled: false
+      wcms_pgph_grid:
+        weight: 35
+        enabled: false
+      wcms_pgph_logo:
+        weight: 36
+        enabled: false
+      wcms_pgph_menu:
+        weight: 37
+        enabled: false
+      wcms_pgph_printversion:
+        weight: 38
+        enabled: false
+      wcms_pgph_slider:
+        weight: 39
+        enabled: false
+      wcms_pgph_slideritem:
+        weight: 40
+        enabled: false
+      wcms_pgph_socialmedia:
+        weight: 41
+        enabled: false
+      wcms_pgph_teaser:
+        weight: 42
+        enabled: false
+      wcms_pgph_view:
+        weight: 43
+        enabled: false
+      wcms_pgph_wysiwyg:
+        weight: 44
+        enabled: false
+field_type: entity_reference_revisions

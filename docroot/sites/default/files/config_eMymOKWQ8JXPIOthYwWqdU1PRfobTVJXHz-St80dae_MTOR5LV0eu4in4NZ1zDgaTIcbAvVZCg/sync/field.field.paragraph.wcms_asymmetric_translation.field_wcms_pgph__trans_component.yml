@@ -1,0 +1,70 @@
+uuid: 63220031-f27f-46d7-ae87-e7ecf84659c2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_wcms_pgph__trans_component
+    - paragraphs.paragraphs_type.wcms_asymmetric_translation
+  module:
+    - entity_reference_revisions
+_core:
+  default_config_hash: 6wXb1wCSiC9kNuU1XIXjgBh4JwfpSmWlcj9F9CAAers
+id: paragraph.wcms_asymmetric_translation.field_wcms_pgph__trans_component
+field_name: field_wcms_pgph__trans_component
+entity_type: paragraph
+bundle: wcms_asymmetric_translation
+label: Item
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles: null
+    target_bundles_drag_drop:
+      wcms_asymmetric_translation:
+        weight: 15
+        enabled: false
+      wcms_pgph_backtotop:
+        weight: 16
+        enabled: false
+      wcms_pgph_document:
+        weight: 17
+        enabled: false
+      wcms_pgph_form:
+        weight: 18
+        enabled: false
+      wcms_pgph_grid:
+        weight: 19
+        enabled: false
+      wcms_pgph_logo:
+        weight: 20
+        enabled: false
+      wcms_pgph_menu:
+        weight: 21
+        enabled: false
+      wcms_pgph_printversion:
+        weight: 22
+        enabled: false
+      wcms_pgph_slider:
+        weight: 23
+        enabled: false
+      wcms_pgph_slideritem:
+        weight: 24
+        enabled: false
+      wcms_pgph_socialmedia:
+        weight: 25
+        enabled: false
+      wcms_pgph_teaser:
+        weight: 26
+        enabled: false
+      wcms_pgph_view:
+        weight: 27
+        enabled: false
+      wcms_pgph_wysiwyg:
+        weight: 28
+        enabled: false
+field_type: entity_reference_revisions

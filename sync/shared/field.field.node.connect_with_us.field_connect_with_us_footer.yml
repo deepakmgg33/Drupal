@@ -1,0 +1,97 @@
+uuid: c20da179-a478-4beb-8267-77b98640f6d5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_connect_with_us_footer
+    - node.type.connect_with_us
+    - paragraphs.paragraphs_type.connect_with_us_footer
+  module:
+    - entity_reference_revisions
+id: node.connect_with_us.field_connect_with_us_footer
+field_name: field_connect_with_us_footer
+entity_type: node
+bundle: connect_with_us
+label: 'Connect With Us footer'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      connect_with_us_footer: connect_with_us_footer
+    target_bundles_drag_drop:
+      connect_with_us_footer:
+        enabled: true
+        weight: 24
+      disease:
+        weight: 25
+        enabled: false
+      from_library:
+        weight: 26
+        enabled: false
+      headline:
+        weight: 27
+        enabled: false
+      headline_icon_with_text:
+        weight: 28
+        enabled: false
+      headline_with_icon:
+        weight: 29
+        enabled: false
+      medical_information:
+        weight: 30
+        enabled: false
+      our_science:
+        weight: 31
+        enabled: false
+      repeative_grid:
+        weight: 32
+        enabled: false
+      wcms_asymmetric_translation:
+        weight: 33
+        enabled: false
+      wcms_pgph_backtotop:
+        weight: 34
+        enabled: false
+      wcms_pgph_document:
+        weight: 35
+        enabled: false
+      wcms_pgph_form:
+        weight: 36
+        enabled: false
+      wcms_pgph_grid:
+        weight: 37
+        enabled: false
+      wcms_pgph_logo:
+        weight: 38
+        enabled: false
+      wcms_pgph_menu:
+        weight: 39
+        enabled: false
+      wcms_pgph_printversion:
+        weight: 40
+        enabled: false
+      wcms_pgph_slider:
+        weight: 41
+        enabled: false
+      wcms_pgph_slideritem:
+        weight: 42
+        enabled: false
+      wcms_pgph_socialmedia:
+        weight: 43
+        enabled: false
+      wcms_pgph_teaser:
+        weight: 44
+        enabled: false
+      wcms_pgph_view:
+        weight: 45
+        enabled: false
+      wcms_pgph_wysiwyg:
+        weight: 46
+        enabled: false
+field_type: entity_reference_revisions

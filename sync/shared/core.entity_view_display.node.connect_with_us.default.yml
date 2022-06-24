@@ -1,0 +1,66 @@
+uuid: 5272bc50-926f-44aa-8b56-58f424da826a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.connect_with_us.body
+    - field.field.node.connect_with_us.field_connect_with_us_footer
+    - field.field.node.connect_with_us.field_footer_image
+    - field.field.node.connect_with_us.field_footer_image_title
+    - field.field.node.connect_with_us.field_medical_info_cards
+    - node.type.connect_with_us
+  module:
+    - entity_reference_revisions
+    - image
+    - text
+    - user
+id: node.connect_with_us.default
+targetEntityType: node
+bundle: connect_with_us
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_connect_with_us_footer:
+    type: entity_reference_revisions_entity_view
+    weight: 4
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_footer_image:
+    weight: 3
+    label: hidden
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_footer_image_title:
+    weight: 2
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_medical_info_cards:
+    weight: 1
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    type: entity_reference_revisions_entity_view
+    region: content
+hidden:
+  langcode: true
+  links: true
+  search_api_excerpt: true

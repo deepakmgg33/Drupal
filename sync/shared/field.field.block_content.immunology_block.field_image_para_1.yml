@@ -1,0 +1,21 @@
+uuid: fde1997d-a899-4e24-bf69-e59d2bd6c9a1
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.immunology_block
+    - field.storage.block_content.field_image_para_1
+  module:
+    - text
+id: block_content.immunology_block.field_image_para_1
+field_name: field_image_para_1
+entity_type: block_content
+bundle: immunology_block
+label: 'Image para 1'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text

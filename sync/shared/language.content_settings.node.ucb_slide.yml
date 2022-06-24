@@ -1,0 +1,11 @@
+uuid: 7257b280-1d34-44ce-bbf3-c7032b1079af
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.ucb_slide
+id: node.ucb_slide
+target_entity_type_id: node
+target_bundle: ucb_slide
+default_langcode: site_default
+language_alterable: false

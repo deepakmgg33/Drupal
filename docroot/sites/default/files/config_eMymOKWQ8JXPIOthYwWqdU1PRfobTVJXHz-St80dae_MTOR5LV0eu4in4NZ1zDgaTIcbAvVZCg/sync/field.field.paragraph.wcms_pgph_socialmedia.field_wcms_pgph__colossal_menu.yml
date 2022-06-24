@@ -1,0 +1,27 @@
+uuid: b0cfa9e6-69f7-4177-b39c-9ec660915a25
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_wcms_pgph__colossal_menu
+    - paragraphs.paragraphs_type.wcms_pgph_socialmedia
+_core:
+  default_config_hash: HCS-dvWTcDkToEk77V8KYgv74YNOxEuOxydA397Ek0Y
+id: paragraph.wcms_pgph_socialmedia.field_wcms_pgph__colossal_menu
+field_name: field_wcms_pgph__colossal_menu
+entity_type: paragraph
+bundle: wcms_pgph_socialmedia
+label: 'Socail Media Menu'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    target_uuid: 4f703608-314f-40fd-bf93-5875565340a5
+default_value_callback: ''
+settings:
+  handler: 'default:colossal_menu'
+  handler_settings:
+    target_bundles: null
+    auto_create: false
+field_type: entity_reference

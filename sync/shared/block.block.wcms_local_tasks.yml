@@ -1,0 +1,22 @@
+uuid: db0bd42e-e4ee-4d1b-8332-3cad96cc66bb
+langcode: en
+status: true
+dependencies:
+  theme:
+    - wcms
+_core:
+  default_config_hash: sdJOXZ1YgYlmojQkHCPR1WyMU_ayJLYSqS7ra7rh8Nk
+id: wcms_local_tasks
+theme: wcms
+region: content
+weight: -40
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Tabs
+  provider: core
+  label_display: '0'
+  primary: true
+  secondary: true
+visibility: {  }

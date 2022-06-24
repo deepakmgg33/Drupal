@@ -1,0 +1,27 @@
+uuid: 6f810de9-3da9-4bcd-8b93-3b4344fe2f11
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_wcms_pgph__form
+    - paragraphs.paragraphs_type.wcms_pgph_form
+  module:
+    - webform
+_core:
+  default_config_hash: g7TsfeK8g2jO_xtnsfyEpRpLYM3ixbp4W6yNWh9jYZc
+id: paragraph.wcms_pgph_form.field_wcms_pgph__form
+field_name: field_wcms_pgph__form
+entity_type: paragraph
+bundle: wcms_pgph_form
+label: Form
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:webform'
+  handler_settings:
+    target_bundles: null
+    auto_create: false
+field_type: webform

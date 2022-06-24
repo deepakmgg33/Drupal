@@ -1,0 +1,11 @@
+uuid: c7787deb-2f7f-4b9d-81f3-e1a7e5b01d0e
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.immunology_block
+id: block_content.immunology_block
+target_entity_type_id: block_content
+target_bundle: immunology_block
+default_langcode: site_default
+language_alterable: false

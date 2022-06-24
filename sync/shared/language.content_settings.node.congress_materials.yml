@@ -1,0 +1,11 @@
+uuid: 8cf4364d-750d-49d7-8bda-108e5ba2781c
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.congress_materials
+id: node.congress_materials
+target_entity_type_id: node
+target_bundle: congress_materials
+default_langcode: site_default
+language_alterable: false

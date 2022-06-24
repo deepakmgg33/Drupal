@@ -1,0 +1,19 @@
+uuid: 768e5934-763e-4e87-a8db-17ac276d4f0b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_connect_title
+    - paragraphs.paragraphs_type.connect_with_us_footer
+id: paragraph.connect_with_us_footer.field_connect_title
+field_name: field_connect_title
+entity_type: paragraph
+bundle: connect_with_us_footer
+label: 'Connect Title'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

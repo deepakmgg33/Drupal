@@ -1,0 +1,21 @@
+uuid: fafb69aa-773e-4ae8-b8c6-b7870b2c2dcb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_title
+    - node.type.text_block
+  module:
+    - text
+id: node.text_block.field_title
+field_name: field_title
+entity_type: node
+bundle: text_block
+label: title
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text

@@ -1,0 +1,23 @@
+uuid: 67a1aee1-c4c9-4a74-82a8-be5c097a0238
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_wcms_pgph__description
+    - paragraphs.paragraphs_type.wcms_pgph_slider
+  module:
+    - text
+_core:
+  default_config_hash: vYW4Y7EixYj4AkrS1-ZklLlxH90ZT3lEbHvCf-kbwjc
+id: paragraph.wcms_pgph_slider.field_wcms_pgph__description
+field_name: field_wcms_pgph__description
+entity_type: paragraph
+bundle: wcms_pgph_slider
+label: Description
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

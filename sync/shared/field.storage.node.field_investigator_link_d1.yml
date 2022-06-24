@@ -1,0 +1,19 @@
+uuid: 89e96462-62a9-4a0b-8fb4-0da85d8c033c
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - text
+id: node.field_investigator_link_d1
+field_name: field_investigator_link_d1
+entity_type: node
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

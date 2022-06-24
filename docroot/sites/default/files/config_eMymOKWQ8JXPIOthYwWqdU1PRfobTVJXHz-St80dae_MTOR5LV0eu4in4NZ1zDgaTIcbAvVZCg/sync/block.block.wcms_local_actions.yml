@@ -1,0 +1,20 @@
+uuid: 54d4fb5f-62d6-4c0e-b76a-c62f3520f168
+langcode: en
+status: true
+dependencies:
+  theme:
+    - wcms
+_core:
+  default_config_hash: x78CgQbdWv4L6gH0uBFsVVYMrvCrnX5N5FBNB0J5dWc
+id: wcms_local_actions
+theme: wcms
+region: content
+weight: -20
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  provider: core
+  label_display: '0'
+visibility: {  }

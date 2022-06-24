@@ -1,0 +1,25 @@
+uuid: 44ba4228-81bf-4228-8abf-d90af9bbca4a
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - rls
+_core:
+  default_config_hash: HdNPiXhdLE4gB6O69aZw6ZZuz6nnA7wJV2eO1OLXJ78
+id: rls_branding
+theme: rls
+region: header
+weight: 0
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Site branding'
+  provider: system
+  label_display: '0'
+  use_site_logo: true
+  use_site_name: true
+  use_site_slogan: true
+visibility: {  }

@@ -1,0 +1,20 @@
+uuid: e86e9365-202c-4c80-b348-0efce7f341fd
+langcode: en
+status: true
+dependencies:
+  theme:
+    - rls
+_core:
+  default_config_hash: x78CgQbdWv4L6gH0uBFsVVYMrvCrnX5N5FBNB0J5dWc
+id: rls_local_actions
+theme: rls
+region: content
+weight: -20
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  provider: core
+  label_display: '0'
+visibility: {  }

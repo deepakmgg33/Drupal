@@ -1,0 +1,19 @@
+uuid: 070f6d56-1956-4d61-b01c-edd8994908f9
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.medical_information
+    - field.storage.block_content.field_medico_block_desc
+id: block_content.medical_information.field_medico_block_desc
+field_name: field_medico_block_desc
+entity_type: block_content
+bundle: medical_information
+label: 'Medico block desc'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,96 @@
+uuid: 53639a3f-3b4e-4130-86ef-108d95971101
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.wcms_pgph_logo.field_wcms_pgph__image
+    - field.field.paragraph.wcms_pgph_logo.field_wcms_pgph__link
+    - field.field.paragraph.wcms_pgph_logo.field_wcms_pgph__view_mode
+    - paragraphs.paragraphs_type.wcms_pgph_logo
+  module:
+    - field_layout
+    - layout_builder
+    - layout_discovery
+    - link
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings:
+      label: ''
+  layout_builder:
+    enabled: true
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+        components:
+          364e1b30-54b1-4770-b8bb-6266fa0dcd75:
+            uuid: 364e1b30-54b1-4770-b8bb-6266fa0dcd75
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:paragraph:wcms_pgph_logo:field_wcms_pgph__link'
+              formatter:
+                label: hidden
+                settings:
+                  trim_length: 80
+                  url_only: false
+                  url_plain: false
+                  rel: ''
+                  target: ''
+                third_party_settings: {  }
+                type: link
+            additional: {  }
+            weight: 0
+          941b6531-1a51-4522-afcd-3af900667b62:
+            uuid: 941b6531-1a51-4522-afcd-3af900667b62
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:paragraph:wcms_pgph_logo:field_wcms_pgph__image'
+              formatter:
+                label: hidden
+                settings:
+                  view_mode: default
+                  link: false
+                third_party_settings: {  }
+                type: entity_reference_entity_view
+            additional: {  }
+            weight: 1
+        third_party_settings: {  }
+_core:
+  default_config_hash: yhLTbP4W6PL-O8Q_J-Fa2dbIWJcL0MO8zGsAWQ4UKQ8
+id: paragraph.wcms_pgph_logo.default
+targetEntityType: paragraph
+bundle: wcms_pgph_logo
+mode: default
+content:
+  field_wcms_pgph__image:
+    weight: 1
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+    region: content
+  field_wcms_pgph__link:
+    weight: 0
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+hidden:
+  field_wcms_pgph__view_mode: true
+  search_api_excerpt: true

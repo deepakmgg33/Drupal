@@ -1,0 +1,19 @@
+uuid: ba7700d0-1ed8-49d9-8880-bb041ed8f62f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_ucb_title
+    - node.type.opportunities
+id: node.opportunities.field_ucb_title
+field_name: field_ucb_title
+entity_type: node
+bundle: opportunities
+label: 'UCB title'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

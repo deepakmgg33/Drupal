@@ -1,0 +1,22 @@
+uuid: 5c82ab96-155a-4a6e-a15f-4dc2d6d34286
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - wcms
+_core:
+  default_config_hash: Y9SuTsMGjJLOIZXapUKYpgFTB9vqzKnKixMYCPy75PQ
+id: wcms_powered
+theme: wcms
+region: footer
+weight: 10
+provider: null
+plugin: system_powered_by_block
+settings:
+  id: system_powered_by_block
+  label: 'Powered by Drupal'
+  provider: system
+  label_display: '0'
+visibility: {  }

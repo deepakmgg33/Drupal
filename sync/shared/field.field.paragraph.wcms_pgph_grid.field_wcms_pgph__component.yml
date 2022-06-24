@@ -1,0 +1,42 @@
+uuid: 2e822668-dac8-460c-bf29-f93ce477cbe6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_wcms_pgph__component
+    - paragraphs.paragraphs_type.wcms_pgph_grid
+  module:
+    - entity_reference_revisions
+_core:
+  default_config_hash: PB1xQvpYmEvXsIcyRP9eUf6B9dGjfuJfXrBfb3_9cQA
+id: paragraph.wcms_pgph_grid.field_wcms_pgph__component
+field_name: field_wcms_pgph__component
+entity_type: paragraph
+bundle: wcms_pgph_grid
+label: Item
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles: null
+    target_bundles_drag_drop:
+      wcms_pgph_backtotop:
+        weight: 6
+        enabled: false
+      wcms_pgph_form:
+        weight: 7
+        enabled: false
+      wcms_pgph_grid:
+        weight: 8
+        enabled: false
+      wcms_pgph_logo:
+        weight: 9
+        enabled: false
+      wcms_pgph_view:
+        weight: 10
+        enabled: false
+field_type: entity_reference_revisions

@@ -1,0 +1,17 @@
+uuid: 4589e6ac-6849-4840-b37f-a918fd997d15
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: text-block
+type: text_block
+description: 'text-block with a title, icon and an image link'
+help: ''
+new_revision: false
+preview_mode: 1
+display_submitted: false

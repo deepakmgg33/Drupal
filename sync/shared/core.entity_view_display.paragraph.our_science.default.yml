@@ -1,0 +1,44 @@
+uuid: c947f5b5-ae9c-46b8-a8cd-8083035972d4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.our_science.field_ourscience_headline
+    - field.field.paragraph.our_science.field_science_icon
+    - field.field.paragraph.our_science.field_science_line
+    - paragraphs.paragraphs_type.our_science
+  module:
+    - image
+id: paragraph.our_science.default
+targetEntityType: paragraph
+bundle: our_science
+mode: default
+content:
+  field_ourscience_headline:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_science_icon:
+    weight: 2
+    label: hidden
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_science_line:
+    weight: 3
+    label: hidden
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+hidden:
+  search_api_excerpt: true

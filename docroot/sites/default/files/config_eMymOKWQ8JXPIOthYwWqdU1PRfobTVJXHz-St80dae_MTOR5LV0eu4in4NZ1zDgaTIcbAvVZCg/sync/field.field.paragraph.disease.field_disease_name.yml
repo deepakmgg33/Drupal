@@ -1,0 +1,19 @@
+uuid: c125938e-a58d-4c3d-8ef1-44d69ad493bf
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_disease_name
+    - paragraphs.paragraphs_type.disease
+id: paragraph.disease.field_disease_name
+field_name: field_disease_name
+entity_type: paragraph
+bundle: disease
+label: 'Disease name'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

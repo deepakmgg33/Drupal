@@ -1,0 +1,8 @@
+uuid: e4ca7dc6-d9a4-4ee7-bdaf-d2502f8fcdd9
+langcode: en
+status: true
+dependencies: {  }
+name: 'Therapeutic area'
+vid: therapeutic_area
+description: ''
+weight: 0

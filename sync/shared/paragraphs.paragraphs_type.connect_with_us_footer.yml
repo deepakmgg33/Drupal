@@ -1,0 +1,10 @@
+uuid: 78ba70c3-7ada-47e3-98e3-0554fb5ac66d
+langcode: en
+status: true
+dependencies: {  }
+id: connect_with_us_footer
+label: 'Connect With Us footer'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

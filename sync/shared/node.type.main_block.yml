@@ -1,0 +1,17 @@
+uuid: edd17b39-7764-4756-a614-acb141c85217
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: main-block
+type: main_block
+description: 'Content block with title, icon, body and a link.'
+help: ''
+new_revision: false
+preview_mode: 1
+display_submitted: false

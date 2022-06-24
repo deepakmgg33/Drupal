@@ -1,0 +1,11 @@
+uuid: ad645d20-22b0-450c-bc02-b25d9aef50eb
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.video_block
+id: node.video_block
+target_entity_type_id: node
+target_bundle: video_block
+default_langcode: site_default
+language_alterable: false

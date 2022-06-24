@@ -1,0 +1,23 @@
+uuid: b564e226-2cce-47be-86fa-58e6b352c63b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_paragraph
+    - paragraphs.paragraphs_type.repeative_grid
+  module:
+    - text
+id: paragraph.repeative_grid.field_paragraph
+field_name: field_paragraph
+entity_type: paragraph
+bundle: repeative_grid
+label: Paragraph
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: false
+  required_summary: false
+field_type: text_with_summary

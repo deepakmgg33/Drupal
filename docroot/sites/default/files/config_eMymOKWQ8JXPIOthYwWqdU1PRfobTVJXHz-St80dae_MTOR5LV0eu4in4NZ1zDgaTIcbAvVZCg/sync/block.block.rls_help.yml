@@ -1,0 +1,22 @@
+uuid: 2a3267e9-15c2-4305-9cdf-fe85e3f8e6f4
+langcode: en
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - rls
+_core:
+  default_config_hash: CuW6iyAUpc6RJ_-ZUXhAm6jie5L1koAcMXf0S2d_UU4
+id: rls_help
+theme: rls
+region: dialogs
+weight: -30
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  provider: help
+  label_display: '0'
+visibility: {  }

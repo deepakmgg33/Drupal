@@ -1,0 +1,69 @@
+uuid: 20618c60-7041-401f-9918-d9af99c94704
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.dermatology
+    - field.field.block_content.dermatology.field_dermatology_image
+    - field.field.block_content.dermatology.field_disease_dermatology
+    - field.field.block_content.dermatology.field_title_dermatology
+    - image.style.thumbnail
+  module:
+    - field_layout
+    - image
+    - layout_discovery
+    - paragraphs
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings:
+      label: ''
+id: block_content.dermatology.default
+targetEntityType: block_content
+bundle: dermatology
+mode: default
+content:
+  field_dermatology_image:
+    weight: 27
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_disease_dermatology:
+    type: entity_reference_paragraphs
+    weight: 28
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    region: content
+  field_title_dermatology:
+    weight: 26
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  info:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 2
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+hidden: {  }

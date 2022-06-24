@@ -1,0 +1,22 @@
+uuid: 73c039cd-5081-4313-8d8b-e2760b0fd6d9
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.disease_block
+id: node.disease_block.promote
+field_name: promote
+entity_type: node
+bundle: disease_block
+label: 'Promoted to front page'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

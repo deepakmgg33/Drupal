@@ -1,0 +1,11 @@
+uuid: 602a495a-f6a1-4dee-9bdc-ee5829add729
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.connect_with_us
+id: node.connect_with_us
+target_entity_type_id: node
+target_bundle: connect_with_us
+default_langcode: site_default
+language_alterable: false

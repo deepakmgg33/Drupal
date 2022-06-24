@@ -1,0 +1,22 @@
+uuid: 3a459206-4352-43ac-8ede-dc8d53f1033c
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.connect_with_us
+id: node.connect_with_us.promote
+field_name: promote
+entity_type: node
+bundle: connect_with_us
+label: 'Promoted to front page'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

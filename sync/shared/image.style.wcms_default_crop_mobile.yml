@@ -1,0 +1,19 @@
+uuid: a2c65446-da3c-40f2-b941-5df0dce31b99
+langcode: en
+status: true
+dependencies:
+  config:
+    - crop.type.wcms_default_crop_mobile
+  module:
+    - crop
+_core:
+  default_config_hash: 9DcZNYeZG5t1f2HuLy8i5tLDnIrertqKpy1nkKwTufI
+name: wcms_default_crop_mobile
+label: 'WCMS Default Crop Mobile'
+effects:
+  07311557-4e87-4ff8-9309-f59eb0346757:
+    uuid: 07311557-4e87-4ff8-9309-f59eb0346757
+    id: crop_crop
+    weight: 1
+    data:
+      crop_type: wcms_default_crop_mobile

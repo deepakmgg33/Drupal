@@ -1,0 +1,76 @@
+uuid: 0decb180-8e90-464f-a3b9-dfc5381ae739
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.repeative_grid
+    - field.storage.block_content.field_repeative_grid
+    - paragraphs.paragraphs_type.repeative_grid
+  module:
+    - entity_reference_revisions
+id: block_content.repeative_grid.field_repeative_grid
+field_name: field_repeative_grid
+entity_type: block_content
+bundle: repeative_grid
+label: 'Repeative Grid'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      repeative_grid: repeative_grid
+    target_bundles_drag_drop:
+      from_library:
+        weight: 17
+        enabled: false
+      repeative_grid:
+        enabled: true
+        weight: 18
+      wcms_asymmetric_translation:
+        weight: 19
+        enabled: false
+      wcms_pgph_backtotop:
+        weight: 20
+        enabled: false
+      wcms_pgph_document:
+        weight: 21
+        enabled: false
+      wcms_pgph_form:
+        weight: 22
+        enabled: false
+      wcms_pgph_grid:
+        weight: 23
+        enabled: false
+      wcms_pgph_logo:
+        weight: 24
+        enabled: false
+      wcms_pgph_menu:
+        weight: 25
+        enabled: false
+      wcms_pgph_printversion:
+        weight: 26
+        enabled: false
+      wcms_pgph_slider:
+        weight: 27
+        enabled: false
+      wcms_pgph_slideritem:
+        weight: 28
+        enabled: false
+      wcms_pgph_socialmedia:
+        weight: 29
+        enabled: false
+      wcms_pgph_teaser:
+        weight: 30
+        enabled: false
+      wcms_pgph_view:
+        weight: 31
+        enabled: false
+      wcms_pgph_wysiwyg:
+        weight: 32
+        enabled: false
+field_type: entity_reference_revisions

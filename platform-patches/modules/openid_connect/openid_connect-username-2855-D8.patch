@@ -1,0 +1,16 @@
+Index: profiles/wcms/modules/contrib/openid_connect/openid_connect.module
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- a/openid_connect/openid_connect.module	(date 1530020477000)
++++ b/openid_connect/openid_connect.module	(date 1530178288000)
+@@ -237,7 +237,7 @@
+ function openid_connect_create_user($sub, array $userinfo, $client_name, $status = 1) {
+   /** @var \Drupal\user\Entity\User $account */
+   $account = User::create([
+-    'name' => openid_connect_generate_username($sub, $userinfo, $client_name),
++    'name' => $userinfo['email'],
+     'pass' => user_password(),
+     'mail' => $userinfo['email'],
+     'init' => $userinfo['email'],

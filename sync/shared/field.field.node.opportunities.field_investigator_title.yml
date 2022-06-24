@@ -1,0 +1,19 @@
+uuid: a3285149-de3f-4577-a91f-52d0d4611281
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_investigator_title
+    - node.type.opportunities
+id: node.opportunities.field_investigator_title
+field_name: field_investigator_title
+entity_type: node
+bundle: opportunities
+label: 'Investigator title'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

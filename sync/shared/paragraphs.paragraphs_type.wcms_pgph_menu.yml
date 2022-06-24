@@ -1,0 +1,12 @@
+uuid: 1b166b82-edd2-4dc6-b12e-174e7ed817e1
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: zl0liTvL_u6vir6wO3-T03h9bqBQ8w3T1jashNRc5bY
+id: wcms_pgph_menu
+label: Menu
+icon_uuid: null
+icon_default: null
+description: null
+behavior_plugins: {  }

@@ -1,0 +1,23 @@
+uuid: b4f4a892-1f6d-4d87-946a-fc23784f42a7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_link
+    - node.type.disease_block
+  module:
+    - link
+id: node.disease_block.field_link
+field_name: field_link
+entity_type: node
+bundle: disease_block
+label: link
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 1
+field_type: link

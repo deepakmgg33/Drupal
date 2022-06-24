@@ -1,0 +1,31 @@
+uuid: 4833008b-8489-45bd-bff1-dd9b897b8e22
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:opportunities:f0a23e70-e774-45c8-81b0-90f9b95764af'
+  module:
+    - block_content
+    - system
+  theme:
+    - ucb
+id: opportunites
+theme: ucb
+region: content
+weight: 0
+provider: null
+plugin: 'block_content:f0a23e70-e774-45c8-81b0-90f9b95764af'
+settings:
+  id: 'block_content:f0a23e70-e774-45c8-81b0-90f9b95764af'
+  label: Opportunites
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: /opportunities
+    negate: false
+    context_mapping: {  }

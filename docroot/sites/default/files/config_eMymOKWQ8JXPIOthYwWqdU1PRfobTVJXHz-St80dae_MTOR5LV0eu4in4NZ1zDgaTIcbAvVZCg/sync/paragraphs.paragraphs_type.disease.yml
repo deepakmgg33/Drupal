@@ -1,0 +1,10 @@
+uuid: 497533a1-7977-4f97-85a9-da1897ebd92f
+langcode: en
+status: true
+dependencies: {  }
+id: disease
+label: 'Disease dermatology'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

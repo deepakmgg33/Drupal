@@ -1,0 +1,27 @@
+uuid: f055d3bb-c0fb-4009-9010-a73337d4030c
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.main
+  module:
+    - system
+  theme:
+    - rls
+_core:
+  default_config_hash: 6IA5FtPbzjJqR71x2B5Oa6hUqLWW7DfKTIHnr26Za4E
+id: rls_secondary_navigation
+theme: rls
+region: dialogs
+weight: 0
+provider: null
+plugin: 'system_menu_block:main'
+settings:
+  id: 'system_menu_block:main'
+  label: 'Secondary navigation'
+  provider: system
+  label_display: '0'
+  level: 2
+  depth: 0
+  expand_all_items: false
+visibility: {  }

@@ -1,0 +1,23 @@
+Index: modules/contrib/draggableviews/draggableviews.module
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- a/draggableviews.module	(date 1532708274000)
++++ b/draggableviews.module	(date 1532928655000)
+@@ -151,13 +151,14 @@
+         ->condition('view_name', $view_name)
+         ->condition('view_display', $view_display)
+         ->condition('entity_id', $item['id'])
++        ->condition('args', implode(',', $view->args))
+         ->execute();
+
+       // Add new data.
+       $record = [
+         'view_name' => $view_name,
+         'view_display' => $view_display,
+-        'args' => '[]',
++        'args' => implode(',', $view->args),
+         'entity_id' => $item['id'],
+         'weight' => $weight,
+       ];

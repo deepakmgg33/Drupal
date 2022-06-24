@@ -1,0 +1,38 @@
+uuid: cea0d6fb-24d1-4945-9b45-647aae8812bf
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.opportunities
+    - field.storage.block_content.field_opportunities_icon
+  module:
+    - image
+id: block_content.opportunities.field_opportunities_icon
+field_name: field_opportunities_icon
+entity_type: block_content
+bundle: opportunities
+label: 'Opportunities Icon'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'png gif jpg jpeg'
+  max_filesize: ''
+  max_resolution: ''
+  min_resolution: ''
+  alt_field: true
+  alt_field_required: true
+  title_field: false
+  title_field_required: false
+  default_image:
+    uuid: ''
+    alt: ''
+    title: ''
+    width: null
+    height: null
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: image

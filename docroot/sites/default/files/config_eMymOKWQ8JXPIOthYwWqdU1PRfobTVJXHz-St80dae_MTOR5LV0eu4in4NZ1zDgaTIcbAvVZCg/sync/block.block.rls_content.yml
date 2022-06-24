@@ -1,0 +1,22 @@
+uuid: b73771f4-2d00-41ce-857a-8724863aa33f
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - rls
+_core:
+  default_config_hash: DG-K56UVld0dD7OV-ACzKKgYVB2WNMD2Cp7fuHLe-EY
+id: rls_content
+theme: rls
+region: content
+weight: 0
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  provider: system
+  label_display: '0'
+visibility: {  }

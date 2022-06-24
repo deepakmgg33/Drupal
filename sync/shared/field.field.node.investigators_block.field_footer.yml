@@ -1,0 +1,21 @@
+uuid: 1754799a-6f7c-492f-98ce-fbae7726ccbf
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_footer
+    - node.type.investigators_block
+  module:
+    - text
+id: node.investigators_block.field_footer
+field_name: field_footer
+entity_type: node
+bundle: investigators_block
+label: footer
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

@@ -1,0 +1,21 @@
+uuid: 01ab4e39-32d9-42d8-aa65-41d91c2cbb2d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_footer_image_title
+    - node.type.connect_with_us
+  module:
+    - text
+id: node.connect_with_us.field_footer_image_title
+field_name: field_footer_image_title
+entity_type: node
+bundle: connect_with_us
+label: 'Footer image title'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

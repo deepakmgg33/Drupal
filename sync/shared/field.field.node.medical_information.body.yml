@@ -1,0 +1,23 @@
+uuid: 53272233-deef-47c1-ae13-d0b14bea009b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.medical_information
+  module:
+    - text
+id: node.medical_information.body
+field_name: body
+entity_type: node
+bundle: medical_information
+label: 'medical info footer'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

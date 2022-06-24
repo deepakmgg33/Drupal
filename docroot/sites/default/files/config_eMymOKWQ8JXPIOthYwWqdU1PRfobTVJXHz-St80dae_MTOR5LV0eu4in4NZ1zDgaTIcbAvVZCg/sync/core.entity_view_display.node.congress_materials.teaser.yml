@@ -1,0 +1,42 @@
+uuid: 960b75f0-6a30-4fd6-8f9f-65b98178c964
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.congress_materials.body
+    - field.field.node.congress_materials.field_content_type
+    - field.field.node.congress_materials.field_event_name
+    - field.field.node.congress_materials.field_image_link
+    - field.field.node.congress_materials.field_link
+    - field.field.node.congress_materials.field_summary
+    - node.type.congress_materials
+  module:
+    - text
+    - user
+id: node.congress_materials.teaser
+targetEntityType: node
+bundle: congress_materials
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_content_type: true
+  field_event_name: true
+  field_image_link: true
+  field_link: true
+  field_summary: true
+  langcode: true
+  search_api_excerpt: true

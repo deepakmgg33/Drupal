@@ -1,0 +1,23 @@
+uuid: fe8c9e11-c67d-4515-a644-a314ca58afbc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_slide_link
+    - node.type.ucb_slide
+  module:
+    - link
+id: node.ucb_slide.field_slide_link
+field_name: field_slide_link
+entity_type: node
+bundle: ucb_slide
+label: 'slide link'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 1
+field_type: link

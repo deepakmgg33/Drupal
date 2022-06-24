@@ -1,0 +1,11 @@
+uuid: 476a9986-8f58-40b8-8aae-f30a43565f8a
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.investigators_block
+id: node.investigators_block
+target_entity_type_id: node
+target_bundle: investigators_block
+default_langcode: site_default
+language_alterable: false

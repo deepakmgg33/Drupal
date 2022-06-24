@@ -1,0 +1,33 @@
+.opportunities-page {
+  &.main {
+    background: none;
+  }
+  article {
+    padding-left: 70px;
+  }
+
+  .vertical-tabs__menu {
+    border: 0;
+    li {
+      background-color: transparent;
+      &:hover {
+        border-bottom: 3px solid #71c5e8;
+      }
+      &.is-selected {
+        .vertical-tabs__menu-item-title {
+          color: #888;
+          text-decoration: none;
+        }
+      }
+      a {
+        color: #888;
+        &:hover,
+        strong:hover {
+          border: 0;
+          outline: none;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}

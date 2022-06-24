@@ -1,0 +1,27 @@
+uuid: c46d75fd-b2fa-41b9-bbd1-1c80e1cbacb1
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.account
+  module:
+    - system
+  theme:
+    - wcms
+_core:
+  default_config_hash: gt63jEt9g7J-ceqJE6YBzPUyjPNcUDkmpd2zKgormt8
+id: wcms_account_menu
+theme: wcms
+region: secondary_menu
+weight: 0
+provider: null
+plugin: 'system_menu_block:account'
+settings:
+  id: 'system_menu_block:account'
+  label: 'User account menu'
+  provider: system
+  label_display: '0'
+  level: 1
+  depth: 1
+  expand_all_items: false
+visibility: {  }

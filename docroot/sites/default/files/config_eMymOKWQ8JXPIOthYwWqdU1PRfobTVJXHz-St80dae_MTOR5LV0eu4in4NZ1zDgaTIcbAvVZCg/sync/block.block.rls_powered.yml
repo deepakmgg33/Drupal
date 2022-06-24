@@ -1,0 +1,22 @@
+uuid: 1558aefd-25e9-4875-82c9-fcda35d95511
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - rls
+_core:
+  default_config_hash: Y9SuTsMGjJLOIZXapUKYpgFTB9vqzKnKixMYCPy75PQ
+id: rls_powered
+theme: rls
+region: footer
+weight: 10
+provider: null
+plugin: system_powered_by_block
+settings:
+  id: system_powered_by_block
+  label: 'Powered by Drupal'
+  provider: system
+  label_display: '0'
+visibility: {  }

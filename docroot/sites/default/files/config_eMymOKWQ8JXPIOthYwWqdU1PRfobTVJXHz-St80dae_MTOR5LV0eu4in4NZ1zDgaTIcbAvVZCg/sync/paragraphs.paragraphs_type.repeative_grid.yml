@@ -1,0 +1,10 @@
+uuid: 1c837931-4501-425c-864e-51056f9492f0
+langcode: en
+status: true
+dependencies: {  }
+id: repeative_grid
+label: 'Repeative Grid'
+icon_uuid: null
+icon_default: null
+description: 'Used in Main page Grid'
+behavior_plugins: {  }

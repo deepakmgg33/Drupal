@@ -1,0 +1,38 @@
+uuid: 1fdd77fa-dc0f-4423-afb4-4aaa6e08d59a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_science_line
+    - paragraphs.paragraphs_type.our_science
+  module:
+    - image
+id: paragraph.our_science.field_science_line
+field_name: field_science_line
+entity_type: paragraph
+bundle: our_science
+label: 'science line'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'png gif jpg jpeg svg'
+  max_filesize: ''
+  max_resolution: ''
+  min_resolution: ''
+  alt_field: true
+  alt_field_required: true
+  title_field: false
+  title_field_required: false
+  default_image:
+    uuid: ''
+    alt: ''
+    title: ''
+    width: null
+    height: null
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: image

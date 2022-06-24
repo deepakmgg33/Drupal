@@ -1,0 +1,25 @@
+uuid: 7c1db3f2-0824-480c-92f0-3f8789444a32
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.footer-secondary-menu
+  module:
+    - system
+  theme:
+    - ucb
+id: footersecondarymenu
+theme: ucb
+region: footerNav
+weight: -10
+provider: null
+plugin: 'system_menu_block:footer-secondary-menu'
+settings:
+  id: 'system_menu_block:footer-secondary-menu'
+  label: 'Footer Secondary Menu'
+  provider: system
+  label_display: '0'
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }

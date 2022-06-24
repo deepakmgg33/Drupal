@@ -1,0 +1,22 @@
+uuid: d7ac2826-d5d8-4026-9140-2990e33efbfc
+langcode: en
+status: false
+dependencies:
+  module:
+    - system
+  theme:
+    - ucb
+_core:
+  default_config_hash: KHQIJ7Vfl25lTjzIc7qIvnuistt-Mw2O0kG4jCofmkI
+id: ucb_messages
+theme: ucb
+region: header
+weight: -7
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Status messages'
+  provider: system
+  label_display: '0'
+visibility: {  }

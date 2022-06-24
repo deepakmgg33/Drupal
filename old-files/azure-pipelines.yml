@@ -1,0 +1,164 @@
+trigger:
+  batch: 'true'
+  branches:
+    include:
+    - develop
+    - qa
+    - preview
+    - master
+  paths:
+    exclude:
+    - /azure-pipelines.yml   
+    - /*.md
+
+variables:
+  accesstoken: $(System.AccessToken)
+  dockerRegistryServiceConnection: 'Azure Container Registry'
+  tag: $(Build.BuildNumber)
+  project: $(Build.Repository.Name)
+  vmImageName: ubuntu-18.04
+  secret: uwhpci
+  phpVersion: 7.3
+
+stages:
+- stage: Build
+  jobs:
+
+  - job: build
+    displayName: Build
+    pool:
+      vmImage: $(vmImageName)
+    steps:
+    - script: |
+        if [ $(Build.SourceBranch) = 'refs/heads/master' ]; then
+          echo "##vso[task.setvariable variable=tier;isOutput=true]prod"
+        elif [ $(Build.SourceBranch) = 'refs/heads/preview' ]; then
+          echo "##vso[task.setvariable variable=tier;isOutput=true]preview"
+        elif [ $(Build.SourceBranch) = 'refs/heads/qa' ]; then
+          echo "##vso[task.setvariable variable=tier;isOutput=true]qa"
+        elif [ $(Build.SourceBranch) = 'refs/heads/develop' ]; then
+          echo "##vso[task.setvariable variable=tier;isOutput=true]dev"
+        fi
+      name: set_tier
+      displayName: Set site tier
+
+    - checkout: self
+      clean: true
+      persistCredentials: true
+
+    - script: |
+        sudo update-alternatives --set php /usr/bin/php$(phpVersion)
+        sudo update-alternatives --set phar /usr/bin/phar$(phpVersion)
+        sudo update-alternatives --set phpdbg /usr/bin/phpdbg$(phpVersion)
+        sudo update-alternatives --set php-cgi /usr/bin/php-cgi$(phpVersion)
+        sudo update-alternatives --set phar.phar /usr/bin/phar.phar$(phpVersion)
+        php -version
+        wget -qO- https://getcomposer.org/installer | sudo php -- --install-dir=/usr/bin --filename=composer --version=1.10.16;
+      displayName: 'Use PHP version $(phpVersion)'
+    
+    - task: DownloadSecureFile@1
+      name: auth
+      displayName: 'Configure Composer Auth'
+      inputs:
+        secureFile: 'auth.json'
+
+    - script: |
+        sed -i 's!ssh://ucbalm@vs-ssh.visualstudio.com:22/DefaultCollection/eCMS/_ssh!https://ucbalm@dev.azure.com/ucbalm/eCMS/_git!' ./composer.json
+        sed -i 's!ssh://ucbalm@vs-ssh.visualstudio.com:22/DefaultCollection/eCMS/_ssh!https://ucbalm@dev.azure.com/ucbalm/eCMS/_git!' ./composer.lock
+        sed -i 's!git@ssh.dev.azure.com:v3/ucbalm/eCMS!https://ucbalm@dev.azure.com/ucbalm/eCMS/_git!' ./composer.json
+        sed -i 's!git@ssh.dev.azure.com:v3/ucbalm/eCMS!https://ucbalm@dev.azure.com/ucbalm/eCMS/_git!' ./composer.lock        
+        sed -i 's!ucbalm@vs-ssh.visualstudio.com:v3/ucbalm/eCMS!https://ucbalm@dev.azure.com/ucbalm/eCMS/_git!' ./composer.json
+        sed -i 's!ucbalm@vs-ssh.visualstudio.com:v3/ucbalm/eCMS!https://ucbalm@dev.azure.com/ucbalm/eCMS/_git!' ./composer.lock
+        sed -i 's!https://ucbalm.visualstudio.com/eCMS/_git!https://ucbalm@dev.azure.com/ucbalm/eCMS/_git!' ./composer.json
+        sed -i 's!https://ucbalm.visualstudio.com/eCMS/_git!https://ucbalm@dev.azure.com/ucbalm/eCMS/_git!' ./composer.lock
+      displayName: SSH to HTTPS
+
+    - task: CacheBeta@0
+      inputs:
+        key: composer.lock
+        path: .composer-cache
+      displayName: Composer cache
+
+    - script: |
+        mv $(auth.secureFilePath) .
+        composer global require hirak/prestissimo
+        composer config -g cache-dir .composer-cache
+        composer install --no-progress --profile --prefer-dist
+        rm -f auth.json
+      displayName: Composer Install
+
+    - script: |
+        search_phrases=('Failed to download:' 'Failed to execute git clone' 'does not contain valid JSON');
+        for search_phrase in "${search_phrases[@]}"; do
+        log_file="curl -u $(USER):$(System.AccessToken) --silent "https://dev.azure.com/ucbalm/eCMS/_apis/build/builds/$(Build.BuildId)/logs/11?api-version=5.0""
+        match_search=`${log_file} | grep "${search_phrase}"`
+        if [[ $? = 0 ]]; then echo "Error in Composer install is found:" && echo ${match_search} && ${log_file} | awk "/${search_phrase}/ ? c++ : c" && exit 1; fi
+        done
+      displayName: Composer install error check
+
+    - task: Docker@2
+      displayName: Build and push an image to container registry
+      inputs:
+        command: buildAndPush
+        repository: $(project)-$(set_tier.tier)
+        containerRegistry: $(dockerRegistryServiceConnection)
+        tags: |
+          $(tag)
+
+  - job: TagWest
+    dependsOn: build
+    pool:
+      name: "UWHP OpenShift West"
+    variables:
+      tier: $[ dependencies.build.outputs['set_tier.tier'] ]
+    steps:
+    - checkout: none
+    - script: echo $(tier)
+      displayName: Check variable
+    - task: Kubernetes@1
+      inputs:
+        connectionType: 'None'
+        namespace: '$(project)-$(tier)'
+        command: 'create'
+        secretType: 'dockerRegistry'
+        containerRegistryType: 'Container Registry'
+        dockerRegistryEndpoint: '$(dockerRegistryServiceConnection)'
+        secretName: '$(secret)'
+    - script: 'oc -n $(project)-$(tier) secrets add serviceaccount/deployer secrets/$(secret) --for=pull'
+    - script: 'oc -n $(project)-$(tier) secrets add serviceaccount/default secrets/$(secret) --for=pull'
+    - script: 'oc policy add-role-to-user system:image-puller -z default -n $(project)-$(tier)'
+    - script: 'oc tag --source=docker $(secret).azurecr.io/$(project)-$(tier):$(tag) $(project)-$(tier)/$(project):$(tag) --reference-policy=local'
+    - script: 'oc tag --source=docker $(secret).azurecr.io/$(project)-$(tier):$(tag) $(project)-$(tier)/$(project):latest --reference-policy=local'
+    - script: 'oc patch is $(project) -n $(project)-$(tier) -p ''{"spec":{"tags":[{"name":"$(tag)","importPolicy":{"scheduled":true}}]}}'''
+    - script: 'sleep 30'
+    - script: 'oc annotate is $(project) -n $(project)-$(tier) openshift.io/image.dockerRepositoryCheck-'
+    - script: 'sleep 30'
+    - script: 'oc annotate is $(project) -n $(project)-$(tier) openshift.io/image.dockerRepositoryCheck-'
+
+  - job: TagNorth
+    dependsOn: build
+    pool:
+      name: "UWHP OpenShift North"
+    variables:
+      tier: $[ dependencies.build.outputs['set_tier.tier'] ]
+    steps:
+    - checkout: none
+    - script: echo $(tier)
+      displayName: Check variable
+    - task: Kubernetes@1
+      inputs:
+        connectionType: 'None'
+        namespace: '$(project)-$(tier)'
+        command: 'create'
+        secretType: 'dockerRegistry'
+        containerRegistryType: 'Container Registry'
+        dockerRegistryEndpoint: '$(dockerRegistryServiceConnection)'
+        secretName: '$(secret)'
+    - script: 'oc -n $(project)-$(tier) secrets add serviceaccount/deployer secrets/$(secret) --for=pull'
+    - script: 'oc -n $(project)-$(tier) secrets add serviceaccount/default secrets/$(secret) --for=pull'
+    - script: 'oc policy add-role-to-user system:image-puller -z default -n $(project)-$(tier)'
+    - script: 'oc tag --source=docker $(secret).azurecr.io/$(project)-$(tier):$(tag) $(project)-$(tier)/$(project):$(tag) --reference-policy=local'
+    - script: 'oc tag --source=docker $(secret).azurecr.io/$(project)-$(tier):$(tag) $(project)-$(tier)/$(project):latest --reference-policy=local'
+    - script: 'oc patch is $(project) -n $(project)-$(tier) -p ''{"spec":{"tags":[{"name":"$(tag)","importPolicy":{"scheduled":true}}]}}'''
+    - script: 'sleep 30'
+    - script: 'oc annotate is $(project) -n $(project)-$(tier) openshift.io/image.dockerRepositoryCheck-'    

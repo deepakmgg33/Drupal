@@ -1,0 +1,10 @@
+uuid: 613c77f9-820a-4601-83f8-6e87e23bc8ee
+langcode: en
+status: true
+dependencies: {  }
+id: hcp_resource
+label: 'Hcp resource'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

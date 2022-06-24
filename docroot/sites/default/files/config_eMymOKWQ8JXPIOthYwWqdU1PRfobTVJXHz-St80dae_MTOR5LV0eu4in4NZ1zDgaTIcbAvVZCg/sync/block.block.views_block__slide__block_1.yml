@@ -1,0 +1,30 @@
+uuid: 8e85fa0e-3135-4279-81c1-959d1e5ecc4f
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.slide_
+  module:
+    - system
+    - views
+  theme:
+    - ucb
+id: views_block__slide__block_1
+theme: ucb
+region: content
+weight: 0
+provider: null
+plugin: 'views_block:slide_-block_1'
+settings:
+  id: 'views_block:slide_-block_1'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }

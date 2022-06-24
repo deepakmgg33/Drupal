@@ -1,0 +1,24 @@
+Index: wcms/docroot/profiles/wcms/modules/contrib/multiversion/src/Entity/Storage/ContentEntityStorageTrait.php
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- a/src/Entity/Storage/ContentEntityStorageTrait.php	(revision 597c7a53bd3639dbf31d8fceb734586ffa7bc85b)
++++ b/src/Entity/Storage/ContentEntityStorageTrait.php	(revision )
+@@ -387,7 +387,15 @@
+         $default_rev = $tree->getDefaultRevision($entity->uuid());
+
+         if ($entity->_rev->value == $default_rev) {
++          // Don't rewrite workbench moderation default revision.
++          $moduleHandler = \Drupal::service('module_handler');
++          if ($moduleHandler->moduleExists('workbench_moderation')){
++            $moderation_default_revision = $entity->moderation_state->entity->isDefaultRevisionState();
++            $entity->isDefaultRevision($moderation_default_revision);
++          }
++          else {
+-          $entity->isDefaultRevision(TRUE);
++            $entity->isDefaultRevision(TRUE);
++          }
+         }
+         // @todo: {@link https://www.drupal.org/node/2597538 Needs test.}
+         else {

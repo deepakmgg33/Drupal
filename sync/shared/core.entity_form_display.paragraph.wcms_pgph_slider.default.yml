@@ -1,0 +1,99 @@
+uuid: 9842c092-5f20-4918-89e5-01c49d789e14
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.wcms_pgph_slider.field_wcms_pgph__component
+    - field.field.paragraph.wcms_pgph_slider.field_wcms_pgph__description
+    - field.field.paragraph.wcms_pgph_slider.field_wcms_pgph__link
+    - field.field.paragraph.wcms_pgph_slider.field_wcms_pgph__slider__title
+    - field.field.paragraph.wcms_pgph_slider.field_wcms_pgph__view_mode
+    - paragraphs.paragraphs_type.wcms_pgph_slider
+  module:
+    - field_group
+    - field_layout
+    - layout_discovery
+    - link_class
+    - paragraphs
+    - text
+    - view_mode_selector
+third_party_settings:
+  field_group:
+    group_slider:
+      children:
+        - field_wcms_pgph__slider__title
+        - field_wcms_pgph__description
+        - field_wcms_pgph__link
+        - field_wcms_pgph__component
+        - field_wcms_pgph__view_mode
+      parent_name: ''
+      weight: 0
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+      label: Slider
+      region: content
+  field_layout:
+    id: layout_onecol
+    settings:
+      label: ''
+_core:
+  default_config_hash: Z4UUq2TKz0lWpWb37LP4mEbqh2X-O7mKDc6Be57UHlY
+id: paragraph.wcms_pgph_slider.default
+targetEntityType: paragraph
+bundle: wcms_pgph_slider
+mode: default
+content:
+  field_wcms_pgph__component:
+    weight: 4
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: closed
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: wcms_pgph_slideritem
+    third_party_settings: {  }
+    type: entity_reference_paragraphs
+    region: content
+  field_wcms_pgph__description:
+    weight: 2
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_wcms_pgph__link:
+    weight: 3
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+      link_class_mode: manual
+      link_class_force: ''
+      link_class_select: ''
+    third_party_settings: {  }
+    type: link_class_field_widget
+    region: content
+  field_wcms_pgph__slider__title:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_wcms_pgph__view_mode:
+    weight: 5
+    settings: {  }
+    third_party_settings: {  }
+    type: view_mode_selector_select
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

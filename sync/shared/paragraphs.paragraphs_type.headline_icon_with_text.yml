@@ -1,0 +1,10 @@
+uuid: 330691ac-d947-4f36-82ce-8ca28b9ffce9
+langcode: en
+status: true
+dependencies: {  }
+id: headline_icon_with_text
+label: 'Headline Icon with text'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

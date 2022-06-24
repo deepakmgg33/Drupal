@@ -1,0 +1,72 @@
+version: "3.4"
+
+services:
+
+  php:
+    image: wodby/drupal-php:7.2-dev-4.12.11
+    depends_on:
+      - mysql
+      - redis
+    env_file:
+      - .env
+    volumes:
+      - ./:/var/www/html
+## For macOS users (https://wodby.com/stacks/drupal/docs/local/docker-for-mac/)
+#      - ./:/var/www/html:cached # User-guided caching
+
+  nginx:
+    image: wodby/nginx:1.15-5.5.0
+    depends_on:
+      - php
+    env_file:
+      - .env
+    volumes:
+      - ./:/var/www/html
+# For macOS users (https://wodby.com/stacks/drupal/docs/local/docker-for-mac/)
+#      - ./:/var/www/html:cached # User-guided caching
+    labels:
+      - 'traefik.backend=${COMPOSE_PROJECT_NAME}_nginx'
+      - 'traefik.port=80'
+      - 'traefik.frontend.rule=Host:${WCMS_SUBSITE}'
+
+  varnish:
+    image: wodby/varnish:4.1-4.2.9
+    env_file:
+      - .env
+    depends_on:
+      - nginx
+    labels:
+      - 'traefik.backend=${COMPOSE_PROJECT_NAME}_varnish'
+      - 'traefik.port=6081'
+      - 'traefik.frontend.rule=Host:varnish.${WCMS_SUBSITE}'
+
+  redis:
+    image: redis
+    env_file:
+      - .env
+
+  mysql:
+    image: percona
+    env_file:
+      - .env
+
+  portainer:
+    image: portainer/portainer
+    env_file:
+      - .env
+    command: --no-auth -H unix:///var/run/docker.sock
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    labels:
+      - 'traefik.backend=${COMPOSE_PROJECT_NAME}_portainer'
+      - 'traefik.port=9000'
+      - 'traefik.frontend.rule=Host:portainer.${WCMS_SUBSITE}'
+
+  traefik:
+    image: traefik
+    command: -c /dev/null --web --docker --logLevel=INFO
+    ports:
+      - '8080:80'
+#      - '8080:8080' # Dashboard
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock

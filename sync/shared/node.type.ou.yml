@@ -1,0 +1,18 @@
+uuid: 93bcae6a-c37b-4737-a453-05d9a965ffe0
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: 'Our science'
+type: ou
+description: ''
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false

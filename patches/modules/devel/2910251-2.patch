@@ -1,0 +1,18 @@
+diff --git a/webprofiler/src/Entity/Decorators/Config/ConfigEntityStorageDecorator.php b/webprofiler/src/Entity/Decorators/Config/ConfigEntityStorageDecorator.php
+index 168b739..b9a06f5 100644
+--- a/webprofiler/src/Entity/Decorators/Config/ConfigEntityStorageDecorator.php
++++ b/webprofiler/src/Entity/Decorators/Config/ConfigEntityStorageDecorator.php
+@@ -111,6 +111,13 @@ class ConfigEntityStorageDecorator extends EntityDecorator implements ConfigEnti
+   /**
+    * {@inheritdoc}
+    */
++  public function hasData() {
++    return $this->getOriginalObject()->hasData();
++  }
++
++  /**
++   * {@inheritdoc}
++   */
+   public function getQuery($conjunction = 'AND') {
+     return $this->getOriginalObject()->getQuery($conjunction);
+   }

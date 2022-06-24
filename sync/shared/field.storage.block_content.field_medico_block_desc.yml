@@ -1,0 +1,21 @@
+uuid: a6cc89f3-de94-4472-adcd-39bd985ebbc2
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_content
+id: block_content.field_medico_block_desc
+field_name: field_medico_block_desc
+entity_type: block_content
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

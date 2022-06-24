@@ -1,0 +1,12 @@
+uuid: 60e3abe8-8ced-4eb1-8ff3-4449bf9bb44f
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: rIubvKnd5eQJTMeDbqRns5uhEOHkC47QPrg2N-A9nCc
+id: wcms_pgph_printversion
+label: 'Print Version'
+icon_uuid: null
+icon_default: null
+description: null
+behavior_plugins: {  }

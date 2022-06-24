@@ -1,0 +1,21 @@
+uuid: 1b293d5b-f88e-4f9a-8d9a-9261ccd66d72
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_clinical_title
+field_name: field_clinical_title
+entity_type: node
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,31 @@
+uuid: d4be1bc2-4841-4cef-b311-380f65b1f970
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:headline_icon_with_text:82e66d14-3c65-4277-8e9b-5fb505c8e016'
+  module:
+    - block_content
+    - system
+  theme:
+    - ucb
+id: publicationsviewblock
+theme: ucb
+region: content
+weight: 0
+provider: null
+plugin: 'block_content:82e66d14-3c65-4277-8e9b-5fb505c8e016'
+settings:
+  id: 'block_content:82e66d14-3c65-4277-8e9b-5fb505c8e016'
+  label: 'Publications view block'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: /publications-listing
+    negate: false
+    context_mapping: {  }

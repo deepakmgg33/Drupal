@@ -1,0 +1,27 @@
+uuid: 05f11bee-5e2f-4275-95b6-898944d4f596
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.tools
+  module:
+    - system
+  theme:
+    - wcms
+_core:
+  default_config_hash: qfsyoP1rZg4ZoIdxrsBMUZnBfiNAXqGIyl-sxC47imc
+id: wcms_tools
+theme: wcms
+region: sidebar_first
+weight: 0
+provider: null
+plugin: 'system_menu_block:tools'
+settings:
+  id: 'system_menu_block:tools'
+  label: Tools
+  provider: system
+  label_display: visible
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }

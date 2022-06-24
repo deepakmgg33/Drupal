@@ -1,0 +1,28 @@
+admin_libraries:
+  enable: 1
+  libraries:
+    - core/drupal.dialog.ajax
+    - core/drupal.tabledrag
+    - core/drupal.autocomplete
+    - ckeditor/drupal.ckeditor
+    - editor/drupal.editor
+    - filter/drupal.filter.admin
+    - filter/drupal.filter.filter_html.admin
+    - filter/drupal.filter
+    - filter/caption
+    - file/drupal.file
+    - media/form
+    - media/type_form
+    - media/oembed.formatter
+    - media/oembed.frame
+    - media/filter.caption
+    - media/media_embed_ckeditor_theme
+    - views/view.ajax
+    - media_library/widget
+    - media_library/view
+    - media_library/ui
+    - core/jquery.form
+    - core/drupal.tableresponsive
+    - core/drupal.dropbutton
+_core:
+  default_config_hash: bzMGr7K1jd0i2VLnsCW06RxI4pwgLOsXp9WogarEgSg

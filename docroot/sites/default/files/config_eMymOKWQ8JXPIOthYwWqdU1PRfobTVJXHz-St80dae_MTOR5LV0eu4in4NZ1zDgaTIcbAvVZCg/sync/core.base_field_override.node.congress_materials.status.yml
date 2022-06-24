@@ -1,0 +1,22 @@
+uuid: 48b1c89a-0140-44ba-ab37-507386799e11
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.congress_materials
+id: node.congress_materials.status
+field_name: status
+entity_type: node
+bundle: congress_materials
+label: Published
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

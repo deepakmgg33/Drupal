@@ -1,0 +1,22 @@
+uuid: 976505a7-881e-4320-b293-e6ee2f3c2afa
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.ucb_slide
+id: node.ucb_slide.status
+field_name: status
+entity_type: node
+bundle: ucb_slide
+label: Published
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

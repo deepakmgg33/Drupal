@@ -1,0 +1,16 @@
+diff --git a/src/EntityAccess.php b/src/EntityAccess.php
+index b4831e3..9c2c948 100644
+--- a/src/EntityAccess.php
++++ b/src/EntityAccess.php
+@@ -67,6 +67,11 @@ class EntityAccess {
+       return AccessResult::neutral();
+     }
+ 
++    // Don't bypass for PageVariant entity.
++    if ($entity->getEntityTypeId() == 'page_variant') {
++      return AccessResult::neutral();
++    }
++
+     return $this->bypassAccessResult($account);
+   }
+ 

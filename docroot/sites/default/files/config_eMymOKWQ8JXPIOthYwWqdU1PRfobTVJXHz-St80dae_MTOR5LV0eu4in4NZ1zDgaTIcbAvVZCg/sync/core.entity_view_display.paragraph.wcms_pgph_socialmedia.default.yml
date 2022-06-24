@@ -1,0 +1,59 @@
+uuid: 8efff0e4-c99d-48ec-b70a-7bf50a25d284
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.wcms_pgph_socialmedia.field_wcms_pgph__colossal_menu
+    - field.field.paragraph.wcms_pgph_socialmedia.field_wcms_pgph__view_mode
+    - paragraphs.paragraphs_type.wcms_pgph_socialmedia
+  module:
+    - field_layout
+    - layout_builder
+    - layout_discovery
+    - wcms_colossal
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings:
+      label: ''
+  layout_builder:
+    enabled: true
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+        components:
+          7a492f84-234d-4466-af5a-3479839934ed:
+            uuid: 7a492f84-234d-4466-af5a-3479839934ed
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:paragraph:wcms_pgph_socialmedia:field_wcms_pgph__colossal_menu'
+              formatter:
+                label: hidden
+                settings: {  }
+                third_party_settings: {  }
+                type: colossal_menu
+            additional: {  }
+            weight: 0
+        third_party_settings: {  }
+_core:
+  default_config_hash: NIJ3Iou0ysPwg4BEFJW3RHzs8Vl0nbl6LgrEXFgrPqc
+id: paragraph.wcms_pgph_socialmedia.default
+targetEntityType: paragraph
+bundle: wcms_pgph_socialmedia
+mode: default
+content:
+  field_wcms_pgph__colossal_menu:
+    weight: 0
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: colossal_menu
+    region: content
+hidden:
+  field_wcms_pgph__view_mode: true
+  search_api_excerpt: true

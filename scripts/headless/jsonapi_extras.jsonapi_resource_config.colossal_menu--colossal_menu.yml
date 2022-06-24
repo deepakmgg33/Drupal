@@ -1,0 +1,35 @@
+uuid: 133662d7-232f-4b99-beac-9f7da6e1d994
+langcode: en
+status: true
+dependencies:
+  module:
+    - colossal_menu
+id: colossal_menu--colossal_menu
+disabled: true
+path: colossal_menu/colossal_menu
+resourceType: colossal_menu--colossal_menu
+resourceFields:
+  id:
+    fieldName: id
+    publicName: id
+    enhancer:
+      id: ''
+    disabled: false
+  type:
+    fieldName: type
+    publicName: type
+    enhancer:
+      id: ''
+    disabled: false
+  uuid:
+    fieldName: uuid
+    publicName: uuid
+    enhancer:
+      id: ''
+    disabled: false
+  _core:
+    fieldName: _core
+    publicName: _core
+    enhancer:
+      id: ''
+    disabled: false

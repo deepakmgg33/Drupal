@@ -1,0 +1,21 @@
+uuid: 147aa915-22f2-474e-abba-100dc28c4bd5
+langcode: en
+status: true
+dependencies:
+  module:
+    - link
+    - paragraphs
+_core:
+  default_config_hash: 9VnL4VCUHsxS1w4AdCtV0Fh6zF3xo_28AyKES27l_Cs
+id: paragraph.field_wcms_pgph__link
+field_name: field_wcms_pgph__link
+entity_type: paragraph
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

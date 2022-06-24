@@ -1,0 +1,41 @@
+uuid: 238db72f-6a95-44e6-9870-25c40258bbdf
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.medical_information
+    - field.field.block_content.medical_information.field_medico_block_desc
+    - field.field.block_content.medical_information.field_medico_block_title
+    - field.field.block_content.medical_information.field_medico_title
+id: block_content.medical_information.default
+targetEntityType: block_content
+bundle: medical_information
+mode: default
+content:
+  field_medico_block_desc:
+    weight: 2
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_medico_block_title:
+    weight: 1
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_medico_title:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden:
+  langcode: true
+  search_api_excerpt: true

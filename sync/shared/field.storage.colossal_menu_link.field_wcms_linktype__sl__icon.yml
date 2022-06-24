@@ -1,0 +1,22 @@
+uuid: 4b0702c5-d1a8-4aef-bb22-4d597991b5f8
+langcode: en
+status: true
+dependencies:
+  module:
+    - colossal_menu
+    - media
+_core:
+  default_config_hash: HHx9KjvtP0WkY8Nx3pjlIOgBpiXJWIKFKiDp776bXV8
+id: colossal_menu_link.field_wcms_linktype__sl__icon
+field_name: field_wcms_linktype__sl__icon
+entity_type: colossal_menu_link
+type: entity_reference
+settings:
+  target_type: media
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

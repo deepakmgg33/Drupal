@@ -1,0 +1,15 @@
+.immunity-2row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.immunity-2row p {
+  margin-right: 10px;
+}
+
+.immunity-icon img {
+  width: auto !important;
+  max-height: 100% !important;
+}
+/*# sourceMappingURL=../../maps/molecules/immunity.css.map */

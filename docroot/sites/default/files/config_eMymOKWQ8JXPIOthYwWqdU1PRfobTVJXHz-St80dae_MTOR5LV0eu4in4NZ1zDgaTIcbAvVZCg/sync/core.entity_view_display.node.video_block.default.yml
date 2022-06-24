@@ -1,0 +1,39 @@
+uuid: 90b6c886-4164-4ecf-9263-7466b5d37ca7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.video_block.body
+    - field.field.node.video_block.field_duration
+    - field.field.node.video_block.field_title
+    - node.type.video_block
+  module:
+    - text
+    - user
+id: node.video_block.default
+targetEntityType: node
+bundle: video_block
+mode: default
+content:
+  field_duration:
+    weight: 1
+    label: hidden
+    settings:
+      date_format: medium
+      custom_date_format: ''
+      timezone: ''
+    third_party_settings: {  }
+    type: timestamp
+    region: content
+  field_title:
+    weight: 0
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+hidden:
+  body: true
+  langcode: true
+  links: true
+  search_api_excerpt: true

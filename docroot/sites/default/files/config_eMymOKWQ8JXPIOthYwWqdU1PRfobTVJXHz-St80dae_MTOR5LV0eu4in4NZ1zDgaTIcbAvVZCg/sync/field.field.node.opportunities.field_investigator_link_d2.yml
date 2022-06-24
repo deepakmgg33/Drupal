@@ -1,0 +1,21 @@
+uuid: 0b3cb248-aa4c-45f8-a270-5cbc54be9edf
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_investigator_link_d2
+    - node.type.opportunities
+  module:
+    - text
+id: node.opportunities.field_investigator_link_d2
+field_name: field_investigator_link_d2
+entity_type: node
+bundle: opportunities
+label: 'Investigator link d2'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

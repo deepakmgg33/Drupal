@@ -1,0 +1,21 @@
+uuid: 4542bf6e-8611-4dc1-96c5-e24da3785625
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_hcp_desc
+    - paragraphs.paragraphs_type.hcp_resource
+  module:
+    - text
+id: paragraph.hcp_resource.field_hcp_desc
+field_name: field_hcp_desc
+entity_type: paragraph
+bundle: hcp_resource
+label: 'HCP Desc'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

@@ -1,0 +1,23 @@
+uuid: ac4bcb5b-e09d-4da9-902b-9d2aa5de0a8a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_wcms_pgph__description
+    - paragraphs.paragraphs_type.wcms_pgph_slideritem
+  module:
+    - text
+_core:
+  default_config_hash: Ua-58a-QUUz5ZfaXNaHOwzPkgRDvMh94trsRFRx8q2g
+id: paragraph.wcms_pgph_slideritem.field_wcms_pgph__description
+field_name: field_wcms_pgph__description
+entity_type: paragraph
+bundle: wcms_pgph_slideritem
+label: Description
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

@@ -1,0 +1,8 @@
+uuid: e62a3cac-5a28-43a8-bde1-44f5ff365035
+langcode: en
+status: true
+dependencies: {  }
+id: dermatology
+label: Dermatology
+revision: 0
+description: ''

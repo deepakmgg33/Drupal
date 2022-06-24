@@ -1,0 +1,12 @@
+uuid: f23d2b44-cd26-4768-a1bd-3cfb61116f1d
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: Fy3vxp0q9P46QoW9gTv1yhZ7I-b5sOalE20_vvyuuo4
+id: wcms_pgph_document
+label: Document
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

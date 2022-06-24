@@ -1,0 +1,11 @@
+--- a/src/Commands/core/SiteInstallCommands.php	2018-08-21 15:36:31.000000000 +0300
++++ b/src/Commands/core/SiteInstallCommands.php	2018-08-21 15:33:06.000000000 +0300
+@@ -64,6 +64,8 @@
+                 $value = intval($value);
+             } elseif ($value == 'NULL') {
+                 $value = null;
++            } elseif (preg_match('/^\[.*\]$/', $value)) {
++                $value = explode(',', trim($value, '[]'));
+             }
+ 
+             $form_options[$key] = $value;

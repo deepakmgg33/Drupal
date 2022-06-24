@@ -1,0 +1,22 @@
+uuid: 63405398-70e0-4e94-8abe-68b78dc946aa
+langcode: en
+status: true
+dependencies:
+  theme:
+    - rls
+_core:
+  default_config_hash: sdJOXZ1YgYlmojQkHCPR1WyMU_ayJLYSqS7ra7rh8Nk
+id: rls_local_tasks
+theme: rls
+region: content
+weight: -40
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Tabs
+  provider: core
+  label_display: '0'
+  primary: true
+  secondary: true
+visibility: {  }

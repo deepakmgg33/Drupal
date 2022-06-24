@@ -1,0 +1,29 @@
+.publication-listing-container {
+  p {
+    font-weight: 300;
+  }
+}
+
+.main.content-main.immunology-pipeline {
+  min-height: unset;
+}
+
+.publication-page {
+  .mainContentCol .mainContent {
+    padding-left: 60px;
+  }
+}
+
+.publications-listing-page {
+  .main {
+    background-image: none;
+  }
+  .btn {
+    background-color: #71c5e8;
+  }
+  .ucb-icon {
+    width: 50px !important;
+    height: 50px !important;
+    margin-left: 20px;
+  }
+}

@@ -1,0 +1,58 @@
+uuid: f9424727-1e7a-41f4-a23e-c358deb20cda
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.wcms_pgph_document.field_wcms_pgph__media
+    - field.field.paragraph.wcms_pgph_document.field_wcms_pgph__view_mode
+    - paragraphs.paragraphs_type.wcms_pgph_document
+  module:
+    - field_group
+    - field_layout
+    - layout_discovery
+    - media_library
+    - view_mode_selector
+third_party_settings:
+  field_group:
+    group_document:
+      children:
+        - field_wcms_pgph__media
+        - field_wcms_pgph__view_mode
+      parent_name: ''
+      weight: 0
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+        required_fields: false
+      label: Document
+      region: content
+  field_layout:
+    id: layout_onecol
+    settings:
+      label: ''
+_core:
+  default_config_hash: eLFY01sZVJRjQAmx0SFTh6HwPogtdcq4gtGURW2UK1U
+id: paragraph.wcms_pgph_document.default
+targetEntityType: paragraph
+bundle: wcms_pgph_document
+mode: default
+content:
+  field_wcms_pgph__media:
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    type: media_library_widget
+    region: content
+  field_wcms_pgph__view_mode:
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    type: view_mode_selector_select
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

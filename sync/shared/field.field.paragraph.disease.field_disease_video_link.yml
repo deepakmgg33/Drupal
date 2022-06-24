@@ -1,0 +1,23 @@
+uuid: dd17bef1-94b9-4414-9de5-1a290cb3e829
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_disease_video_link
+    - paragraphs.paragraphs_type.disease
+  module:
+    - link
+id: paragraph.disease.field_disease_video_link
+field_name: field_disease_video_link
+entity_type: paragraph
+bundle: disease
+label: 'Disease video link'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 1
+field_type: link

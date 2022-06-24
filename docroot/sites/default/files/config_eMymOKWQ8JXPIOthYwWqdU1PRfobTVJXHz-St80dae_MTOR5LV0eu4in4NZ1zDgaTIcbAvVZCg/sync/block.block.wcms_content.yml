@@ -1,0 +1,22 @@
+uuid: 0c80411a-8424-4f37-a231-55725f97af84
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - wcms
+_core:
+  default_config_hash: DG-K56UVld0dD7OV-ACzKKgYVB2WNMD2Cp7fuHLe-EY
+id: wcms_content
+theme: wcms
+region: content
+weight: 0
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  provider: system
+  label_display: '0'
+visibility: {  }

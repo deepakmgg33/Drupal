@@ -1,0 +1,25 @@
+uuid: 91a6fbb8-3320-4d0a-a02e-f2c6ca4adcf2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_wcms_pgph__grid__column
+    - paragraphs.paragraphs_type.wcms_pgph_grid
+  module:
+    - options
+_core:
+  default_config_hash: _Nyom8VykNfajMTMKiLmjoc-kflwz4ONmse2-sllhY0
+id: paragraph.wcms_pgph_grid.field_wcms_pgph__grid__column
+field_name: field_wcms_pgph__grid__column
+entity_type: paragraph
+bundle: wcms_pgph_grid
+label: Column
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings: {  }
+field_type: list_integer

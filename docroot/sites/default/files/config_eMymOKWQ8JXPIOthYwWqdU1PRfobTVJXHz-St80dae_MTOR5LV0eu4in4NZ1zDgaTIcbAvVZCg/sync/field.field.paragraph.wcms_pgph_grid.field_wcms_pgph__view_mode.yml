@@ -1,0 +1,30 @@
+uuid: 48851127-1455-49eb-9227-0806a4bb3908
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_wcms_pgph__view_mode
+    - paragraphs.paragraphs_type.wcms_pgph_grid
+  module:
+    - view_mode_selector
+_core:
+  default_config_hash: ZpYrgdhpc_Wep8pFDhAgnfrgaFomd14jzmCoN40p3t8
+id: paragraph.wcms_pgph_grid.field_wcms_pgph__view_mode
+field_name: field_wcms_pgph__view_mode
+entity_type: paragraph
+bundle: wcms_pgph_grid
+label: 'View Mode'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: default
+default_value_callback: ''
+settings:
+  view_modes:
+    default:
+      enable: 0
+      hide_title: 0
+      icon: {  }
+field_type: view_mode_selector

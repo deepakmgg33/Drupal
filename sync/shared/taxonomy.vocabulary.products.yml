@@ -1,0 +1,8 @@
+uuid: ae92f691-38fa-4825-a0fb-efd059523d5f
+langcode: en
+status: true
+dependencies: {  }
+name: Products
+vid: products
+description: ''
+weight: 0

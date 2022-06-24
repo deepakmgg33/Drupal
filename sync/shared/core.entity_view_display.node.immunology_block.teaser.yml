@@ -1,0 +1,34 @@
+uuid: f55e7fa8-c414-40f2-b0b7-cfb055cb3c4e
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.immunology_block.body
+    - field.field.node.immunology_block.field_large_image
+    - node.type.immunology_block
+  module:
+    - text
+    - user
+id: node.immunology_block.teaser
+targetEntityType: node
+bundle: immunology_block
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_large_image: true
+  langcode: true
+  search_api_excerpt: true

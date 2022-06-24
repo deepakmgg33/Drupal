@@ -1,0 +1,17 @@
+uuid: b5e8555d-a0f5-4ff4-8e25-51da35f3955d
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: disease-block
+type: disease_block
+description: ''
+help: ''
+new_revision: false
+preview_mode: 1
+display_submitted: false

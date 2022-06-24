@@ -1,0 +1,18 @@
+uuid: 97ca21cf-de89-4c6d-9f2d-c565b2fa40e3
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: investigators-block
+type: investigators_block
+description: ''
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: true

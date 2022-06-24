@@ -1,0 +1,38 @@
+uuid: e46bbf78-e744-4e0f-9b32-e985be98fc13
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.hcp_resources.body
+    - field.field.node.hcp_resources.field_hcp_list
+    - field.field.node.hcp_resources.field_resource_type
+    - field.field.node.hcp_resources.field_therapeutic_area
+    - node.type.hcp_resources
+  module:
+    - text
+    - user
+id: node.hcp_resources.teaser
+targetEntityType: node
+bundle: hcp_resources
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_hcp_list: true
+  field_resource_type: true
+  field_therapeutic_area: true
+  langcode: true
+  search_api_excerpt: true

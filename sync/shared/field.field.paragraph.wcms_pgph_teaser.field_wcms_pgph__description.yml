@@ -1,0 +1,23 @@
+uuid: c8adbeb8-1ed7-4f6e-85c8-ff84a4eea56a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_wcms_pgph__description
+    - paragraphs.paragraphs_type.wcms_pgph_teaser
+  module:
+    - text
+_core:
+  default_config_hash: 8ptU5XE81Ysnv6jtUXZnkuXBl1KlxyohSOn5kSO0sDM
+id: paragraph.wcms_pgph_teaser.field_wcms_pgph__description
+field_name: field_wcms_pgph__description
+entity_type: paragraph
+bundle: wcms_pgph_teaser
+label: Description
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

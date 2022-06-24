@@ -1,0 +1,25 @@
+uuid: b1d30baf-8b0c-4bf7-b296-924028baf89f
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:f49fb78e-f19a-4dac-a84b-6f42c0bf8019'
+  module:
+    - block_content
+  theme:
+    - ucb
+id: footerlogo
+theme: ucb
+region: footer
+weight: -11
+provider: null
+plugin: 'block_content:f49fb78e-f19a-4dac-a84b-6f42c0bf8019'
+settings:
+  id: 'block_content:f49fb78e-f19a-4dac-a84b-6f42c0bf8019'
+  label: 'Footer Logo'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

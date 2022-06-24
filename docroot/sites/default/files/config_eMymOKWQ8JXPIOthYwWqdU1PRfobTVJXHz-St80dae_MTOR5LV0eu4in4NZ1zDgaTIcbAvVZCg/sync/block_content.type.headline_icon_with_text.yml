@@ -1,0 +1,8 @@
+uuid: 82fdba83-3743-4b64-aa70-cc829cb2db0e
+langcode: en
+status: true
+dependencies: {  }
+id: headline_icon_with_text
+label: 'Headline Icon with text'
+revision: 0
+description: ''

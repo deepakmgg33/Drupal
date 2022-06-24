@@ -1,0 +1,41 @@
+uuid: 5272bc50-926f-44aa-8b56-58f424da826a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.connect_with_us.body
+    - field.field.node.connect_with_us.field_medical_info_cards
+    - node.type.connect_with_us
+  module:
+    - entity_reference_revisions
+    - text
+    - user
+id: node.connect_with_us.default
+targetEntityType: node
+bundle: connect_with_us
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_medical_info_cards:
+    weight: 102
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    type: entity_reference_revisions_entity_view
+    region: content
+  links:
+    weight: 100
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  langcode: true
+  search_api_excerpt: true

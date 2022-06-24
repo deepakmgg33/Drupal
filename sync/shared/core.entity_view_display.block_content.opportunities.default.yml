@@ -1,0 +1,44 @@
+uuid: 5dbc0cdb-e1c7-4ad5-a948-770ced35e2f8
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.opportunities
+    - field.field.block_content.opportunities.body
+    - field.field.block_content.opportunities.field_opportunities
+    - field.field.block_content.opportunities.field_opportunities_icon
+  module:
+    - image
+    - text
+id: block_content.opportunities.default
+targetEntityType: block_content
+bundle: opportunities
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_opportunities:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_opportunities_icon:
+    weight: 1
+    label: hidden
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+hidden:
+  langcode: true
+  search_api_excerpt: true

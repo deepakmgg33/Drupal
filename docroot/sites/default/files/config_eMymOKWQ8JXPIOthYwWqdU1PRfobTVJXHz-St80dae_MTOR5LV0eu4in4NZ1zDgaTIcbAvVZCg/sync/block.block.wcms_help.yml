@@ -1,0 +1,22 @@
+uuid: f4af1caf-4998-4500-a88b-f4de986b0a07
+langcode: en
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - wcms
+_core:
+  default_config_hash: CuW6iyAUpc6RJ_-ZUXhAm6jie5L1koAcMXf0S2d_UU4
+id: wcms_help
+theme: wcms
+region: help
+weight: -30
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  provider: help
+  label_display: '0'
+visibility: {  }

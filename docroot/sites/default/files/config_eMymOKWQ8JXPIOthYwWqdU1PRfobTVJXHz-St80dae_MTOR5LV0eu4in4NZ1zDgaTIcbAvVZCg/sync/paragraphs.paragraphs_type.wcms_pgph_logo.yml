@@ -1,0 +1,12 @@
+uuid: 4b01032c-fe13-4176-a6ce-e181699a12d1
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: kew5eupcp5vbGZ-yPw-BDRnGRPpsF5ZPDs0rc5OKfDA
+id: wcms_pgph_logo
+label: Logo
+icon_uuid: null
+icon_default: null
+description: null
+behavior_plugins: {  }

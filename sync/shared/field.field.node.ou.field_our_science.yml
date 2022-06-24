@@ -1,0 +1,79 @@
+uuid: 8de7adda-a70d-42c0-aea5-4bba1da0c254
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_our_science
+    - node.type.ou
+    - paragraphs.paragraphs_type.our_science
+  module:
+    - entity_reference_revisions
+id: node.ou.field_our_science
+field_name: field_our_science
+entity_type: node
+bundle: ou
+label: 'Our science'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      our_science: our_science
+    target_bundles_drag_drop:
+      from_library:
+        weight: 18
+        enabled: false
+      our_science:
+        enabled: true
+        weight: 19
+      repeative_grid:
+        weight: 20
+        enabled: false
+      wcms_asymmetric_translation:
+        weight: 21
+        enabled: false
+      wcms_pgph_backtotop:
+        weight: 22
+        enabled: false
+      wcms_pgph_document:
+        weight: 23
+        enabled: false
+      wcms_pgph_form:
+        weight: 24
+        enabled: false
+      wcms_pgph_grid:
+        weight: 25
+        enabled: false
+      wcms_pgph_logo:
+        weight: 26
+        enabled: false
+      wcms_pgph_menu:
+        weight: 27
+        enabled: false
+      wcms_pgph_printversion:
+        weight: 28
+        enabled: false
+      wcms_pgph_slider:
+        weight: 29
+        enabled: false
+      wcms_pgph_slideritem:
+        weight: 30
+        enabled: false
+      wcms_pgph_socialmedia:
+        weight: 31
+        enabled: false
+      wcms_pgph_teaser:
+        weight: 32
+        enabled: false
+      wcms_pgph_view:
+        weight: 33
+        enabled: false
+      wcms_pgph_wysiwyg:
+        weight: 34
+        enabled: false
+field_type: entity_reference_revisions

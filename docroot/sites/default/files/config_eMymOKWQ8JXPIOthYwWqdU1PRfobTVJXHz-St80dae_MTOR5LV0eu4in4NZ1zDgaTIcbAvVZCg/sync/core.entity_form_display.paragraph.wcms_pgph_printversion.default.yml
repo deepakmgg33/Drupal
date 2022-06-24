@@ -1,0 +1,60 @@
+uuid: bd7a59fa-392e-4f98-b073-c323d52a2c09
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.wcms_pgph_printversion.field_wcms_pgph__image
+    - field.field.paragraph.wcms_pgph_printversion.field_wcms_pgph__link
+    - paragraphs.paragraphs_type.wcms_pgph_printversion
+  module:
+    - field_group
+    - field_layout
+    - layout_discovery
+    - link
+    - media_library
+third_party_settings:
+  field_group:
+    group_print_version:
+      children:
+        - field_wcms_pgph__image
+        - field_wcms_pgph__link
+      parent_name: ''
+      weight: 0
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+      label: 'Print Version'
+      region: content
+  field_layout:
+    id: layout_onecol
+    settings:
+      label: ''
+_core:
+  default_config_hash: Ini-obxW0sTe5sJy_RrzfLmdMtF_kOhn8nU9nqiZMN4
+id: paragraph.wcms_pgph_printversion.default
+targetEntityType: paragraph
+bundle: wcms_pgph_printversion
+mode: default
+content:
+  field_wcms_pgph__image:
+    type: media_library_widget
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_wcms_pgph__link:
+    weight: 1
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

@@ -1,0 +1,23 @@
+uuid: 3e92189d-fb69-46c6-8583-b725468bfedb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.headline.field_headline_main
+    - paragraphs.paragraphs_type.headline
+  module:
+    - text
+id: paragraph.headline.default
+targetEntityType: paragraph
+bundle: headline
+mode: default
+content:
+  field_headline_main:
+    weight: 0
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+hidden:
+  search_api_excerpt: true

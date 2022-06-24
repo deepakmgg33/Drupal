@@ -1,0 +1,12 @@
+uuid: 1a267fb7-030b-44c9-918c-1c8e89e166a8
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: IN6UeE20aDYoBWwURm9moHpok-37pcQ0VrkGX5acH9I
+id: wcms_pgph_backtotop
+label: 'Back To Top'
+icon_uuid: null
+icon_default: null
+description: null
+behavior_plugins: {  }

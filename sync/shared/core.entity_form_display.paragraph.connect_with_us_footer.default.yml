@@ -1,0 +1,43 @@
+uuid: f106c2f4-def8-459f-b88b-8cee4dffe59d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.connect_with_us_footer.field_connect_desc
+    - field.field.paragraph.connect_with_us_footer.field_connect_title
+    - paragraphs.paragraphs_type.connect_with_us_footer
+  module:
+    - field_layout
+    - layout_discovery
+    - text
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings:
+      label: ''
+id: paragraph.connect_with_us_footer.default
+targetEntityType: paragraph
+bundle: connect_with_us_footer
+mode: default
+content:
+  field_connect_desc:
+    weight: 1
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+      show_summary: false
+    third_party_settings: {  }
+    type: text_textarea_with_summary
+    region: content
+  field_connect_title:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true

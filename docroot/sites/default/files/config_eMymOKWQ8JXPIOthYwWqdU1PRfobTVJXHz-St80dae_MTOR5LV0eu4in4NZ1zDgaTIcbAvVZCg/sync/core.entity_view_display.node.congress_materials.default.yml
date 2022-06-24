@@ -1,0 +1,71 @@
+uuid: a0d19289-4f85-4505-920d-2a83b25a7598
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.congress_materials.body
+    - field.field.node.congress_materials.field_content_type
+    - field.field.node.congress_materials.field_event_name
+    - field.field.node.congress_materials.field_image_link
+    - field.field.node.congress_materials.field_link
+    - field.field.node.congress_materials.field_summary
+    - node.type.congress_materials
+  module:
+    - link
+    - text
+    - user
+id: node.congress_materials.default
+targetEntityType: node
+bundle: congress_materials
+mode: default
+content:
+  field_content_type:
+    weight: 0
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_event_name:
+    weight: 1
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_image_link:
+    weight: 3
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_link:
+    weight: 4
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_summary:
+    weight: 2
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+hidden:
+  body: true
+  langcode: true
+  links: true
+  search_api_excerpt: true

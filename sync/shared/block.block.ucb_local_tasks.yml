@@ -1,0 +1,22 @@
+uuid: e34e3a48-505b-4902-86d9-7d27f596fc8a
+langcode: en
+status: false
+dependencies:
+  theme:
+    - ucb
+_core:
+  default_config_hash: X9I1OB0W3WlWtrK-CNcg6hNWwa8wficanpH8pYnDZDE
+id: ucb_local_tasks
+theme: ucb
+region: content
+weight: -5
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Tabs
+  provider: core
+  label_display: '0'
+  primary: true
+  secondary: true
+visibility: {  }

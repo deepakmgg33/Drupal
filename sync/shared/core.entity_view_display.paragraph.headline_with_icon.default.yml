@@ -1,0 +1,36 @@
+uuid: 59ac6838-5a41-4e30-968e-a8d1e10e3aca
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.headline_with_icon.field_headline_with_icon
+    - field.field.paragraph.headline_with_icon.field_science_icon
+    - paragraphs.paragraphs_type.headline_with_icon
+  module:
+    - entity_reference_revisions
+    - image
+id: paragraph.headline_with_icon.default
+targetEntityType: paragraph
+bundle: headline_with_icon
+mode: default
+content:
+  field_headline_with_icon:
+    type: entity_reference_revisions_entity_view
+    weight: 0
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_science_icon:
+    weight: 1
+    label: hidden
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+hidden:
+  search_api_excerpt: true

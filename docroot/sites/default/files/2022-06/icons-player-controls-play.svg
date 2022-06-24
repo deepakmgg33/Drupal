@@ -1,0 +1,6 @@
+<svg id="icons_player-controls_play" data-name="icons/player-controls/play" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+  <g id="icons_background" data-name="icons/background">
+    <rect id="bg" width="24" height="24" rx="12" fill="#f18070"/>
+  </g>
+  <path id="play" d="M0,10V0L8,5Z" transform="translate(9 7)" fill="#001489"/>
+</svg>

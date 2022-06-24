@@ -1,0 +1,19 @@
+Index: wcms/docroot/profiles/wcms/modules/contrib/openid_connect/openid_connect.module
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- a/openid_connect/openid_connect.module	(revision 9eed49d81b77e6f306ebf5f745b8c1d22d0e96fa)
++++ b/openid_connect/openid_connect.module	(revision )
+@@ -428,6 +428,11 @@
+     return FALSE;
+   }
+
++  if ($userinfo === FALSE) {
++    $userinfo = [
++        'email' => $user_data["unique_name"],
++    ];
++  }
+   $sub = openid_connect_extract_sub($user_data, $userinfo);
+   if (empty($sub)) {
+     $message = 'No "sub" found from @provider';

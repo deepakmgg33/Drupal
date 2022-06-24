@@ -1,0 +1,23 @@
+vendor:
+  css:
+    theme:
+      https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css:
+        {}
+      https://fast.fonts.net/cssapi/311af04f-fae1-4900-8e68-c946a54efffd.css: {}
+      dist/components/vendor.css: {}
+  js:
+    https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js:
+      attributes:
+        type: module
+cycle:
+  js:
+    '/libraries/cycle/jquery.cycle.all.js': {}
+  dependencies:
+    - core/jquery
+
+global:
+  css:
+    theme:
+      dist/components/global.css: {}
+  js:
+    js/scripts.js: {}

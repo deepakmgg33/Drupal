@@ -1,0 +1,8 @@
+<svg id="icn_corner-arrow" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+  <g id="icons_nav_arrow-right" data-name="icons/nav/arrow-right">
+    <g id="icons_background" data-name="icons/background">
+      <rect id="bg" width="24" height="24" rx="12" fill="none"/>
+    </g>
+    <path id="icon-arrow-right" d="M7.823,9.712a.735.735,0,0,0,0,1.067h0a.8.8,0,0,0,1.106,0l4.785-4.613a.919.919,0,0,0,0-1.333L8.929.221a.8.8,0,0,0-1.106,0h0a.735.735,0,0,0,0,1.067L11.41,4.746H.782A.769.769,0,0,0,0,5.5H0a.769.769,0,0,0,.782.754H11.41Z" transform="translate(5 7)" fill="#001489"/>
+  </g>
+</svg>

@@ -1,0 +1,19 @@
+uuid: 8cddd40a-91b1-4708-908e-c07a4c007399
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_medico_info_link
+    - paragraphs.paragraphs_type.medical_information
+id: paragraph.medical_information.field_medico_info_link
+field_name: field_medico_info_link
+entity_type: paragraph
+bundle: medical_information
+label: 'Medico info link'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

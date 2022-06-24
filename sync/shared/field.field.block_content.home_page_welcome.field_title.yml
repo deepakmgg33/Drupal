@@ -1,0 +1,21 @@
+uuid: 365a3c2d-a60a-43cd-a50d-cf4f14f054c8
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.home_page_welcome
+    - field.storage.block_content.field_title
+  module:
+    - text
+id: block_content.home_page_welcome.field_title
+field_name: field_title
+entity_type: block_content
+bundle: home_page_welcome
+label: title
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text

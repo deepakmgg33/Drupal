@@ -1,0 +1,21 @@
+uuid: 06c394ed-1ea3-474a-ab96-916be8e9ec30
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_summary
+    - node.type.disease_block
+  module:
+    - text
+id: node.disease_block.field_summary
+field_name: field_summary
+entity_type: node
+bundle: disease_block
+label: summary
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text

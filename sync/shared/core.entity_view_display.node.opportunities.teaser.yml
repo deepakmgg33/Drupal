@@ -1,0 +1,60 @@
+uuid: ca396a16-9755-4baa-b88c-f4de9c66a0d2
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.opportunities.body
+    - field.field.node.opportunities.field_clinical_link
+    - field.field.node.opportunities.field_clinical_title
+    - field.field.node.opportunities.field_contents
+    - field.field.node.opportunities.field_investigator_d1
+    - field.field.node.opportunities.field_investigator_d2
+    - field.field.node.opportunities.field_investigator_link
+    - field.field.node.opportunities.field_investigator_link_d1
+    - field.field.node.opportunities.field_investigator_link_d2
+    - field.field.node.opportunities.field_investigator_link_d3
+    - field.field.node.opportunities.field_investigator_title
+    - field.field.node.opportunities.field_investogator_link_title
+    - field.field.node.opportunities.field_ucb_d1
+    - field.field.node.opportunities.field_ucb_d2
+    - field.field.node.opportunities.field_ucb_title
+    - node.type.opportunities
+  module:
+    - text
+    - user
+id: node.opportunities.teaser
+targetEntityType: node
+bundle: opportunities
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_clinical_link: true
+  field_clinical_title: true
+  field_contents: true
+  field_investigator_d1: true
+  field_investigator_d2: true
+  field_investigator_link: true
+  field_investigator_link_d1: true
+  field_investigator_link_d2: true
+  field_investigator_link_d3: true
+  field_investigator_title: true
+  field_investogator_link_title: true
+  field_ucb_d1: true
+  field_ucb_d2: true
+  field_ucb_title: true
+  langcode: true
+  search_api_excerpt: true

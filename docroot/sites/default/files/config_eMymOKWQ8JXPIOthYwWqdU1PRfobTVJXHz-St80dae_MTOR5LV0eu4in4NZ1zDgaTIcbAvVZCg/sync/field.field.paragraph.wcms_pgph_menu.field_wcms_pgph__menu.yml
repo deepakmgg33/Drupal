@@ -1,0 +1,25 @@
+uuid: 47ee8031-b2d0-49ed-bbfd-0932282ff3dc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_wcms_pgph__menu
+    - paragraphs.paragraphs_type.wcms_pgph_menu
+_core:
+  default_config_hash: SmtfvPRddOsVntQP6Eln3TBIvf6b9JrloYE-CTkR6nA
+id: paragraph.wcms_pgph_menu.field_wcms_pgph__menu
+field_name: field_wcms_pgph__menu
+entity_type: paragraph
+bundle: wcms_pgph_menu
+label: Menu
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:menu'
+  handler_settings:
+    target_bundles: null
+    auto_create: false
+field_type: entity_reference

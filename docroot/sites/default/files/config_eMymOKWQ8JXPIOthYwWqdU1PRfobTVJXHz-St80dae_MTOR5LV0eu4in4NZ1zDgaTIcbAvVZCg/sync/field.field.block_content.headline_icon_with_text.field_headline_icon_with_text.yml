@@ -1,0 +1,88 @@
+uuid: 796caac6-7dc8-4eeb-9c59-1025c0ce529c
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.headline_icon_with_text
+    - field.storage.block_content.field_headline_icon_with_text
+    - paragraphs.paragraphs_type.headline_icon_with_text
+  module:
+    - entity_reference_revisions
+id: block_content.headline_icon_with_text.field_headline_icon_with_text
+field_name: field_headline_icon_with_text
+entity_type: block_content
+bundle: headline_icon_with_text
+label: 'Headline Icon with text'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      headline_icon_with_text: headline_icon_with_text
+    target_bundles_drag_drop:
+      from_library:
+        weight: 21
+        enabled: false
+      headline:
+        weight: 22
+        enabled: false
+      headline_icon_with_text:
+        enabled: true
+        weight: 23
+      headline_with_icon:
+        weight: 24
+        enabled: false
+      our_science:
+        weight: 25
+        enabled: false
+      repeative_grid:
+        weight: 26
+        enabled: false
+      wcms_asymmetric_translation:
+        weight: 27
+        enabled: false
+      wcms_pgph_backtotop:
+        weight: 28
+        enabled: false
+      wcms_pgph_document:
+        weight: 29
+        enabled: false
+      wcms_pgph_form:
+        weight: 30
+        enabled: false
+      wcms_pgph_grid:
+        weight: 31
+        enabled: false
+      wcms_pgph_logo:
+        weight: 32
+        enabled: false
+      wcms_pgph_menu:
+        weight: 33
+        enabled: false
+      wcms_pgph_printversion:
+        weight: 34
+        enabled: false
+      wcms_pgph_slider:
+        weight: 35
+        enabled: false
+      wcms_pgph_slideritem:
+        weight: 36
+        enabled: false
+      wcms_pgph_socialmedia:
+        weight: 37
+        enabled: false
+      wcms_pgph_teaser:
+        weight: 38
+        enabled: false
+      wcms_pgph_view:
+        weight: 39
+        enabled: false
+      wcms_pgph_wysiwyg:
+        weight: 40
+        enabled: false
+field_type: entity_reference_revisions

@@ -1,0 +1,11 @@
+uuid: 56dc792a-d42c-41d9-afc4-8e1d215af285
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.repeative_grid
+id: block_content.repeative_grid
+target_entity_type_id: block_content
+target_bundle: repeative_grid
+default_langcode: site_default
+language_alterable: false

@@ -1,0 +1,59 @@
+uuid: ed072729-ee08-4c30-9df6-2805cd1f23a2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.wcms_pgph_wysiwyg.field_wcms_pgph__description
+    - field.field.paragraph.wcms_pgph_wysiwyg.field_wcms_pgph__view_mode
+    - paragraphs.paragraphs_type.wcms_pgph_wysiwyg
+  module:
+    - field_layout
+    - layout_builder
+    - layout_discovery
+    - text
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings:
+      label: ''
+  layout_builder:
+    enabled: true
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+        components:
+          ef0f092a-168c-42b4-9e52-fae221693e88:
+            uuid: ef0f092a-168c-42b4-9e52-fae221693e88
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:paragraph:wcms_pgph_wysiwyg:field_wcms_pgph__description'
+              formatter:
+                label: hidden
+                settings: {  }
+                third_party_settings: {  }
+                type: text_default
+            additional: {  }
+            weight: 0
+        third_party_settings: {  }
+_core:
+  default_config_hash: i7mPoNiM42HutHw_OF0Lqzzpiao3uNrGBCD8087LlaM
+id: paragraph.wcms_pgph_wysiwyg.default
+targetEntityType: paragraph
+bundle: wcms_pgph_wysiwyg
+mode: default
+content:
+  field_wcms_pgph__description:
+    weight: 0
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+hidden:
+  field_wcms_pgph__view_mode: true
+  search_api_excerpt: true

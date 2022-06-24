@@ -1,0 +1,49 @@
+uuid: ad6b9036-014c-45f0-9693-b978db7a5c54
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.repeative_grid
+    - field.field.block_content.repeative_grid.field_repeative_grid
+  module:
+    - field_layout
+    - layout_discovery
+    - paragraphs
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings:
+      label: ''
+id: block_content.repeative_grid.default
+targetEntityType: block_content
+bundle: repeative_grid
+mode: default
+content:
+  field_repeative_grid:
+    type: entity_reference_paragraphs
+    weight: 27
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    region: content
+  info:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 2
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+hidden: {  }

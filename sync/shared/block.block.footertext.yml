@@ -1,0 +1,25 @@
+uuid: c644f81b-4769-4932-b5f8-24cb90e46af5
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:d12f592c-8732-42af-8675-b0ccbb8a76f4'
+  module:
+    - block_content
+  theme:
+    - ucb
+id: footertext
+theme: ucb
+region: footer
+weight: -9
+provider: null
+plugin: 'block_content:d12f592c-8732-42af-8675-b0ccbb8a76f4'
+settings:
+  id: 'block_content:d12f592c-8732-42af-8675-b0ccbb8a76f4'
+  label: 'Footer Text'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

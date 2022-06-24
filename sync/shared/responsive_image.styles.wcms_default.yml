@@ -1,0 +1,26 @@
+uuid: 45aa4d14-aeee-474d-9449-559ea67065e0
+langcode: en
+status: true
+dependencies:
+  config:
+    - image.style.wcms_default_crop
+    - image.style.wcms_default_crop_mobile
+  theme:
+    - bartik
+_core:
+  default_config_hash: VGnU-2C3CUQCFSEKhdQ8FgZULkvfdhSFDXP94jztB_Y
+id: wcms_default
+label: 'WCMS Default'
+image_style_mappings:
+  -
+    breakpoint_id: bartik.wide
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: wcms_default_crop
+  -
+    breakpoint_id: bartik.mobile
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: wcms_default_crop_mobile
+breakpoint_group: bartik
+fallback_image_style: wcms_default_crop

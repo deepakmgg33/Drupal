@@ -1,0 +1,23 @@
+uuid: 7d18f7cf-30b6-44df-8dd9-1575d48d1e96
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.connect_with_us
+  module:
+    - text
+id: node.connect_with_us.body
+field_name: body
+entity_type: node
+bundle: connect_with_us
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

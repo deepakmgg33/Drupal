@@ -1,0 +1,46 @@
+uuid: eaff6702-c407-476d-9173-2377ed5f9dbd
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.rheumatology
+    - field.field.block_content.rheumatology.field_disease_rheumatology
+    - field.field.block_content.rheumatology.field_rh_image
+    - field.field.block_content.rheumatology.field_rheumatology_title
+  module:
+    - entity_reference_revisions
+    - image
+id: block_content.rheumatology.default
+targetEntityType: block_content
+bundle: rheumatology
+mode: default
+content:
+  field_disease_rheumatology:
+    type: entity_reference_revisions_entity_view
+    weight: 2
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_rh_image:
+    weight: 1
+    label: hidden
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_rheumatology_title:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden:
+  langcode: true
+  search_api_excerpt: true

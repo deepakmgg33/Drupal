@@ -1,0 +1,22 @@
+uuid: 94be68f5-68cd-47b6-9442-fa8891b34977
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - wcms
+_core:
+  default_config_hash: o6qzL0gmFH0iN0vHxKJ6H1qfxla7JepLqvXofF7bw0A
+id: wcms_messages
+theme: wcms
+region: highlighted
+weight: 0
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Status messages'
+  provider: system
+  label_display: '0'
+visibility: {  }

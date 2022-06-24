@@ -1,0 +1,11 @@
+uuid: 8dcfc0c2-39e3-4a07-8362-1d276bba5fb9
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.therapeutic_area
+id: taxonomy_term.therapeutic_area
+target_entity_type_id: taxonomy_term
+target_bundle: therapeutic_area
+default_langcode: site_default
+language_alterable: false

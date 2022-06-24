@@ -1,0 +1,17 @@
+uuid: b173e425-8bd0-4f98-aa23-d1d33ee813f0
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: 'UCB Slide'
+type: ucb_slide
+description: ''
+help: ''
+new_revision: false
+preview_mode: 1
+display_submitted: false

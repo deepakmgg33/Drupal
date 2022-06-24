@@ -1,0 +1,12 @@
+uuid: d0e9bcda-dd81-4364-a837-31bedbc128be
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: 4pSekAKQmXuB5BsU7BEGIzDqgmp_XMONj5iqCnvpGHQ
+id: wcms_pgph_socialmedia
+label: 'Social Media'
+icon_uuid: null
+icon_default: null
+description: null
+behavior_plugins: {  }

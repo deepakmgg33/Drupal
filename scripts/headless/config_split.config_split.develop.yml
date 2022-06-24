@@ -1,0 +1,24 @@
+langcode: en
+status: false
+dependencies: {  }
+id: develop
+label: Develop
+description: ''
+folder: ../sync/dev
+module:
+  devel: 0
+  field_ui: 0
+  page_manager_ui: 0
+  dblog: 0
+  purge: 0
+  varnish_purger: 0
+  views_ui: 0
+  webform_ui: 0
+  openapi_ui: 0
+  openapi_ui_redoc: 0
+theme: {  }
+blacklist: {  }
+graylist: {  }
+graylist_dependents: true
+graylist_skip_equal: true
+weight: 0

@@ -1,0 +1,25 @@
+uuid: be6400e7-7e91-430e-9969-7614f66d18a3
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:advisory:f5ff9541-126e-45c8-b9a0-51a023dac59c'
+  module:
+    - block_content
+  theme:
+    - ucb
+id: advisory
+theme: ucb
+region: headertop
+weight: -11
+provider: null
+plugin: 'block_content:f5ff9541-126e-45c8-b9a0-51a023dac59c'
+settings:
+  id: 'block_content:f5ff9541-126e-45c8-b9a0-51a023dac59c'
+  label: advisory
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

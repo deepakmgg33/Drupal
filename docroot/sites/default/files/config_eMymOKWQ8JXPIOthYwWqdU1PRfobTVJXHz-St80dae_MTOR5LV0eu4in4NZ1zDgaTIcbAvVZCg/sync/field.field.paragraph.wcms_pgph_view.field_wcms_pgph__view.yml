@@ -1,0 +1,46 @@
+uuid: c5577dff-4647-41ca-937c-310c9270d739
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_wcms_pgph__view
+    - paragraphs.paragraphs_type.wcms_pgph_view
+  module:
+    - viewsreference
+_core:
+  default_config_hash: TIMoMW1d9DmW7GvmYuP7CTaWnP5RJd1-Cxulnchvq0A
+id: paragraph.wcms_pgph_view.field_wcms_pgph__view
+field_name: field_wcms_pgph__view
+entity_type: paragraph
+bundle: wcms_pgph_view
+label: View
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:view'
+  handler_settings:
+    target_bundles: null
+    auto_create: 0
+  plugin_types:
+    block: block
+    default: 0
+    page: 0
+    feed: 0
+    entity_browser: 0
+  preselect_views:
+    block_content: 0
+    comments_recent: 0
+    content: 0
+    content_recent: 0
+    files: 0
+    frontpage: 0
+    media_library: 0
+    taxonomy_term: 0
+    user_admin_people: 0
+    who_s_new: 0
+    who_s_online: 0
+  enabled_settings: {  }
+field_type: viewsreference

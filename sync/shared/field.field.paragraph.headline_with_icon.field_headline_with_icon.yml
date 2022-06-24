@@ -1,0 +1,85 @@
+uuid: 8d109ae0-f81f-4fd7-82a3-3b9760fa162b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_headline_with_icon
+    - paragraphs.paragraphs_type.headline
+    - paragraphs.paragraphs_type.headline_with_icon
+  module:
+    - entity_reference_revisions
+id: paragraph.headline_with_icon.field_headline_with_icon
+field_name: field_headline_with_icon
+entity_type: paragraph
+bundle: headline_with_icon
+label: 'Headline with icon'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      headline: headline
+    target_bundles_drag_drop:
+      from_library:
+        weight: 20
+        enabled: false
+      headline:
+        enabled: true
+        weight: 21
+      headline_with_icon:
+        weight: 22
+        enabled: false
+      our_science:
+        weight: 23
+        enabled: false
+      repeative_grid:
+        weight: 24
+        enabled: false
+      wcms_asymmetric_translation:
+        weight: 25
+        enabled: false
+      wcms_pgph_backtotop:
+        weight: 26
+        enabled: false
+      wcms_pgph_document:
+        weight: 27
+        enabled: false
+      wcms_pgph_form:
+        weight: 28
+        enabled: false
+      wcms_pgph_grid:
+        weight: 29
+        enabled: false
+      wcms_pgph_logo:
+        weight: 30
+        enabled: false
+      wcms_pgph_menu:
+        weight: 31
+        enabled: false
+      wcms_pgph_printversion:
+        weight: 32
+        enabled: false
+      wcms_pgph_slider:
+        weight: 33
+        enabled: false
+      wcms_pgph_slideritem:
+        weight: 34
+        enabled: false
+      wcms_pgph_socialmedia:
+        weight: 35
+        enabled: false
+      wcms_pgph_teaser:
+        weight: 36
+        enabled: false
+      wcms_pgph_view:
+        weight: 37
+        enabled: false
+      wcms_pgph_wysiwyg:
+        weight: 38
+        enabled: false
+field_type: entity_reference_revisions

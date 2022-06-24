@@ -1,0 +1,17 @@
+uuid: abebf403-e767-4a53-993a-33f8af9cc1d1
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: 'Connect With Us'
+type: connect_with_us
+description: ''
+help: ''
+new_revision: false
+preview_mode: 1
+display_submitted: false

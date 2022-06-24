@@ -1,0 +1,36 @@
+uuid: c65108cb-c51b-44ce-91d6-922d1d61847c
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.medical_information.body
+    - field.field.node.medical_information.field_medical_info_card_title
+    - field.field.node.medical_information.field_medical_info_cards
+    - node.type.medical_information
+  module:
+    - text
+    - user
+id: node.medical_information.teaser
+targetEntityType: node
+bundle: medical_information
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_medical_info_card_title: true
+  field_medical_info_cards: true
+  langcode: true
+  search_api_excerpt: true

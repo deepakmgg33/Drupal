@@ -1,0 +1,21 @@
+uuid: 58ffda2e-1804-4a93-b100-9a4bbc2913a3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_duration
+    - node.type.video_block
+id: node.video_block.field_duration
+field_name: field_duration
+entity_type: node
+bundle: video_block
+label: duration
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1654017365
+default_value_callback: ''
+settings: {  }
+field_type: timestamp

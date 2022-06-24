@@ -1,0 +1,40 @@
+uuid: 1f1a3d45-6559-4f28-986c-980ea346ae9d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.medical_information.field_medical_info_title
+    - field.field.paragraph.medical_information.field_medico_info_desc
+    - field.field.paragraph.medical_information.field_medico_info_link
+    - paragraphs.paragraphs_type.medical_information
+  module:
+    - text
+id: paragraph.medical_information.default
+targetEntityType: paragraph
+bundle: medical_information
+mode: default
+content:
+  field_medical_info_title:
+    weight: 0
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_medico_info_desc:
+    weight: 1
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_medico_info_link:
+    weight: 2
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden:
+  search_api_excerpt: true

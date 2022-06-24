@@ -1,0 +1,63 @@
+uuid: 61379c46-cb36-477a-98ea-ccaffa07f231
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.wcms_pgph_menu.field_wcms_pgph__menu
+    - field.field.paragraph.wcms_pgph_menu.field_wcms_pgph__view_mode
+    - paragraphs.paragraphs_type.wcms_pgph_menu
+  module:
+    - field_group
+    - field_layout
+    - layout_discovery
+    - view_mode_selector
+third_party_settings:
+  field_group:
+    group_menu:
+      children:
+        - field_wcms_pgph__menu
+        - field_wcms_pgph__view_mode
+      parent_name: ''
+      weight: 0
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+      label: Menu
+      region: content
+  field_layout:
+    id: layout_onecol
+    settings:
+      label: ''
+_core:
+  default_config_hash: oB81znyNusZDRZh7QU5by4ldmMG_YHi9ujMHwR_5_S0
+id: paragraph.wcms_pgph_menu.default
+targetEntityType: paragraph
+bundle: wcms_pgph_menu
+mode: default
+content:
+  field_pgph__menu:
+    weight: 6
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_wcms_pgph__menu:
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_wcms_pgph__view_mode:
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    type: view_mode_selector_select
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

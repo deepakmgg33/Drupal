@@ -1,0 +1,40 @@
+uuid: 559b2300-0d1c-45fc-a1e0-6d57d9ad8722
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.connect_with_us.body
+    - field.field.node.connect_with_us.field_connect_with_us_footer
+    - field.field.node.connect_with_us.field_footer_image
+    - field.field.node.connect_with_us.field_footer_image_title
+    - field.field.node.connect_with_us.field_medical_info_cards
+    - node.type.connect_with_us
+  module:
+    - text
+    - user
+id: node.connect_with_us.teaser
+targetEntityType: node
+bundle: connect_with_us
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_connect_with_us_footer: true
+  field_footer_image: true
+  field_footer_image_title: true
+  field_medical_info_cards: true
+  langcode: true
+  search_api_excerpt: true

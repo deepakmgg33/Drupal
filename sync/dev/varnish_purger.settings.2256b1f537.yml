@@ -1,0 +1,31 @@
+uuid: a271a266-9d6b-4dd2-82ad-5ab9d5446505
+langcode: en
+status: true
+dependencies: {  }
+id: 2256b1f537
+name: 'Varnish 1'
+invalidationtype: tag
+hostname: varnish-0.varnish
+port: 6081
+path: /
+request_method: BAN
+scheme: http
+verify: '1'
+headers:
+  -
+    field: X-VC-Purge-Key
+    value: secret
+  -
+    field: Cache-Tags
+    value: '[invalidation:expression]'
+  -
+    field: X-VC-Purge-Key-Auth
+    value: 'true'
+body: null
+body_content_type: null
+runtime_measurement: true
+timeout: !!float 1
+connect_timeout: !!float 1
+cooldown_time: !!float 0
+max_requests: 100
+http_errors: true

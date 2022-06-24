@@ -1,0 +1,14 @@
+
+<div{{ attributes }}>
+  {{ title_prefix }}
+  {% if label %}
+    <h2{{ title_attributes }}>{{ label }}</h2>
+  {% endif %}
+  {{ title_suffix }}
+  {% block content %}
+  <div class="flagGroup">
+   <span class="flag"> {{ content.field_flag_icon }} </span>
+   <span class="txt-upper">&nbsp;&nbsp;{{ content.body }}</span>
+  </div>
+  {% endblock %}
+</div>

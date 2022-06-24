@@ -1,0 +1,152 @@
+uuid: 85fa71fe-290a-4274-908f-ac2616537c68
+langcode: en
+status: open
+dependencies: {  }
+_core:
+  default_config_hash: Fy8hbSMWTv4ccRP6Fel76IO7HTolv4v1NNulrs8SLTM
+open: null
+close: null
+weight: 0
+uid: 1
+template: false
+archive: false
+id: survey
+title: Survey
+description: ''
+category: ''
+elements: "title:\n  '#type': webform_markup\n  '#markup': '<h2 class=\"page_heading\">Survey</h2>'\ndescription:\n  '#type': webform_markup\n  '#markup': '<p>Thank you for visiting our Web site. Your feedback is important for optimizing your experience in the future. This survey should only take a few minutes of your time and will remain anonymous.</p>'\nbest_describe:\n  '#type': radios\n  '#title': 'Please select the answer that describes you best.'\n  '#options':\n    1: 'I’m just curious about this website'\n    2: 'I’m a patient'\n    3: 'I’m a caregiver'\n    4: 'I’m a nurse'\n    5: 'I’m a physician'\n    6: 'I’m a pharmacist'\n    7: Other...\n  '#required': true\nbest_describe_other:\n  '#type': textfield\n  '#title': Other\n  '#title_display': invisible\n  '#states':\n    invisible:\n      ':input[name=\"best_describe\"]':\n        '!value': '7'\n    required:\n      ':input[name=\"best_describe\"]':\n        value: '7'\nget_in_touch:\n  '#type': radios\n  '#title': 'How did you first learn about CimpleCare?'\n  '#options':\n    1: 'From the internet'\n    2: 'Through my doctor'\n    3: 'Through the nurse'\n    4: 'Through a relative (friend, caregiver, family, colleague, etc.)'\n    5: 'Through my pharmacist'\n    6: 'From the Cimzia starter kit'\n    7: Other...\n  '#required': true\nget_in_touc_other:\n  '#type': textfield\n  '#title': Other\n  '#title_display': invisible\n  '#states':\n    invisible:\n      ':input[name=\"get_in_touch\"]':\n        '!value': '7'\n    required:\n      ':input[name=\"get_in_touch\"]':\n        value: '7'\nwhat_extent:\n  '#type': webform_likert\n  '#title': 'To what extent do you agree with the following statements ?'\n  '#required': true\n  '#questions':\n    1: 'This website is helping me , my patients , my relatives to feel more confident about injecting myself'\n    2: 'This website is helping me , my patients , my relatives to prepare myself for the injecting.'\n    3: 'This website is helping me , my patients , my relatives to sucessfully inject myself.'\n    4: 'This website is helping me , my patients , my relatives to feel confident about my next Cimzia injection.'\n    5: 'This website provides all the important information needed to make a better decisions regarding my Cimzia injection.'\n    6: 'The information in this website is explained in a way that is easy to understand.'\n    7: 'This website is easy to navigate and find information in.'\n    8: 'This website is helping my friends and relatives better support me throughout my injection journey.'\n  '#answers':\n    1: Agree\n    2: 'Neither Agree or Disagree'\n    3: Disagree\n    4: 'Strongly Disagree'\n  '#na_answer_text': ''\nwhat_you_think:\n  '#type': webform_likert\n  '#title': 'How do you find the following sections?'\n  '#required': true\n  '#questions':\n    1: 'Injection steps'\n    2: 'Patients Story'\n    3: FAQ\n  '#answers':\n    1: 'very useful'\n    2: 'somewhat usefule'\n    3: Neither\n    4: 'Not so useful'\n    5: 'Not at all useful'\n    6: 'I have not visited that section'\n  '#na_answer_text': ''\n"
+css: ''
+javascript: ''
+settings:
+  ajax: false
+  ajax_scroll_top: form
+  page: true
+  page_submit_path: /survey
+  page_confirm_path: ''
+  form_submit_once: false
+  form_exception_message: ''
+  form_open_message: ''
+  form_close_message: ''
+  form_previous_submissions: true
+  form_confidential: false
+  form_confidential_message: ''
+  form_convert_anonymous: false
+  form_prepopulate: false
+  form_prepopulate_source_entity: false
+  form_prepopulate_source_entity_required: false
+  form_prepopulate_source_entity_type: ''
+  form_reset: false
+  form_disable_autocomplete: false
+  form_novalidate: false
+  form_disable_inline_errors: false
+  form_required: false
+  form_unsaved: false
+  form_disable_back: false
+  form_submit_back: false
+  form_autofocus: false
+  form_details_toggle: false
+  form_login: false
+  form_login_message: ''
+  submission_label: ''
+  submission_log: false
+  submission_user_columns: {  }
+  submission_user_duplicate: false
+  submission_login: false
+  submission_login_message: ''
+  submission_exception_message: ''
+  submission_locked_message: ''
+  previous_submission_message: ''
+  previous_submissions_message: ''
+  autofill: false
+  autofill_message: ''
+  autofill_excluded_elements: {  }
+  wizard_progress_bar: true
+  wizard_progress_pages: false
+  wizard_progress_percentage: false
+  wizard_start_label: ''
+  wizard_confirmation: true
+  wizard_confirmation_label: ''
+  wizard_track: ''
+  preview: 0
+  preview_label: ''
+  preview_title: ''
+  preview_message: ''
+  preview_attributes: {  }
+  preview_excluded_elements: {  }
+  preview_exclude_empty: true
+  preview_exclude_empty_checkbox: false
+  draft: none
+  draft_multiple: false
+  draft_auto_save: false
+  draft_saved_message: ''
+  draft_loaded_message: ''
+  confirmation_type: message
+  confirmation_title: ''
+  confirmation_message: 'Thanks for your time. We appreciate your feedback'
+  confirmation_url: ''
+  confirmation_attributes: {  }
+  confirmation_back: true
+  confirmation_back_label: ''
+  confirmation_back_attributes: {  }
+  confirmation_exclude_query: false
+  confirmation_exclude_token: false
+  limit_total: null
+  limit_total_interval: null
+  limit_total_message: ''
+  limit_user: null
+  limit_user_interval: null
+  limit_user_message: ''
+  entity_limit_total: null
+  entity_limit_total_interval: null
+  entity_limit_user: null
+  entity_limit_user_interval: null
+  purge: none
+  purge_days: null
+  results_disabled: false
+  results_disabled_ignore: false
+  token_update: false
+access:
+  create:
+    roles:
+      - anonymous
+      - authenticated
+    users: {  }
+    permissions: {  }
+  view_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  update_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  delete_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  purge_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  view_own:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  update_own:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  delete_own:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  administer:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  test:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+handlers: {  }
+variants: {  }

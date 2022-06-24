@@ -1,0 +1,45 @@
+Index: colossal_menu.info.yml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- a/colossal_menu.info.yml	(date 1590595210000)
++++ b/colossal_menu.info.yml	(date 1590595484375)
+@@ -4,7 +4,6 @@
+ core: 8.x
+ package: Menu
+ dependencies:
+-  - machine_name_widget:machine_name_widget
+   - drupal:link
+ 
+ # Information added by Drupal.org packaging script on 2019-11-29
+Index: src/Entity/Link.php
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- a/src/Entity/Link.php	(date 1590595210000)
++++ b/src/Entity/Link.php	(date 1590595391386)
+@@ -238,12 +238,7 @@
+         'type' => 'machine_name',
+         'weight' => -4,
+         'settings' => [
+-          'source' => [
+-            'title',
+-            'widget',
+-            0,
+-            'value',
+-          ],
++          'source_field' => 'title',
+           'exists' => '\Drupal\colossal_menu\Entity\Link::loadByMachineName',
+         ],
+       ]);
+@@ -565,7 +560,7 @@
+   /**
+    * Checks that an existing machine name does not already exist.
+    *
+-   * This is a static mehod so it can be used by a machine name field.
++   * This is a static method so it can be used by a machine name field.
+    *
+    * @param string $machine_name
+    *   The machine name to load the entity by.

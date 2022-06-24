@@ -1,0 +1,19 @@
+uuid: def9f612-c3eb-4904-b5b6-b7ca095af693
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - text
+id: node.field_ucb_d1
+field_name: field_ucb_d1
+entity_type: node
+type: text_with_summary
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

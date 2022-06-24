@@ -1,0 +1,8 @@
+uuid: 310b2393-3cf2-423f-81ce-5ebde00557ed
+langcode: en
+status: true
+dependencies: {  }
+id: immunology_block
+label: 'Immunology Block'
+revision: 0
+description: ''

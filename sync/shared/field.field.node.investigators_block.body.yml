@@ -1,0 +1,23 @@
+uuid: 6f2a4a5d-5502-4779-9ea0-48f144d33732
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.investigators_block
+  module:
+    - text
+id: node.investigators_block.body
+field_name: body
+entity_type: node
+bundle: investigators_block
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

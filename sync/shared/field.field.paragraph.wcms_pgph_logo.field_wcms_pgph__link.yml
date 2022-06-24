@@ -1,0 +1,32 @@
+uuid: 53e50456-bf93-4ddc-94e7-8552db8e37cb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_wcms_pgph__link
+    - paragraphs.paragraphs_type.wcms_pgph_logo
+  module:
+    - link
+_core:
+  default_config_hash: JUZSQeRsEf47STHbDilqhOIuvROrqwD69YwS_NwTe9A
+id: paragraph.wcms_pgph_logo.field_wcms_pgph__link
+field_name: field_wcms_pgph__link
+entity_type: paragraph
+bundle: wcms_pgph_logo
+label: Link
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    attributes: {  }
+    uri: 'internal:/'
+    options:
+      attributes:
+        class: ''
+    title: ''
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 0
+field_type: link

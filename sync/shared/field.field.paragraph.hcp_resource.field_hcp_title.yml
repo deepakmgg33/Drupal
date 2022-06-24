@@ -1,0 +1,19 @@
+uuid: 42f91e74-2002-4e55-b1ac-b6b52eeb0643
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_hcp_title
+    - paragraphs.paragraphs_type.hcp_resource
+id: paragraph.hcp_resource.field_hcp_title
+field_name: field_hcp_title
+entity_type: paragraph
+bundle: hcp_resource
+label: 'Hcp title'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

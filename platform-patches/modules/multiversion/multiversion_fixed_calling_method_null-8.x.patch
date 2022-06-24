@@ -1,0 +1,16 @@
+Index: profiles/wcms/modules/contrib/multiversion/src/Entity/Storage/ContentEntityStorageTrait.php
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- a/src/Entity/Storage/ContentEntityStorageTrait.php	(date 1527513126000)
++++ b/src/Entity/Storage/ContentEntityStorageTrait.php	(date 1527595725000)
+@@ -390,7 +390,7 @@
+           // Don't rewrite workbanch moderation default revision.
+           $moduleHandler = \Drupal::service('module_handler');
+           if ($moduleHandler->moduleExists('workbench_moderation')){
+-            $moderation_default_revision = $entity->moderation_state->entity->isDefaultRevisionState();
++            $moderation_default_revision = empty($entity->moderation_state->entity) ? TRUE : $entity->moderation_state->entity->isDefaultRevisionState();
+             $entity->isDefaultRevision($moderation_default_revision);
+           }
+           else {
